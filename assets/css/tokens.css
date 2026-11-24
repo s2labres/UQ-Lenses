@@ -1,0 +1,83 @@
+/* UQ Lenses design tokens.
+   Light = the paper's tmlr.tex \definecolor inks and ...bg tints, verbatim.
+   Dark  = same hues, inks lifted for a near-black ground, tints turned into dark washes
+           (values from opening-example/opening-preview.html; metric-only inks from brainstorm §7.2).
+   *-text variants exist where the ink fails AA 4.5:1 as text (yellow, sky). */
+:root{
+  color-scheme:light;
+  /* UI */
+  --bg:#ffffff; --panel:#F4F5F7; --ink:#000000; --muted:#555A61; --faint:#8A8F96;
+  --line:#E4E5E6; --panelframe:#CBD3DC; --navy:#1C1C4C; --navy-bg:#DFE2EC; --link:#000080; --rule-ink:#1F747A;
+  /* lenses (inner → outer) */
+  --str:#33598F; --str-bg:#DFE5EE;
+  --rep:#825580; --rep-bg:#ECE6EC;
+  --dis:#3A7018; --dis-bg:#E1EADC;
+  --sem:#BA4242; --sem-bg:#F5E3E3;
+  /* targets */
+  --cor:#1C1C4C; --cor-bg:#DFE2EC;
+  --fth:#4D839E; --fth-bg:#E1EEF4; --fth-text:#3C6A82;
+  --grd:#1F747A; --grd-bg:#DCE9E6;
+  --uns:#C49520; --uns-bg:#F6EFDE; --uns-text:#8A6A12;
+  /* metric families */
+  --cal:#1F747A;  --cal-bg:#DCE9E6;
+  --rnk:#1C1C4C;  --rnk-bg:#DFE2EC;
+  --scr:#C49520;  --scr-bg:#F6EFDE; --scr-text:#8A6A12;
+  --fthm:#4D839E; --fthm-bg:#E1EEF4; --fthm-text:#3C6A82;
+  --dec:#60468D;  --dec-bg:#E9E4F0;
+  --reg:#945A33;  --reg-bg:#F5E7E0;
+  --cov:#3A3D42;  --cov-bg:#E4E5E6;
+  /* demos: correct / wrong (never lens red for "wrong") */
+  --right:#1F747A; --wrong:#C96584;
+  --teal:#1F747A; --slate:#3A3D42;
+  --lens-gradient:linear-gradient(90deg,var(--str),var(--rep),var(--dis),var(--sem));
+  /* paper figures drawn for white paper: shown as is in light, inverted with hue kept in dark */
+  --fig-filter:none;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
+  --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  color-scheme:dark;
+  --bg:#0c0f13; --panel:#131820; --ink:#e8eaed; --muted:#a0a8b2; --faint:#6e7782;
+  --line:#222a33; --panelframe:#33404d; --navy:#A3A8EA; --navy-bg:#1b1d33; --link:#A3A8EA; --rule-ink:#A3A8EA;
+  --str:#7FA3D9; --str-bg:#18212e;
+  --rep:#C08FBD; --rep-bg:#221a26;
+  --dis:#8CC06A; --dis-bg:#172113;
+  --sem:#E58585; --sem-bg:#2a1819;
+  --cor:#A3A8EA; --cor-bg:#1b1d33;
+  --fth:#86BAD3; --fth-bg:#14242c; --fth-text:#86BAD3;
+  --grd:#5BB3B9; --grd-bg:#122628;
+  --uns:#E3BA52; --uns-bg:#2a2211; --uns-text:#E3BA52;
+  --cal:#5BB3B9;  --cal-bg:#122628;
+  --rnk:#A3A8EA;  --rnk-bg:#1b1d33;
+  --scr:#E3BA52;  --scr-bg:#2a2211; --scr-text:#E3BA52;
+  --fthm:#86BAD3; --fthm-bg:#14242c; --fthm-text:#86BAD3;
+  --dec:#A08BD0;  --dec-bg:#1f1a2c;
+  --reg:#CC9068;  --reg-bg:#2a1d15;
+  --cov:#A6ACB4;  --cov-bg:#1c2026;
+  --right:#5BB3B9; --wrong:#E08AA6;
+  --teal:#5BB3B9; --slate:#B4BAC2;
+  --fig-filter:invert(.92) hue-rotate(180deg) saturate(1.3);
+}}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --bg:#0c0f13; --panel:#131820; --ink:#e8eaed; --muted:#a0a8b2; --faint:#6e7782;
+  --line:#222a33; --panelframe:#33404d; --navy:#A3A8EA; --navy-bg:#1b1d33; --link:#A3A8EA; --rule-ink:#A3A8EA;
+  --str:#7FA3D9; --str-bg:#18212e;
+  --rep:#C08FBD; --rep-bg:#221a26;
+  --dis:#8CC06A; --dis-bg:#172113;
+  --sem:#E58585; --sem-bg:#2a1819;
+  --cor:#A3A8EA; --cor-bg:#1b1d33;
+  --fth:#86BAD3; --fth-bg:#14242c; --fth-text:#86BAD3;
+  --grd:#5BB3B9; --grd-bg:#122628;
+  --uns:#E3BA52; --uns-bg:#2a2211; --uns-text:#E3BA52;
+  --cal:#5BB3B9;  --cal-bg:#122628;
+  --rnk:#A3A8EA;  --rnk-bg:#1b1d33;
+  --scr:#E3BA52;  --scr-bg:#2a2211; --scr-text:#E3BA52;
+  --fthm:#86BAD3; --fthm-bg:#14242c; --fthm-text:#86BAD3;
+  --dec:#A08BD0;  --dec-bg:#1f1a2c;
+  --reg:#CC9068;  --reg-bg:#2a1d15;
+  --cov:#A6ACB4;  --cov-bg:#1c2026;
+  --right:#5BB3B9; --wrong:#E08AA6;
+  --teal:#5BB3B9; --slate:#B4BAC2;
+  --fig-filter:invert(.92) hue-rotate(180deg) saturate(1.3);
+}

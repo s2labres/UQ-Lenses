@@ -1,0 +1,351 @@
+{
+ "meta": {
+  "section_id": "survey",
+  "source": "arXiv:2611.15735, §5 (5-survey.tex: intro, takeaways 5–8) and §7.1 Open Problems (7-discussion.tex)",
+  "date": "2026-11-23",
+  "data": "Counts are never typed in. Placeholders in braces are filled at render time from papers.json: {papers} unique papers, {rows} method rows, {lens:rep} papers in a lens, {tgt:GRD} papers with a target, {cell:axis.lens.col} a coverage cell's n (axis = Z | S | target).",
+  "math": "Strings may contain LaTeX between \\( \\), typeset with MathJax 3 (tex-svg). All *_html fields are trusted, author-written HTML."
+ },
+ "lede_html": "We survey {papers} papers and place each method along the three axes of the Lenses section: the lens \\(\\lambda\\) is the observation point, the variation \\(Z\\) is the resampling variable, and the auxiliary structure \\(S\\) is used to obtain the score.",
+ "map": {
+  "title": "Coverage map",
+  "sub": "Bar length is the number of surveyed papers at that lens with that value, split by the chosen breakdown.",
+  "caption": "A method with several Z or S values counts in each of its columns, so a row can add up to more than its total.",
+  "gap_note": "Dashed cells are empty: no surveyed method sits there.",
+  "total_label": "Total",
+  "total_short": "papers",
+  "tabs": {
+   "Z": {
+    "col_short": {
+     "∅": "one pass",
+     "y": "outputs",
+     "θ": "parameters",
+     "x′": "inputs"
+    },
+    "note_html": "Representational methods mostly read a single forward pass (\\(Z=\\varnothing\\) for {cell:Z.rep.∅} of {lens:rep} papers), and structural methods do so for {cell:Z.str.∅} of {lens:str}."
+   },
+   "S": {
+    "col_short": {
+     "∅": "none",
+     "Z_S": "variation",
+     "ρ_S": "readout",
+     "U_S": "score",
+     "ψ_S": "post"
+    },
+    "note_html": "Most representational and structural methods fit an external model \\(\\mathcal U_S\\) against output-level labels: {cell:S.rep.U_S} of {lens:rep} representational and {cell:S.str.U_S} of {lens:str} structural papers."
+   },
+   "target": {
+    "col_short": {
+     "COR": "correctness",
+     "FTH": "faithfulness",
+     "GRD": "grounding",
+     "UNS": "underspec."
+    },
+    "note_html": ""
+   }
+  },
+  "dots": {
+   "label": "Split by",
+   "default": "ns",
+   "modes": {
+    "ns": "native / surrogate",
+    "access": "access",
+    "target": "target"
+   },
+   "target_note": "In the lens × Z and lens × S tabs, a paper with several targets counts under its rarest one (GRD, FTH, UNS before COR).",
+   "native_legend": "native (outline in the row's lens colour)"
+  }
+ },
+ "takeaways": {
+  "title": "What each lens shows",
+  "items": [
+   {
+    "lens": "sem",
+    "n": 5,
+    "section": "§5.1",
+    "title": "Semantical estimators measure the spread of meanings",
+    "body_html": "All semantical methods are native estimators that read a semantical observation and measure the spread of meanings. The relation \\(R\\) moves from cluster to graph to manifold, which weakens the assumptions on meaning. Verbalization branches off this line and lets the model itself judge meaning."
+   },
+   {
+    "lens": "dis",
+    "n": 6,
+    "section": "§5.2",
+    "title": "Distributional estimators as baselines",
+    "body_html": "The distributional lens is the earliest and most studied lens, and its estimators are the usual baselines. Most methods read token probabilities with gray-box access, and black-box methods use sampled text or a proxy model. Most estimators are native. The surrogate estimators select or weight tokens with a semantics model to approximate the spread over meanings."
+   },
+   {
+    "lens": "rep",
+    "n": 7,
+    "section": "§5.3",
+    "title": "Representational estimators are mostly surrogates",
+    "body_html": "All representational methods need white-box access, and most read a single forward pass and target correctness. The native estimators measure spread in hidden state space by a closed-form function or an unsupervised probe. The surrogate estimators fit a model against a semantical or distributional label."
+   },
+   {
+    "lens": "str",
+    "n": 8,
+    "section": "§5.4",
+    "title": "Structural estimators often target grounding",
+    "body_html": "All structural methods need white-box access, and some add cross-lens signals. The native estimators measure spread on the attention pattern. The surrogate estimators fit a model against correctness or grounding labels. Structural methods are more often used for grounding prediction than methods at the other lenses."
+   }
+  ]
+ },
+ "finder": {
+  "summary": "Find me an estimator",
+  "note": "Answer any of the questions to set the filters below. A question left blank keeps every option. This filters the survey; it is not a ranking.",
+  "rule_html": "Pick the lens that is <em>sufficient</em> for the target, then choose \\(Z\\) and \\(S\\) for <em>efficiency</em>. <a href=\"#lenses-rule\">Choosing an estimator</a>",
+  "reset": "Reset",
+  "questions": [
+   {
+    "id": "access",
+    "q": "What access do you have?",
+    "options": [
+     {
+      "label": "Black-box",
+      "hint": "sampled text",
+      "set": {
+       "access": [
+        "B"
+       ]
+      }
+     },
+     {
+      "label": "Gray-box",
+      "hint": "token probabilities",
+      "set": {
+       "access": [
+        "B",
+        "G"
+       ]
+      }
+     },
+     {
+      "label": "White-box",
+      "hint": "hidden states",
+      "set": {
+       "access": []
+      }
+     }
+    ]
+   },
+   {
+    "id": "lens",
+    "q": "Which lens to read?",
+    "options": [
+     {
+      "label": "Structural",
+      "code": "str",
+      "set": {
+       "lens": [
+        "str"
+       ]
+      }
+     },
+     {
+      "label": "Representational",
+      "code": "rep",
+      "set": {
+       "lens": [
+        "rep"
+       ]
+      }
+     },
+     {
+      "label": "Distributional",
+      "code": "dis",
+      "set": {
+       "lens": [
+        "dis"
+       ]
+      }
+     },
+     {
+      "label": "Semantical",
+      "code": "sem",
+      "set": {
+       "lens": [
+        "sem"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "target",
+    "q": "What is your target?",
+    "options": [
+     {
+      "label": "Correctness",
+      "code": "COR",
+      "set": {
+       "target": [
+        "COR"
+       ]
+      }
+     },
+     {
+      "label": "Faithfulness",
+      "code": "FTH",
+      "set": {
+       "target": [
+        "FTH"
+       ]
+      }
+     },
+     {
+      "label": "Grounding",
+      "code": "GRD",
+      "set": {
+       "target": [
+        "GRD"
+       ]
+      }
+     },
+     {
+      "label": "Underspecification",
+      "code": "UNS",
+      "set": {
+       "target": [
+        "UNS"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "sampling",
+    "q": "Can you afford sampling?",
+    "options": [
+     {
+      "label": "Yes",
+      "hint": "any Z",
+      "set": {
+       "Z": []
+      }
+     },
+     {
+      "label": "No",
+      "hint": "one pass, Z = ∅",
+      "set": {
+       "Z": [
+        "∅"
+       ]
+      }
+     }
+    ]
+   },
+   {
+    "id": "S",
+    "q": "Which auxiliary structure S?",
+    "options": [
+     {
+      "label": "None",
+      "sym": "∅",
+      "set": {
+       "S": [
+        "∅"
+       ]
+      }
+     },
+     {
+      "label": "Variation",
+      "sym": "Z_S",
+      "set": {
+       "S": [
+        "Z_S"
+       ]
+      }
+     },
+     {
+      "label": "Readout",
+      "sym": "ρ_S",
+      "set": {
+       "S": [
+        "ρ_S"
+       ]
+      }
+     },
+     {
+      "label": "Score function",
+      "sym": "U_S",
+      "set": {
+       "S": [
+        "U_S"
+       ]
+      }
+     },
+     {
+      "label": "Post-process",
+      "sym": "ψ_S",
+      "set": {
+       "S": [
+        "ψ_S"
+       ]
+      }
+     }
+    ]
+   }
+  ]
+ },
+ "filters": {
+  "search_label": "Search methods, titles and authors",
+  "search_placeholder": "Search method, title, author",
+  "toggle": "Filters",
+  "groups": {
+   "lens": "Lens",
+   "target": "Target",
+   "Z": "Variation Z",
+   "S": "Auxiliary structure S",
+   "access": "Access",
+   "ns": "Native / surrogate",
+   "metric": "Metric",
+   "type": "{type_header}"
+  },
+  "clear_all": "Clear all",
+  "count_all": "All {rows} methods from {papers} papers",
+  "count": "Showing {rows} methods from {papers} papers"
+ },
+ "list": {
+  "title": "Paper list",
+  "sort_label": "Sort",
+  "sort": {
+   "lens": "By lens",
+   "year": "Newest first"
+  },
+  "initial": 12,
+  "show_all": "Show all {n}",
+  "show_less": "Show fewer",
+  "empty": "No methods match these filters.",
+  "empty_gap": "No surveyed method sits in this cell of the map.",
+  "clear": "Clear filters",
+  "also": "Also listed under",
+  "same_paper": "Same paper",
+  "buttons": {
+   "code": "Code",
+   "bib": "BibTeX",
+   "copied": "Copied",
+   "search_title": "No direct link in the bib entry: searches Google Scholar for this title"
+  },
+  "bib_ok": "BibTeX for {id} copied to clipboard.",
+  "bib_fail": "Copy failed. The entry is in data/papers.bib under {id}."
+ },
+ "sym_html": {
+  "Z": {
+   "∅": "∅",
+   "y": "<i>y</i>",
+   "θ": "<i>θ</i>",
+   "x′": "<i>x</i>′"
+  },
+  "S": {
+   "∅": "∅",
+   "Z_S": "<i>Z</i><sub>S</sub>",
+   "ρ_S": "<i>ρ</i><sub>S</sub>",
+   "U_S": "𝒰<sub>S</sub>",
+   "ψ_S": "<i>ψ</i><sub>S</sub>"
+  },
+  "ns": {
+   "native": "∘",
+   "surr-dis": "•<sub>dis</sub>",
+   "surr-sem": "•<sub>sem</sub>"
+  }
+ }
+}

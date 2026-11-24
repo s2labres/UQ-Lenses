@@ -1,0 +1,8498 @@
+{
+ "meta": {
+  "source": "arXiv:2611.15735, Tables tab:sem/dis/rep/str-survey (arXiv/5-survey.tex)",
+  "generated_from": "survey-data/papers.yaml",
+  "n_rows": 170,
+  "n_papers": 159,
+  "lens_order": [
+   "str",
+   "rep",
+   "dis",
+   "sem"
+  ],
+  "bib": "papers.bib (look up entries by `id`)"
+ },
+ "papers": [
+  {
+   "row": "sem-01",
+   "id": "kuhnSemanticUncertaintyLinguistic2023",
+   "method": "Semantic Entropy",
+   "title": "Semantic Uncertainty: Linguistic Invariances for Uncertainty Estimation in Natural Language Generation",
+   "authors": [
+    "Kuhn",
+    "Gal",
+    "Farquhar"
+   ],
+   "year": 2023,
+   "venue": "ICLR",
+   "arxiv": "2302.09664",
+   "url": null,
+   "code": "https://github.com/lorenzkuhn/semantic_uncertainty",
+   "lens": "sem",
+   "type": "Cluster",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-02",
+   "id": "farquharDetectingHallucinationsLarge2024",
+   "method": "SE Blackbox",
+   "title": "Detecting Hallucinations in Large Language Models Using Semantic Entropy",
+   "authors": [
+    "Farquhar",
+    "Kossen",
+    "Kuhn",
+    "Gal"
+   ],
+   "year": 2024,
+   "venue": "Nature",
+   "arxiv": null,
+   "url": "https://doi.org/10.1038/s41586-024-07421-0",
+   "code": "https://github.com/jlko/semantic_uncertainty",
+   "lens": "sem",
+   "type": "Cluster",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-03",
+   "id": "linGeneratingConfidenceUncertainty2024",
+   "method": "NumSets",
+   "title": "Generating with Confidence: Uncertainty Quantification for Black-Box Large Language Models",
+   "authors": [
+    "Lin",
+    "Trivedi",
+    "Sun"
+   ],
+   "year": 2024,
+   "venue": "TMLR",
+   "arxiv": "2305.19187",
+   "url": null,
+   "code": "https://github.com/zlin7/UQ-NLG",
+   "lens": "sem",
+   "type": "Cluster",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-04",
+   "id": "mccabeEstimatingSemanticAlphabet2026",
+   "method": "Alphabet Size",
+   "title": "Estimating Semantic Alphabet Size for LLM Uncertainty Quantification",
+   "authors": [
+    "McCabe",
+    "Melamed",
+    "Hartvigsen",
+    "Huang"
+   ],
+   "year": 2026,
+   "venue": "ICLR",
+   "arxiv": "2509.14478",
+   "url": null,
+   "code": "https://github.com/lucasmccabe/esa",
+   "lens": "sem",
+   "type": "Cluster",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK",
+    "DEC"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-05",
+   "id": "caoClusteredSelfAssessmentSimple2026",
+   "method": "Self-Assessment",
+   "title": "Clustered Self-Assessment: A Simple yet Effective Method for Uncertainty Quantification in Large Language Models",
+   "authors": [
+    "Cao",
+    "Kojima",
+    "Gambardella",
+    "Peng",
+    "Matsuo",
+    "Iwasawa"
+   ],
+   "year": 2026,
+   "venue": "Findings of ACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2026.findings-acl.1531",
+   "code": "https://github.com/ccqq77/clustered_self_assessment",
+   "lens": "sem",
+   "type": "Cluster",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK",
+    "SCR"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-06",
+   "id": "vipulanandanSemanticUncertaintyQuantification2026",
+   "method": "SRE-UQ",
+   "title": "Semantic Uncertainty Quantification of Hallucinations in LLMs: A Quantum Tensor Network Based Method",
+   "authors": [
+    "Vipulanandan",
+    "Premaratne",
+    "Sarkar"
+   ],
+   "year": 2026,
+   "venue": "ICLR",
+   "arxiv": "2601.20026",
+   "url": null,
+   "code": "https://github.com/pragasv/semantic-entropy-UQ-",
+   "lens": "sem",
+   "type": "Cluster",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-07",
+   "id": "aichbergerImprovingUncertaintyEstimation2025",
+   "method": "SDLG",
+   "title": "Improving Uncertainty Estimation through Semantically Diverse Language Generation",
+   "authors": [
+    "Aichberger",
+    "Schweighofer",
+    "Ielanskyi",
+    "Hochreiter"
+   ],
+   "year": 2025,
+   "venue": "ICLR",
+   "arxiv": "2406.04306",
+   "url": null,
+   "code": "https://github.com/ml-jku/SDLG",
+   "lens": "sem",
+   "type": "Cluster",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "Z_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-08",
+   "id": "wangConUConformalUncertainty2024",
+   "method": "ConU",
+   "title": "ConU: Conformal Uncertainty in Large Language Models with Correctness Coverage Guarantees",
+   "authors": [
+    "Wang",
+    "Duan",
+    "Cheng",
+    "Zhang",
+    "Wang",
+    "Shi",
+    "Xu",
+    "Shen",
+    "Zhu"
+   ],
+   "year": 2024,
+   "venue": "Findings of EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2024.findings-emnlp.404",
+   "code": "https://github.com/Zhiyuan-GG/Conformal-Uncertainty-Criterion",
+   "lens": "sem",
+   "type": "Cluster",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "ψ_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "COV"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-09",
+   "id": "mohriLanguageModelsConformal2024",
+   "method": "CP",
+   "title": "Language Models with Conformal Factuality Guarantees",
+   "authors": [
+    "Mohri",
+    "Hashimoto"
+   ],
+   "year": 2024,
+   "venue": "ICML",
+   "arxiv": "2402.10978",
+   "url": null,
+   "code": "https://github.com/tatsu-lab/conformal-factual-lm",
+   "lens": "sem",
+   "type": "Cluster",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "ψ_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "COV"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-10",
+   "id": "houDecomposingUncertaintyLarge2024",
+   "method": "Input Clarification",
+   "title": "Decomposing Uncertainty for Large Language Models through Input Clarification Ensembling",
+   "authors": [
+    "Hou",
+    "Liu",
+    "Qian",
+    "Andreas",
+    "Chang",
+    "Zhang"
+   ],
+   "year": 2024,
+   "venue": "ICML",
+   "arxiv": "2311.08718",
+   "url": null,
+   "code": "https://github.com/UCSB-NLP-Chang/llm_uncertainty",
+   "lens": "sem",
+   "type": "Cluster",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y",
+    "x′"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "UNS"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-11",
+   "id": "zhangSAC^3ReliableHallucination2023",
+   "method": "SAC3",
+   "title": "SAC3: Reliable Hallucination Detection in Black-Box Language Models via Semantic-Aware Cross-Check Consistency",
+   "authors": [
+    "Zhang",
+    "Li",
+    "Das",
+    "Malin",
+    "Kumar"
+   ],
+   "year": 2023,
+   "venue": "Findings of EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2023.findings-emnlp.1032",
+   "code": "https://github.com/intuit/sac3",
+   "lens": "sem",
+   "type": "Cluster",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y",
+    "x′",
+    "θ"
+   ],
+   "S": [
+    "Z_S",
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK",
+    "DEC"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-12",
+   "id": "manakulSelfCheckGPTZeroResourceBlackBox2023",
+   "method": "SelfCheckGPT",
+   "title": "SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models",
+   "authors": [
+    "Manakul",
+    "Liusie",
+    "Gales"
+   ],
+   "year": 2023,
+   "venue": "EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2023.emnlp-main.557",
+   "code": "https://github.com/potsawee/selfcheckgpt",
+   "lens": "sem",
+   "type": "Graph",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-13",
+   "id": "linGeneratingConfidenceUncertainty2024",
+   "method": "Degree",
+   "title": "Generating with Confidence: Uncertainty Quantification for Black-Box Large Language Models",
+   "authors": [
+    "Lin",
+    "Trivedi",
+    "Sun"
+   ],
+   "year": 2024,
+   "venue": "TMLR",
+   "arxiv": "2305.19187",
+   "url": null,
+   "code": "https://github.com/zlin7/UQ-NLG",
+   "lens": "sem",
+   "type": "Graph",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-14",
+   "id": "linGeneratingConfidenceUncertainty2024",
+   "method": "Eccentricity",
+   "title": "Generating with Confidence: Uncertainty Quantification for Black-Box Large Language Models",
+   "authors": [
+    "Lin",
+    "Trivedi",
+    "Sun"
+   ],
+   "year": 2024,
+   "venue": "TMLR",
+   "arxiv": "2305.19187",
+   "url": null,
+   "code": "https://github.com/zlin7/UQ-NLG",
+   "lens": "sem",
+   "type": "Graph",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-15",
+   "id": "linGeneratingConfidenceUncertainty2024",
+   "method": "EigV",
+   "title": "Generating with Confidence: Uncertainty Quantification for Black-Box Large Language Models",
+   "authors": [
+    "Lin",
+    "Trivedi",
+    "Sun"
+   ],
+   "year": 2024,
+   "venue": "TMLR",
+   "arxiv": "2305.19187",
+   "url": null,
+   "code": "https://github.com/zlin7/UQ-NLG",
+   "lens": "sem",
+   "type": "Graph",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-16",
+   "id": "nikitinKernelLanguageEntropy2024",
+   "method": "KLE",
+   "title": "Kernel Language Entropy: Fine-Grained Uncertainty Quantification for LLMs from Semantic Similarities",
+   "authors": [
+    "Nikitin",
+    "Kossen",
+    "Gal",
+    "Marttinen"
+   ],
+   "year": 2024,
+   "venue": "NeurIPS",
+   "arxiv": "2405.20003",
+   "url": null,
+   "code": "https://github.com/AlexanderVNikitin/kernel-language-entropy",
+   "lens": "sem",
+   "type": "Graph",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:sem-survey",
+   "access_all": [
+    "B",
+    "G"
+   ],
+   "notes": "Access cell lists several levels (B/G). `access` keeps the first (B); all levels in `access_all`."
+  },
+  {
+   "row": "sem-17",
+   "id": "qiuSemanticDensityUncertainty2024",
+   "method": "SD",
+   "title": "Semantic Density: Uncertainty Quantification for Large Language Models through Confidence Measurement in Semantic Space",
+   "authors": [
+    "Qiu",
+    "Miikkulainen"
+   ],
+   "year": 2024,
+   "venue": "NeurIPS",
+   "arxiv": null,
+   "url": "https://doi.org/10.52202/079017-4274",
+   "code": "https://github.com/cognizant-ai-labs/semantic-density-paper",
+   "lens": "sem",
+   "type": "Graph",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-18",
+   "id": "daLLMUncertaintyQuantification2024",
+   "method": "DEG",
+   "title": "LLM Uncertainty Quantification through Directional Entailment Graph and Claim Level Response Augmentation",
+   "authors": [
+    "Da",
+    "Chen",
+    "Cheng",
+    "Wei"
+   ],
+   "year": 2024,
+   "venue": "arXiv",
+   "arxiv": "2407.00994",
+   "url": "http://arxiv.org/abs/2407.00994",
+   "code": null,
+   "lens": "sem",
+   "type": "Graph",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-19",
+   "id": "wangCLUEConceptLevelUncertainty2024",
+   "method": "CLUE",
+   "title": "CLUE: Concept-Level Uncertainty Estimation for Large Language Models",
+   "authors": [
+    "Wang",
+    "Bai",
+    "Tsai",
+    "Hsieh"
+   ],
+   "year": 2024,
+   "venue": "arXiv",
+   "arxiv": "2409.03021",
+   "url": "http://arxiv.org/abs/2409.03021",
+   "code": null,
+   "lens": "sem",
+   "type": "Graph",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-20",
+   "id": "zhangLUQLongtextUncertainty2024",
+   "method": "LUQ",
+   "title": "LUQ: Long-Text Uncertainty Quantification for LLMs",
+   "authors": [
+    "Zhang",
+    "Liu",
+    "Basaldella",
+    "Collier"
+   ],
+   "year": 2024,
+   "venue": "EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2024.emnlp-main.299",
+   "code": "https://github.com/caiqizh/LUQ",
+   "lens": "sem",
+   "type": "Graph",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-21",
+   "id": "jiangGraphbasedUncertaintyMetrics2024",
+   "method": "Graph Uncertainty",
+   "title": "Graph-Based Uncertainty Metrics for Long-Form Language Model Generations",
+   "authors": [
+    "Jiang",
+    "Ruan",
+    "Sattigeri",
+    "Roukos",
+    "Hashimoto"
+   ],
+   "year": 2024,
+   "venue": "NeurIPS",
+   "arxiv": "2410.20783",
+   "url": null,
+   "code": "https://github.com/Mingjianjiang-1/Graph-based-Uncertainty",
+   "lens": "sem",
+   "type": "Graph",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-22",
+   "id": "zhangAllRoadsLead2025",
+   "method": "Reasoning Graph",
+   "title": "All Roads Lead to Rome: Graph-Based Confidence Estimation for Large Language Model Reasoning",
+   "authors": [
+    "Zhang",
+    "Shu",
+    "Shareghi",
+    "Collier"
+   ],
+   "year": 2025,
+   "venue": "EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2025.emnlp-main.1620",
+   "code": null,
+   "lens": "sem",
+   "type": "Graph",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK",
+    "CAL",
+    "SCR"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-23",
+   "id": "luoAGSCAdaptiveGranularity2026",
+   "method": "AGSC",
+   "title": "AGSC: Adaptive Granularity and Semantic Clustering for Uncertainty Quantification in Long-Text Generation",
+   "authors": [
+    "Luo",
+    "Qiu",
+    "Zhao",
+    "Lv",
+    "Jian",
+    "Wang",
+    "Wu"
+   ],
+   "year": 2026,
+   "venue": "ACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2026.acl-long.434",
+   "code": null,
+   "lens": "sem",
+   "type": "Graph",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-24",
+   "id": "chenUncertaintyQuantificationLarge2025",
+   "method": "MD-UQ",
+   "title": "Uncertainty Quantification of Large Language Models through Multi-Dimensional Responses",
+   "authors": [
+    "Chen",
+    "Liu",
+    "Da",
+    "Chen",
+    "Papalexakis",
+    "Wei"
+   ],
+   "year": 2025,
+   "venue": "arXiv",
+   "arxiv": "2502.16820",
+   "url": "http://arxiv.org/abs/2502.16820",
+   "code": null,
+   "lens": "sem",
+   "type": "Graph",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-25",
+   "id": "daUnderstandingUncertaintyLLM2025",
+   "method": "TopologyUQ",
+   "title": "Understanding the Uncertainty of LLM Explanations: A Perspective Based on Reasoning Topology",
+   "authors": [
+    "Da",
+    "Liu",
+    "Dai",
+    "Cheng",
+    "Wang",
+    "Wei"
+   ],
+   "year": 2025,
+   "venue": "COLM",
+   "arxiv": "2502.17026",
+   "url": null,
+   "code": "https://github.com/LongchaoDa/LLM-Topology",
+   "lens": "sem",
+   "type": "Graph",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "FTH"
+   ],
+   "metrics": [
+    "FTH"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-26",
+   "id": "coxMappingMeaningAddressing2025",
+   "method": "Variance",
+   "title": "Mapping from Meaning: Addressing the Miscalibration of Prompt-Sensitive Language Models",
+   "authors": [
+    "Cox",
+    "Xu",
+    "Han",
+    "Xu",
+    "Li",
+    "Hsu",
+    "Chen",
+    "Gerych",
+    "Ding"
+   ],
+   "year": 2025,
+   "venue": "AAAI",
+   "arxiv": null,
+   "url": "https://doi.org/10.1609/aaai.v39i22.34540",
+   "code": "https://github.com/xocelyk/paraphrase-uncertainty",
+   "lens": "sem",
+   "type": "Graph",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y",
+    "x′"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-27",
+   "id": "fanIUQInterrogativeUncertainty2026",
+   "method": "IUQ",
+   "title": "IUQ: Interrogative Uncertainty Quantification for Long-Form Large Language Model Generation",
+   "authors": [
+    "Fan",
+    "Duan",
+    "Xu"
+   ],
+   "year": 2026,
+   "venue": "ACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2026.acl-long.606",
+   "code": "https://github.com/louisfanhz/IUQ",
+   "lens": "sem",
+   "type": "Graph",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y",
+    "x′"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-28",
+   "id": "houProbabilisticFrameworkLLM2025",
+   "method": "BTProp",
+   "title": "A Probabilistic Framework for LLM Hallucination Detection via Belief Tree Propagation",
+   "authors": [
+    "Hou",
+    "Zhang",
+    "Andreas",
+    "Chang"
+   ],
+   "year": 2025,
+   "venue": "COLING",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2025.naacl-long.158",
+   "code": "https://github.com/UCSB-NLP-Chang/BTProp",
+   "lens": "sem",
+   "type": "Graph",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y",
+    "x′"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-29",
+   "id": "tanneruQuantifyingUncertaintyNatural2024",
+   "method": "CoTA",
+   "title": "Quantifying Uncertainty in Natural Language Explanations of Large Language Models",
+   "authors": [
+    "Tanneru",
+    "Agarwal",
+    "Lakkaraju"
+   ],
+   "year": 2024,
+   "venue": "AISTATS",
+   "arxiv": "2311.03533",
+   "url": null,
+   "code": null,
+   "lens": "sem",
+   "type": "Graph",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y",
+    "x′"
+   ],
+   "S": [
+    "Z_S",
+    "U_S"
+   ],
+   "targets": [
+    "FTH"
+   ],
+   "metrics": [
+    "FTH"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-30",
+   "id": "manakulSelfCheckGPTZeroResourceBlackBox2023",
+   "method": "SelfCheckGPT",
+   "title": "SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models",
+   "authors": [
+    "Manakul",
+    "Liusie",
+    "Gales"
+   ],
+   "year": 2023,
+   "venue": "EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2023.emnlp-main.557",
+   "code": "https://github.com/potsawee/selfcheckgpt",
+   "lens": "sem",
+   "type": "Manifold",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-31",
+   "id": "aoCSSContrastiveSemantic2024",
+   "method": "CSS",
+   "title": "CSS: Contrastive Semantic Similarities for Uncertainty Quantification of LLMs",
+   "authors": [
+    "Ao",
+    "Rueger",
+    "Siddharthan"
+   ],
+   "year": 2024,
+   "venue": "UAI",
+   "arxiv": "2406.03158",
+   "url": null,
+   "code": "https://github.com/AoShuang92/css_uq_llms",
+   "lens": "sem",
+   "type": "Manifold",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-32",
+   "id": "chenEveryResponseCounts2026",
+   "method": "MATU",
+   "title": "Every Response Counts: Quantifying Uncertainty of LLM-Based Multi-Agent Systems through Tensor Decomposition",
+   "authors": [
+    "Chen",
+    "Yao",
+    "Chen",
+    "Papalexakis",
+    "Wei"
+   ],
+   "year": 2026,
+   "venue": "ACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2026.acl-long.737",
+   "code": "https://github.com/tiejin98/MATU",
+   "lens": "sem",
+   "type": "Manifold",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-33",
+   "id": "phillipsGeometricUncertaintyDetecting2026",
+   "method": "GeoU",
+   "title": "Geometric Uncertainty for Detecting and Correcting Hallucinations in LLMs",
+   "authors": [
+    "Phillips",
+    "Wu",
+    "Molaei",
+    "Belgrave",
+    "Thakur",
+    "Clifton"
+   ],
+   "year": 2026,
+   "venue": "TMLR",
+   "arxiv": "2509.13813",
+   "url": null,
+   "code": null,
+   "lens": "sem",
+   "type": "Manifold",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-34",
+   "id": "walhaFinegrainedUncertaintyDecomposition2026",
+   "method": "SpecU",
+   "title": "Fine-Grained Uncertainty Decomposition in Large Language Models: A Spectral Approach",
+   "authors": [
+    "Walha",
+    "Gruber",
+    "Decker",
+    "Yang",
+    "Javanmardi",
+    "Hüllermeier",
+    "Buettner"
+   ],
+   "year": 2026,
+   "venue": "AAAI",
+   "arxiv": null,
+   "url": "https://doi.org/10.1609/aaai.v40i31.39811",
+   "code": "https://github.com/MLO-lab/spectral_uncertainty_decomposition",
+   "lens": "sem",
+   "type": "Manifold",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y",
+    "x′"
+   ],
+   "S": [
+    "Z_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK",
+    "SCR"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-35",
+   "id": "gaoSPUQPerturbationBasedUncertainty2024",
+   "method": "SPUQ",
+   "title": "SPUQ: Perturbation-Based Uncertainty Quantification for Large Language Models",
+   "authors": [
+    "Gao",
+    "Zhang",
+    "Mouatadid",
+    "Das"
+   ],
+   "year": 2024,
+   "venue": "EACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2024.eacl-long.143",
+   "code": "https://github.com/intuit-ai-research/SPUQ",
+   "lens": "sem",
+   "type": "Manifold",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y",
+    "x′"
+   ],
+   "S": [
+    "Z_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "CAL"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-36",
+   "id": "linTeachingModelsExpress2022",
+   "method": "Verbalized Confidence",
+   "title": "Teaching Models to Express Their Uncertainty in Words",
+   "authors": [
+    "Lin",
+    "Hilton",
+    "Evans"
+   ],
+   "year": 2022,
+   "venue": "TMLR",
+   "arxiv": "2205.14334",
+   "url": null,
+   "code": "https://github.com/sylinrl/CalibratedMath",
+   "lens": "sem",
+   "type": "Report",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "CAL"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-37",
+   "id": "yangCanWeTrust2024",
+   "method": "Knowledge Transfer",
+   "title": "Can We Trust LLMs? Mitigate Overconfidence Bias in LLMs through Knowledge Transfer",
+   "authors": [
+    "Yang",
+    "Wang",
+    "Xu",
+    "Zhang",
+    "Bian"
+   ],
+   "year": 2024,
+   "venue": "arXiv",
+   "arxiv": "2405.16856",
+   "url": "http://arxiv.org/abs/2405.16856",
+   "code": null,
+   "lens": "sem",
+   "type": "Report",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "CAL"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-38",
+   "id": "xuSaySelfTeachingLLMs2024",
+   "method": "SaySelf",
+   "title": "SaySelf: Teaching LLMs to Express Confidence with Self-Reflective Rationales",
+   "authors": [
+    "Xu",
+    "Wu",
+    "Diao",
+    "Liu",
+    "Wang",
+    "Chen",
+    "Gao"
+   ],
+   "year": 2024,
+   "venue": "EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2024.emnlp-main.343",
+   "code": "https://github.com/xu1868/SaySelf",
+   "lens": "sem",
+   "type": "Report",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "CAL",
+    "RNK"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-39",
+   "id": "bandLinguisticCalibrationLongForm2024",
+   "method": "Ling. Calib.",
+   "title": "Linguistic Calibration of Long-Form Generations",
+   "authors": [
+    "Band",
+    "Li",
+    "Ma",
+    "Hashimoto"
+   ],
+   "year": 2024,
+   "venue": "ICML",
+   "arxiv": "2404.00474",
+   "url": null,
+   "code": "https://github.com/tatsu-lab/linguistic_calibration",
+   "lens": "sem",
+   "type": "Report",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "CAL"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-40",
+   "id": "taoWhenTrustLLMs2024",
+   "method": "CONQORD",
+   "title": "When to Trust LLMs: Aligning Confidence with Response Quality",
+   "authors": [
+    "Tao",
+    "Yao",
+    "Ding",
+    "Xie",
+    "Cao",
+    "Sun",
+    "Gao",
+    "Shen",
+    "Ding"
+   ],
+   "year": 2024,
+   "venue": "Findings of ACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2024.findings-acl.357",
+   "code": "https://github.com/TaoShuchang/CONQORD",
+   "lens": "sem",
+   "type": "Report",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "CAL"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-41",
+   "id": "tianJustAskCalibration2023",
+   "method": "Ask for Calibration",
+   "title": "Just Ask for Calibration: Strategies for Eliciting Calibrated Confidence Scores from Language Models Fine-Tuned with Human Feedback",
+   "authors": [
+    "Tian",
+    "Mitchell",
+    "Zhou",
+    "Sharma",
+    "Rafailov",
+    "Yao",
+    "Finn",
+    "Manning"
+   ],
+   "year": 2023,
+   "venue": "EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2023.emnlp-main.330",
+   "code": null,
+   "lens": "sem",
+   "type": "Report",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "CAL",
+    "RNK",
+    "SCR"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-42",
+   "id": "liuCanLLMsLearn2024",
+   "method": "UaIT",
+   "title": "Can LLMs Learn Uncertainty on Their Own? Expressing Uncertainty Effectively in A Self-Training Manner",
+   "authors": [
+    "Liu",
+    "Li",
+    "Liu",
+    "Zhan",
+    "Wong",
+    "Chao",
+    "Zhang"
+   ],
+   "year": 2024,
+   "venue": "EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2024.emnlp-main.1205",
+   "code": "https://github.com/NLP2CT/UaIT",
+   "lens": "sem",
+   "type": "Report",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-43",
+   "id": "liuMetaFaithFaithfulNatural2025",
+   "method": "MetaFaith",
+   "title": "MetaFaith: Faithful Natural Language Uncertainty Expression in LLMs",
+   "authors": [
+    "Liu",
+    "Yona",
+    "Caciularu",
+    "Szpektor",
+    "Rudner",
+    "Cohan"
+   ],
+   "year": 2025,
+   "venue": "EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2025.emnlp-main.1505",
+   "code": "https://github.com/yale-nlp/MetaFaith",
+   "lens": "sem",
+   "type": "Report",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "FTH"
+   ],
+   "metrics": [
+    "FTH",
+    "CAL",
+    "SCR"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-44",
+   "id": "liuReinforcementLearningMetacognitive2026",
+   "method": "RLMF",
+   "title": "Reinforcement Learning with Metacognitive Feedback Elicits Faithful Uncertainty Expression in LLMs",
+   "authors": [
+    "Liu",
+    "Caciularu",
+    "Yona",
+    "Szpektor",
+    "Cohan"
+   ],
+   "year": 2026,
+   "venue": "COLM",
+   "arxiv": "2606.32032",
+   "url": null,
+   "code": "https://github.com/yale-nlp/RLMF",
+   "lens": "sem",
+   "type": "Report",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "FTH"
+   ],
+   "metrics": [
+    "FTH",
+    "CAL",
+    "SCR"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-45",
+   "id": "tanneruQuantifyingUncertaintyNatural2024",
+   "method": "CoTA",
+   "title": "Quantifying Uncertainty in Natural Language Explanations of Large Language Models",
+   "authors": [
+    "Tanneru",
+    "Agarwal",
+    "Lakkaraju"
+   ],
+   "year": 2024,
+   "venue": "AISTATS",
+   "arxiv": "2311.03533",
+   "url": null,
+   "code": null,
+   "lens": "sem",
+   "type": "Report",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "FTH"
+   ],
+   "metrics": [
+    "FTH"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-46",
+   "id": "wangCalibratingVerbalizedConfidence2026",
+   "method": "DINCO",
+   "title": "Calibrating Verbalized Confidence with Self-Generated Distractors",
+   "authors": [
+    "Wang",
+    "Stengel-Eskin"
+   ],
+   "year": 2026,
+   "venue": "ICLR",
+   "arxiv": "2509.25532",
+   "url": null,
+   "code": "https://github.com/victorwang37/dinco",
+   "lens": "sem",
+   "type": "Report",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "Z_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "CAL",
+    "RNK",
+    "SCR"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-47",
+   "id": "cohenLMVsLM2023",
+   "method": "LM vs LM",
+   "title": "LM vs LM: Detecting Factual Errors via Cross Examination",
+   "authors": [
+    "Cohen",
+    "Hamri",
+    "Geva",
+    "Globerson"
+   ],
+   "year": 2023,
+   "venue": "EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2023.emnlp-main.778",
+   "code": null,
+   "lens": "sem",
+   "type": "Report",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "DEC"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-48",
+   "id": "yangZerosourceLLMHallucination2026",
+   "method": "HCPD",
+   "title": "Zero-Source LLM Hallucination Detection with Human-like Criteria Probing",
+   "authors": [
+    "Yang",
+    "Zhang",
+    "Kang",
+    "Liu",
+    "Chen",
+    "Tan"
+   ],
+   "year": 2026,
+   "venue": "ICML",
+   "arxiv": "2606.12900",
+   "url": null,
+   "code": "https://github.com/TRISKEL10N/HCPD",
+   "lens": "sem",
+   "type": "Report",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-49",
+   "id": "chenQuantifyingUncertaintyAnswers2024",
+   "method": "BSDetector",
+   "title": "Quantifying Uncertainty in Answers from Any Language Model and Enhancing Their Trustworthiness",
+   "authors": [
+    "Chen",
+    "Mueller"
+   ],
+   "year": 2024,
+   "venue": "ACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2024.acl-long.283",
+   "code": null,
+   "lens": "sem",
+   "type": "Report",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-50",
+   "id": "yonaCanLargeLanguage2024",
+   "method": "Decisiveness",
+   "title": "Can Large Language Models Faithfully Express Their Intrinsic Uncertainty in Words?",
+   "authors": [
+    "Yona",
+    "Aharoni",
+    "Geva"
+   ],
+   "year": 2024,
+   "venue": "EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2024.emnlp-main.443",
+   "code": null,
+   "lens": "sem",
+   "type": "Report",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "FTH"
+   ],
+   "metrics": [
+    "FTH"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-51",
+   "id": "cherianLargeLanguageModel2024",
+   "method": "Enhanced CP",
+   "title": "Large Language Model Validity via Enhanced Conformal Prediction Methods",
+   "authors": [
+    "Cherian",
+    "Gibbs",
+    "Candès"
+   ],
+   "year": 2024,
+   "venue": "NeurIPS",
+   "arxiv": null,
+   "url": "https://doi.org/10.52202/079017-3645",
+   "code": "https://github.com/jjcherian/conformal-safety",
+   "lens": "sem",
+   "type": "Report",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "ψ_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK",
+    "COV"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-52",
+   "id": "liThinkTwiceTrusting2024",
+   "method": "T3",
+   "title": "Think Twice Before Trusting: Self-Detection for Large Language Models through Comprehensive Answer Reflection",
+   "authors": [
+    "Li",
+    "Wang",
+    "Feng",
+    "Zhu",
+    "Wang",
+    "Chua"
+   ],
+   "year": 2024,
+   "venue": "Findings of EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2024.findings-emnlp.693",
+   "code": null,
+   "lens": "sem",
+   "type": "Report",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "x′"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK",
+    "CAL"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "sem-53",
+   "id": "gaoSPUQPerturbationBasedUncertainty2024",
+   "method": "SPUQ",
+   "title": "SPUQ: Perturbation-Based Uncertainty Quantification for Large Language Models",
+   "authors": [
+    "Gao",
+    "Zhang",
+    "Mouatadid",
+    "Das"
+   ],
+   "year": 2024,
+   "venue": "EACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2024.eacl-long.143",
+   "code": "https://github.com/intuit-ai-research/SPUQ",
+   "lens": "sem",
+   "type": "Report",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y",
+    "x′"
+   ],
+   "S": [
+    "Z_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "CAL"
+   ],
+   "table": "tab:sem-survey"
+  },
+  {
+   "row": "dis-01",
+   "id": "hendrycksBaselineDetectingMisclassified2017",
+   "method": "MSP",
+   "title": "A Baseline for Detecting Misclassified and Out-of-Distribution Examples in Neural Networks",
+   "authors": [
+    "Hendrycks",
+    "Gimpel"
+   ],
+   "year": 2017,
+   "venue": "ICLR",
+   "arxiv": "1610.02136",
+   "url": null,
+   "code": "https://github.com/hendrycks/error-detection",
+   "lens": "dis",
+   "type": "Token",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-02",
+   "id": "maEstimatingLLMUncertainty2025",
+   "method": "LogTokU",
+   "title": "Estimating LLM Uncertainty with Evidence",
+   "authors": [
+    "Ma",
+    "Chen",
+    "Zhou",
+    "Wang",
+    "Zhang"
+   ],
+   "year": 2025,
+   "venue": "arXiv",
+   "arxiv": "2502.00290",
+   "url": "http://arxiv.org/abs/2502.00290",
+   "code": "https://github.com/MaHuanAAA/logtoku",
+   "lens": "dis",
+   "type": "Token",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-03",
+   "id": "vashurinUNCERTAINTYLINELengthInvariantEstimation2025",
+   "method": "U-LINE",
+   "title": "UNCERTAINTY-LINE: Length-Invariant Estimation of Uncertainty for Large Language Models",
+   "authors": [
+    "Vashurin",
+    "Goloburda",
+    "Nakov",
+    "Panov"
+   ],
+   "year": 2025,
+   "venue": "EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2025.emnlp-main.400",
+   "code": "https://github.com/stat-ml/uncertainty-line",
+   "lens": "dis",
+   "type": "Token",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "ψ_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-04",
+   "id": "maSemanticEnergyDetecting2025",
+   "method": "Semantic Energy",
+   "title": "Semantic Energy: Detecting LLM Hallucination Beyond Entropy",
+   "authors": [
+    "Ma",
+    "Pan",
+    "Liu",
+    "Chen",
+    "Zhou",
+    "Wang",
+    "Hu",
+    "Wu",
+    "Zhang",
+    "Wang"
+   ],
+   "year": 2025,
+   "venue": "arXiv",
+   "arxiv": "2508.14496",
+   "url": "http://arxiv.org/abs/2508.14496",
+   "code": "https://github.com/MaHuanAAA/SemanticEnergy",
+   "lens": "dis",
+   "type": "Token",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-05",
+   "id": "suAPIEnoughConformal2024",
+   "method": "LoFree CP",
+   "title": "API Is Enough: Conformal Prediction for Large Language Models Without Logit-Access",
+   "authors": [
+    "Su",
+    "Luo",
+    "Wang",
+    "Cheng"
+   ],
+   "year": 2024,
+   "venue": "Findings of EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2024.findings-emnlp.54",
+   "code": null,
+   "lens": "dis",
+   "type": "Token",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "ψ_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "COV"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-06",
+   "id": "jiangCalibratingLanguageModels2023",
+   "method": "CAPE",
+   "title": "Calibrating Language Models via Augmented Prompt Ensembles",
+   "authors": [
+    "Jiang",
+    "Ruan",
+    "Huang",
+    "Liao",
+    "Pitis",
+    "Grosse",
+    "Ba"
+   ],
+   "year": 2023,
+   "venue": "ICML",
+   "arxiv": null,
+   "url": null,
+   "code": null,
+   "lens": "dis",
+   "type": "Token",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "x′"
+   ],
+   "S": [
+    "Z_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "CAL",
+    "RNK",
+    "SCR"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-07",
+   "id": "portillowightmanStrengthNumbersEstimating2023",
+   "method": "Agreement",
+   "title": "Strength in Numbers: Estimating Confidence of Large Language Models by Prompt Agreement",
+   "authors": [
+    "Portillo Wightman",
+    "Delucia",
+    "Dredze"
+   ],
+   "year": 2023,
+   "venue": "TrustNLP Workshop",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2023.trustnlp-1.28",
+   "code": "https://github.com/JHU-CLSP/Confidence-Estimation-TrustNLP2023",
+   "lens": "dis",
+   "type": "Token",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "x′"
+   ],
+   "S": [
+    "Z_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "CAL",
+    "RNK"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-08",
+   "id": "beckerCyclesThoughtMeasuring2024",
+   "method": "Stable Explanation",
+   "title": "Cycles of Thought: Measuring LLM Confidence through Stable Explanations",
+   "authors": [
+    "Becker",
+    "Soatto"
+   ],
+   "year": 2024,
+   "venue": "arXiv",
+   "arxiv": "2406.03441",
+   "url": "http://arxiv.org/abs/2406.03441",
+   "code": null,
+   "lens": "dis",
+   "type": "Token",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "x′"
+   ],
+   "S": [
+    "Z_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK",
+    "CAL"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-09",
+   "id": "kumarConformalPredictionLarge2023",
+   "method": "MCQA CP",
+   "title": "Conformal Prediction with Large Language Models for Multi-Choice Question Answering",
+   "authors": [
+    "Kumar",
+    "Lu",
+    "Gupta",
+    "Palepu",
+    "Bellamy",
+    "Raskar",
+    "Beam"
+   ],
+   "year": 2023,
+   "venue": "arXiv",
+   "arxiv": "2305.18404",
+   "url": "http://arxiv.org/abs/2305.18404",
+   "code": "https://github.com/bhaweshiitk/ConformalLLM",
+   "lens": "dis",
+   "type": "Token",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "x′"
+   ],
+   "S": [
+    "ψ_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "CAL",
+    "COV"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-10",
+   "id": "jungTrustEscalateLLM2025",
+   "method": "LLM Judges",
+   "title": "Trust or Escalate: LLM Judges with Provable Guarantees for Human Agreement",
+   "authors": [
+    "Jung",
+    "Brahman",
+    "Choi"
+   ],
+   "year": 2025,
+   "venue": "ICLR",
+   "arxiv": "2407.18370",
+   "url": null,
+   "code": "https://github.com/jaehunjung1/cascaded-selective-evaluation",
+   "lens": "dis",
+   "type": "Token",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "x′"
+   ],
+   "S": [
+    "ψ_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK",
+    "CAL"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-11",
+   "id": "mora-crossUncertaintyEstimationLarge2024",
+   "method": "MC",
+   "title": "Uncertainty Estimation in Large Language Models to Support Biodiversity Conservation",
+   "authors": [
+    "Mora-Cross",
+    "Calderon-Ramirez"
+   ],
+   "year": 2024,
+   "venue": "NAACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2024.naacl-industry.31",
+   "code": null,
+   "lens": "dis",
+   "type": "Token",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "θ"
+   ],
+   "S": [
+    "Z_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "CAL"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-12",
+   "id": "balabanovUncertaintyQuantificationFinetuned2025",
+   "method": "LoRA Ens.",
+   "title": "Uncertainty quantification in fine-tuned LLMs using LoRA ensembles",
+   "authors": [
+    "Balabanov",
+    "Linander"
+   ],
+   "year": 2025,
+   "venue": "ICLR Workshop",
+   "arxiv": null,
+   "url": "https://openreview.net/forum?id=L8KaEqT70q",
+   "code": "https://github.com/oleksandr-balabanov/equivariant-posteriors",
+   "lens": "dis",
+   "type": "Token",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "θ"
+   ],
+   "S": [
+    "Z_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK",
+    "CAL"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-13",
+   "id": "zhangTokURTokenLevelUncertainty2026",
+   "method": "TokUR",
+   "title": "TokUR: Token-Level Uncertainty Estimation for Large Language Model Reasoning",
+   "authors": [
+    "Zhang",
+    "Shi",
+    "Wang",
+    "Wang",
+    "He",
+    "Li",
+    "Chen",
+    "Han",
+    "Xu",
+    "Zhang",
+    "Metaxas",
+    "Wang"
+   ],
+   "year": 2026,
+   "venue": "ICLR",
+   "arxiv": "2505.11737",
+   "url": null,
+   "code": "https://github.com/Wang-ML-Lab/TokUR",
+   "lens": "dis",
+   "type": "Token",
+   "access": "W",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "θ"
+   ],
+   "S": [
+    "Z_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK",
+    "DEC"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-14",
+   "id": "yangBayesianLowrankAdaptation2024",
+   "method": "BLoRA",
+   "title": "Bayesian Low-Rank Adaptation for Large Language Models",
+   "authors": [
+    "Yang",
+    "Robeyns",
+    "Wang",
+    "Aitchison"
+   ],
+   "year": 2024,
+   "venue": "ICLR",
+   "arxiv": "2308.13111",
+   "url": null,
+   "code": "https://github.com/adamxyang/laplace-lora",
+   "lens": "dis",
+   "type": "Token",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "θ"
+   ],
+   "S": [
+    "Z_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "CAL",
+    "SCR"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-15",
+   "id": "wangBLoBBayesianLowRank2024",
+   "method": "BLoB",
+   "title": "BLoB: Bayesian Low-Rank Adaptation by Backpropagation for Large Language Models",
+   "authors": [
+    "Wang",
+    "Shi",
+    "Han",
+    "Metaxas",
+    "Wang"
+   ],
+   "year": 2024,
+   "venue": "NeurIPS",
+   "arxiv": null,
+   "url": "https://doi.org/10.52202/079017-2164",
+   "code": "https://github.com/Wang-ML-Lab/bayesian-peft",
+   "lens": "dis",
+   "type": "Token",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "θ"
+   ],
+   "S": [
+    "Z_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "CAL",
+    "SCR"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-16",
+   "id": "kruseSimpleEffectiveInformationTheoretic2025",
+   "method": "MUSE",
+   "title": "Simple Yet Effective: An Information-Theoretic Approach to Multi-LLM Uncertainty Quantification",
+   "authors": [
+    "Kruse",
+    "Afshar",
+    "Khatwani",
+    "Mayampurath",
+    "Chen",
+    "Gao"
+   ],
+   "year": 2025,
+   "venue": "EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2025.emnlp-main.1551",
+   "code": "https://github.com/LARK-NLP-Lab/MUSE",
+   "lens": "dis",
+   "type": "Token",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "θ"
+   ],
+   "S": [
+    "Z_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK",
+    "CAL",
+    "SCR"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-17",
+   "id": "lingUncertaintyQuantificationInContext2024",
+   "method": "PE ICL",
+   "title": "Uncertainty Quantification for In-Context Learning of Large Language Models",
+   "authors": [
+    "Ling",
+    "Zhao",
+    "Zhang",
+    "Cheng",
+    "Liu",
+    "Sun",
+    "Oishi",
+    "Osaki",
+    "Matsuda",
+    "Ji",
+    "Bai",
+    "Zhao",
+    "Chen"
+   ],
+   "year": 2024,
+   "venue": "NAACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2024.naacl-long.184",
+   "code": "https://github.com/lingchen0331/UQ_ICL",
+   "lens": "dis",
+   "type": "Token",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "x′",
+    "θ"
+   ],
+   "S": [
+    "Z_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-18",
+   "id": "kadavathLanguageModelsMostly2022",
+   "method": "P(True)",
+   "title": "Language Models (Mostly) Know What They Know",
+   "authors": [
+    "Kadavath",
+    "Conerly",
+    "Askell",
+    "Henighan",
+    "Drain",
+    "Perez",
+    "Schiefer",
+    "Hatfield-Dodds",
+    "DasSarma",
+    "Tran-Johnson",
+    "Johnston",
+    "El-Showk",
+    "Jones",
+    "Elhage",
+    "Hume",
+    "Chen",
+    "Bai",
+    "Bowman",
+    "Fort",
+    "Ganguli",
+    "Hernandez",
+    "Jacobson",
+    "Kernion",
+    "Kravec",
+    "Lovitt",
+    "Ndousse",
+    "Olsson",
+    "Ringer",
+    "Amodei",
+    "Brown",
+    "Clark",
+    "Joseph",
+    "Mann",
+    "McCandlish",
+    "Olah",
+    "Kaplan"
+   ],
+   "year": 2022,
+   "venue": "arXiv",
+   "arxiv": "2207.05221",
+   "url": "http://arxiv.org/abs/2207.05221",
+   "code": null,
+   "lens": "dis",
+   "type": "Token",
+   "access": "G",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "CAL"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-19",
+   "id": "renSelfEvaluationImprovesSelective2023",
+   "method": "Self-Evaluation",
+   "title": "Self-Evaluation Improves Selective Generation in Large Language Models",
+   "authors": [
+    "Ren",
+    "Zhao",
+    "Vu",
+    "Liu",
+    "Lakshminarayanan"
+   ],
+   "year": 2023,
+   "venue": "Proceedings On",
+   "arxiv": "2312.09300",
+   "url": null,
+   "code": null,
+   "lens": "dis",
+   "type": "Token",
+   "access": "G",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK",
+    "CAL"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-20",
+   "id": "fengDontHallucinateAbstain2024",
+   "method": "COOPERATE",
+   "title": "Don't Hallucinate, Abstain: Identifying LLM Knowledge Gaps via Multi-LLM Collaboration",
+   "authors": [
+    "Feng",
+    "Shi",
+    "Wang",
+    "Ding",
+    "Balachandran",
+    "Tsvetkov"
+   ],
+   "year": 2024,
+   "venue": "ACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2024.acl-long.786",
+   "code": "https://github.com/BunsenFeng/AbstainQA",
+   "lens": "dis",
+   "type": "Token",
+   "access": "G",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "DEC"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-21",
+   "id": "duanShiftingAttentionRelevance2024",
+   "method": "TokenSAR",
+   "title": "Shifting Attention to Relevance: Towards the Predictive Uncertainty Quantification of Free-Form Large Language Models",
+   "authors": [
+    "Duan",
+    "Cheng",
+    "Wang",
+    "Zavalny",
+    "Wang",
+    "Xu",
+    "Kailkhura",
+    "Xu"
+   ],
+   "year": 2024,
+   "venue": "ACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2024.acl-long.276",
+   "code": "https://github.com/jinhaoduan/SAR",
+   "lens": "dis",
+   "type": "Token",
+   "access": "G",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-22",
+   "id": "zhangCoTUQImprovingResponsewise2025",
+   "method": "CoT-UQ",
+   "title": "CoT-UQ: Improving Response-Wise Uncertainty Quantification in LLMs with Chain-of-Thought",
+   "authors": [
+    "Zhang",
+    "Zhang"
+   ],
+   "year": 2025,
+   "venue": "Findings of ACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2025.findings-acl.1339",
+   "code": "https://github.com/ZBox1005/CoT-UQ",
+   "lens": "dis",
+   "type": "Token",
+   "access": "G",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-23",
+   "id": "malininUncertaintyEstimationAutoregressive2021",
+   "method": "Leng.-Norm. SCR",
+   "title": "Uncertainty Estimation in Autoregressive Structured Prediction",
+   "authors": [
+    "Malinin",
+    "Gales"
+   ],
+   "year": 2021,
+   "venue": "ICLR",
+   "arxiv": "2002.07650",
+   "url": null,
+   "code": "https://github.com/KaosEngineer/structured-uncertainty",
+   "lens": "dis",
+   "type": "Sequence",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-24",
+   "id": "coleSelectivelyAnsweringAmbiguous2023",
+   "method": "Selective Answering",
+   "title": "Selectively Answering Ambiguous Questions",
+   "authors": [
+    "Cole",
+    "Zhang",
+    "Gillick",
+    "Eisenschlos",
+    "Dhingra",
+    "Eisenstein"
+   ],
+   "year": 2023,
+   "venue": "EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2023.emnlp-main.35",
+   "code": null,
+   "lens": "dis",
+   "type": "Sequence",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK",
+    "CAL"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-25",
+   "id": "fomichevaUnsupervisedQualityEstimation2020",
+   "method": "Perplexity",
+   "title": "Unsupervised Quality Estimation for Neural Machine Translation",
+   "authors": [
+    "Fomicheva",
+    "Sun",
+    "Yankovskaya",
+    "Blain",
+    "Guzmán",
+    "Fishel",
+    "Aletras",
+    "Chaudhary",
+    "Specia"
+   ],
+   "year": 2020,
+   "venue": "TACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.1162/tacl_a_00330",
+   "code": "https://github.com/facebookresearch/mlqe",
+   "lens": "dis",
+   "type": "Sequence",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-26",
+   "id": "aichbergerRethinkingUncertaintyEstimation2026",
+   "method": "G-NLL",
+   "title": "Rethinking Uncertainty Estimation in LLMs: A Principled Single-Sequence Measure",
+   "authors": [
+    "Aichberger",
+    "Schweighofer",
+    "Hochreiter"
+   ],
+   "year": 2026,
+   "venue": "ICLR",
+   "arxiv": "2412.15176",
+   "url": null,
+   "code": "https://github.com/ml-jku/G-NLL",
+   "lens": "dis",
+   "type": "Sequence",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-27",
+   "id": "darrinRainProofUmbrellaShield2023",
+   "method": "Rényi Divergence",
+   "title": "RainProof: An Umbrella to Shield Text Generator from Out-Of-Distribution Data",
+   "authors": [
+    "Darrin",
+    "Piantanida",
+    "Colombo"
+   ],
+   "year": 2023,
+   "venue": "EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2023.emnlp-main.357",
+   "code": "https://github.com/icannos/ToddBenchmark",
+   "lens": "dis",
+   "type": "Sequence",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-28",
+   "id": "darrinRainProofUmbrellaShield2023",
+   "method": "Fisher-Rao Dist.",
+   "title": "RainProof: An Umbrella to Shield Text Generator from Out-Of-Distribution Data",
+   "authors": [
+    "Darrin",
+    "Piantanida",
+    "Colombo"
+   ],
+   "year": 2023,
+   "venue": "EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2023.emnlp-main.357",
+   "code": "https://github.com/icannos/ToddBenchmark",
+   "lens": "dis",
+   "type": "Sequence",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-29",
+   "id": "duanUPropInvestigatingUncertainty2025",
+   "method": "UProp",
+   "title": "UProp: Investigating the Uncertainty Propagation of LLMs in Multi-Step Agentic Decision-Making",
+   "authors": [
+    "Duan",
+    "Diffenderfer",
+    "Madireddy",
+    "Chen",
+    "Kailkhura",
+    "Xu"
+   ],
+   "year": 2025,
+   "venue": "arXiv",
+   "arxiv": "2506.17419",
+   "url": "http://arxiv.org/abs/2506.17419",
+   "code": "https://github.com/jinhaoduan/UProp",
+   "lens": "dis",
+   "type": "Sequence",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-30",
+   "id": "xieCalibratingReasoningLanguage2024",
+   "method": "Internal Consistency",
+   "title": "Calibrating Reasoning in Language Models with Internal Consistency",
+   "authors": [
+    "Xie",
+    "Guo",
+    "Yu",
+    "Li"
+   ],
+   "year": 2024,
+   "venue": "NeurIPS",
+   "arxiv": null,
+   "url": "https://doi.org/10.52202/079017-3647",
+   "code": "https://github.com/zhxieml/internal-consistency",
+   "lens": "dis",
+   "type": "Sequence",
+   "access": "W",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "CAL"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-31",
+   "id": "kangScalableBestofNSelection2025",
+   "method": "Self-Certainty",
+   "title": "Scalable Best-of-N Selection for Large Language Models via Self-Certainty",
+   "authors": [
+    "Kang",
+    "Zhao",
+    "Song"
+   ],
+   "year": 2025,
+   "venue": "NeurIPS",
+   "arxiv": null,
+   "url": "https://doi.org/10.52202/085713-0663",
+   "code": "https://github.com/backprop07/Self-Certainty",
+   "lens": "dis",
+   "type": "Sequence",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "DEC"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-32",
+   "id": "zhaoUncertaintyPropagationLLM2025",
+   "method": "SAUP",
+   "title": "Uncertainty Propagation on LLM Agent",
+   "authors": [
+    "Zhao",
+    "Li",
+    "Liu",
+    "Cheng",
+    "Sun",
+    "Oishi",
+    "Osaki",
+    "Matsuda",
+    "Yao",
+    "Zhao",
+    "Chen",
+    "Zhao"
+   ],
+   "year": 2025,
+   "venue": "ACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2025.acl-long.302",
+   "code": null,
+   "lens": "dis",
+   "type": "Sequence",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-33",
+   "id": "cuiEstimatingBlackboxLLM2026",
+   "method": "DisAAD",
+   "title": "Estimating the Black-Box LLM Uncertainty with Distribution-Aligned Adversarial Distillation",
+   "authors": [
+    "Cui",
+    "Ma",
+    "Wang",
+    "Gao",
+    "Zhang"
+   ],
+   "year": 2026,
+   "venue": "ACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2026.acl-long.1979",
+   "code": "https://github.com/huizi-Cui/DisAAD",
+   "lens": "dis",
+   "type": "Sequence",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK",
+    "CAL",
+    "SCR"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-34",
+   "id": "lyuCalibratingLargeLanguage2025",
+   "method": "Consistency",
+   "title": "Calibrating Large Language Models with Sample Consistency",
+   "authors": [
+    "Lyu",
+    "Shridhar",
+    "Malaviya",
+    "Zhang",
+    "Elazar",
+    "Tandon",
+    "Apidianaki",
+    "Sachan",
+    "Callison-Burch"
+   ],
+   "year": 2025,
+   "venue": "AAAI",
+   "arxiv": null,
+   "url": "https://doi.org/10.1609/aaai.v39i18.34120",
+   "code": "https://github.com/veronica320/Calibrating-LLMs-with-Consistency",
+   "lens": "dis",
+   "type": "Sequence",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK",
+    "CAL",
+    "SCR"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-35",
+   "id": "manakulSelfCheckGPTZeroResourceBlackBox2023",
+   "method": "SelfCheckGPT",
+   "title": "SelfCheckGPT: Zero-Resource Black-Box Hallucination Detection for Generative Large Language Models",
+   "authors": [
+    "Manakul",
+    "Liusie",
+    "Gales"
+   ],
+   "year": 2023,
+   "venue": "EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2023.emnlp-main.557",
+   "code": "https://github.com/potsawee/selfcheckgpt",
+   "lens": "dis",
+   "type": "Sequence",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-36",
+   "id": "wangSubjectiveUncertaintyQuantification2025",
+   "method": "Subjective UQ",
+   "title": "On Subjective Uncertainty Quantification and Calibration in Natural Language Generation",
+   "authors": [
+    "Wang",
+    "Holmes"
+   ],
+   "year": 2025,
+   "venue": "AISTATS",
+   "arxiv": "2406.05213",
+   "url": null,
+   "code": "https://github.com/meta-inf/suq-nlg",
+   "lens": "dis",
+   "type": "Sequence",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK",
+    "CAL"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-37",
+   "id": "yadkoriBelieveNotBelieve2024",
+   "method": "Mutual Information",
+   "title": "To Believe or Not to Believe Your LLM: Iterative Prompting for Estimating Epistemic Uncertainty",
+   "authors": [
+    "Yadkori",
+    "Kuzborskij",
+    "György",
+    "Szepesvári"
+   ],
+   "year": 2024,
+   "venue": "NeurIPS",
+   "arxiv": null,
+   "url": "https://doi.org/10.52202/079017-1852",
+   "code": null,
+   "lens": "dis",
+   "type": "Sequence",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-38",
+   "id": "vashurinCoCoAMinimumBayes2025",
+   "method": "CoCoA",
+   "title": "CoCoA: A Minimum Bayes Risk Framework Bridging Confidence and Consistency for Uncertainty Quantification in LLMs",
+   "authors": [
+    "Vashurin",
+    "Goloburda",
+    "Ilina",
+    "Rubashevskii",
+    "Nakov",
+    "Shelmanov",
+    "Panov"
+   ],
+   "year": 2025,
+   "venue": "NeurIPS",
+   "arxiv": "2502.04964",
+   "url": null,
+   "code": "https://github.com/stat-ml/llm_uncertainty_cocoa",
+   "lens": "dis",
+   "type": "Sequence",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-39",
+   "id": "nguyenSemanticEntropyBoosting2025",
+   "method": "SNNE",
+   "title": "Beyond Semantic Entropy: Boosting LLM Uncertainty Quantification with Pairwise Semantic Similarity",
+   "authors": [
+    "Nguyen",
+    "Payani",
+    "Mirzasoleiman"
+   ],
+   "year": 2025,
+   "venue": "Findings of ACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2025.findings-acl.234",
+   "code": "https://github.com/BigML-CS-UCLA/SNNE",
+   "lens": "dis",
+   "type": "Sequence",
+   "access": "B",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-40",
+   "id": "liQuantifyingUnderstandingUncertainty2026",
+   "method": "CoRAP",
+   "title": "Quantifying and Understanding Uncertainty in Large Reasoning Models",
+   "authors": [
+    "Li",
+    "Zhao",
+    "Huai"
+   ],
+   "year": 2026,
+   "venue": "ACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2026.acl-long.1511",
+   "code": null,
+   "lens": "dis",
+   "type": "Sequence",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "ψ_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "COV"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-41",
+   "id": "fuDeepThinkConfidence2026",
+   "method": "DeepConf",
+   "title": "Deep Think with Confidence",
+   "authors": [
+    "Fu",
+    "Wang",
+    "Zhang",
+    "Tian",
+    "Zhao"
+   ],
+   "year": 2026,
+   "venue": "ICLR",
+   "arxiv": "2508.15260",
+   "url": null,
+   "code": "https://github.com/facebookresearch/deepconf",
+   "lens": "dis",
+   "type": "Sequence",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "ψ_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "DEC"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-42",
+   "id": "kimDetectingLLMHallucination2025",
+   "method": "LI",
+   "title": "Detecting LLM Hallucination Through Layer-Wise Information Deficiency: Analysis of Ambiguous Prompts and Unanswerable Questions",
+   "authors": [
+    "Kim",
+    "Lamb",
+    "Bibi",
+    "Torr",
+    "Gal"
+   ],
+   "year": 2025,
+   "venue": "EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2025.emnlp-main.1644",
+   "code": null,
+   "lens": "dis",
+   "type": "Sequence",
+   "access": "W",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "x′"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK",
+    "CAL"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-43",
+   "id": "duanShiftingAttentionRelevance2024",
+   "method": "SentenceSAR",
+   "title": "Shifting Attention to Relevance: Towards the Predictive Uncertainty Quantification of Free-Form Large Language Models",
+   "authors": [
+    "Duan",
+    "Cheng",
+    "Wang",
+    "Zavalny",
+    "Wang",
+    "Xu",
+    "Kailkhura",
+    "Xu"
+   ],
+   "year": 2024,
+   "venue": "ACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2024.acl-long.276",
+   "code": "https://github.com/jinhaoduan/SAR",
+   "lens": "dis",
+   "type": "Sequence",
+   "access": "G",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-44",
+   "id": "yaldizNotDesignLearn2025",
+   "method": "LARS",
+   "title": "Do Not Design, Learn: A Trainable Scoring Function for Uncertainty Estimation in Generative LLMs",
+   "authors": [
+    "Yaldiz",
+    "Bakman",
+    "Buyukates",
+    "Tao",
+    "Ramakrishna",
+    "Dimitriadis",
+    "Zhao",
+    "Avestimehr"
+   ],
+   "year": 2025,
+   "venue": "Findings of NAACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2025.findings-naacl.41",
+   "code": "https://github.com/duygunuryldz/LARS",
+   "lens": "dis",
+   "type": "Sequence",
+   "access": "G",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-45",
+   "id": "fengDontHallucinateAbstain2024",
+   "method": "COMPETE",
+   "title": "Don't Hallucinate, Abstain: Identifying LLM Knowledge Gaps via Multi-LLM Collaboration",
+   "authors": [
+    "Feng",
+    "Shi",
+    "Wang",
+    "Ding",
+    "Balachandran",
+    "Tsvetkov"
+   ],
+   "year": 2024,
+   "venue": "ACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2024.acl-long.786",
+   "code": "https://github.com/BunsenFeng/AbstainQA",
+   "lens": "dis",
+   "type": "Sequence",
+   "access": "G",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "x′"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "DEC"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-46",
+   "id": "bakmanMARSMeaningAwareResponse2024",
+   "method": "MARS",
+   "title": "MARS: Meaning-Aware Response Scoring for Uncertainty Estimation in Generative LLMs",
+   "authors": [
+    "Bakman",
+    "Yaldiz",
+    "Buyukates",
+    "Tao",
+    "Dimitriadis",
+    "Avestimehr"
+   ],
+   "year": 2024,
+   "venue": "ACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2024.acl-long.419",
+   "code": "https://github.com/Ybakman/LLM_Uncertainty",
+   "lens": "dis",
+   "type": "Sequence",
+   "access": "G",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅",
+    "y"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:dis-survey",
+   "notes": "Z cell is '∅ / y' in the table: read as alternatives, stored as both."
+  },
+  {
+   "row": "dis-47",
+   "id": "fadeevaFactCheckingOutputLarge2024",
+   "method": "CCP",
+   "title": "Fact-Checking the Output of Large Language Models via Token-Level Uncertainty Quantification",
+   "authors": [
+    "Fadeeva",
+    "Rubashevskii",
+    "Shelmanov",
+    "Petrakov",
+    "Li",
+    "Mubarak",
+    "Tsymbalov",
+    "Kuzmin",
+    "Panchenko",
+    "Baldwin",
+    "Nakov",
+    "Panov"
+   ],
+   "year": 2024,
+   "venue": "Findings of ACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2024.findings-acl.558",
+   "code": "https://github.com/IINemo/lm-polygraph",
+   "lens": "dis",
+   "type": "Claim",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "dis-48",
+   "id": "quachConformalLanguageModeling2024",
+   "method": "Conformal LM",
+   "title": "Conformal Language Modeling",
+   "authors": [
+    "Quach",
+    "Fisch",
+    "Schuster",
+    "Yala",
+    "Sohn",
+    "Jaakkola",
+    "Barzilay"
+   ],
+   "year": 2024,
+   "venue": "ICLR",
+   "arxiv": "2306.10193",
+   "url": null,
+   "code": "https://github.com/Varal7/conformal-language-modeling",
+   "lens": "dis",
+   "type": "Claim",
+   "access": "G",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "ψ_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "COV"
+   ],
+   "table": "tab:dis-survey"
+  },
+  {
+   "row": "rep-01",
+   "id": "renOutofDistributionDetectionSelective2023",
+   "method": "Rel. Mahalanobis Dist.",
+   "title": "Out-of-Distribution Detection and Selective Generation for Conditional Language Models",
+   "authors": [
+    "Ren",
+    "Luo",
+    "Zhao",
+    "Krishna",
+    "Saleh",
+    "Lakshminarayanan",
+    "Liu"
+   ],
+   "year": 2023,
+   "venue": "ICLR",
+   "arxiv": "2209.15558",
+   "url": null,
+   "code": null,
+   "lens": "rep",
+   "type": "Fixed",
+   "access": "W",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-02",
+   "id": "braunUSpaceUncoveringWhen2026",
+   "method": "U-Space",
+   "title": "U-Space: Uncovering When and Why Uncertainty Arises in Language Models",
+   "authors": [
+    "Braun",
+    "Loose",
+    "Herzog",
+    "Ceccatelli",
+    "Rohrbach",
+    "Eisenbarth",
+    "Cavallaro"
+   ],
+   "year": 2026,
+   "venue": "arXiv",
+   "arxiv": "2610.09087",
+   "url": "http://arxiv.org/abs/2610.09087",
+   "code": "https://github.com/s2labres/U-Space",
+   "lens": "rep",
+   "type": "Fixed",
+   "access": "W",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "ρ_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-03",
+   "id": "chenLLMsInternalStates2024",
+   "method": "INSIDE",
+   "title": "INSIDE: LLMs' Internal States Retain the Power of Hallucination Detection",
+   "authors": [
+    "Chen",
+    "Liu",
+    "Chen",
+    "Gu",
+    "Wu",
+    "Tao",
+    "Fu",
+    "Ye"
+   ],
+   "year": 2024,
+   "venue": "ICLR",
+   "arxiv": "2402.03744",
+   "url": null,
+   "code": "https://github.com/alibaba/eigenscore",
+   "lens": "rep",
+   "type": "Fixed",
+   "access": "W",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "y"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-04",
+   "id": "liGradientsRespectSemantics2026",
+   "method": "SemGrad",
+   "title": "Gradients with Respect to Semantics Preserving Embeddings Tell the Uncertainty of Large Language Models",
+   "authors": [
+    "Li",
+    "Lv",
+    "Li",
+    "Zhang",
+    "Liu"
+   ],
+   "year": 2026,
+   "venue": "ICML",
+   "arxiv": "2605.04638",
+   "url": null,
+   "code": "https://github.com/mingdali6717/SemGrad",
+   "lens": "rep",
+   "type": "Fixed",
+   "access": "W",
+   "ns": [
+    "surr-dis"
+   ],
+   "Z": [
+    "x′"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-05",
+   "id": "kadavathLanguageModelsMostly2022",
+   "method": "P(IK)",
+   "title": "Language Models (Mostly) Know What They Know",
+   "authors": [
+    "Kadavath",
+    "Conerly",
+    "Askell",
+    "Henighan",
+    "Drain",
+    "Perez",
+    "Schiefer",
+    "Hatfield-Dodds",
+    "DasSarma",
+    "Tran-Johnson",
+    "Johnston",
+    "El-Showk",
+    "Jones",
+    "Elhage",
+    "Hume",
+    "Chen",
+    "Bai",
+    "Bowman",
+    "Fort",
+    "Ganguli",
+    "Hernandez",
+    "Jacobson",
+    "Kernion",
+    "Kravec",
+    "Lovitt",
+    "Ndousse",
+    "Olsson",
+    "Ringer",
+    "Amodei",
+    "Brown",
+    "Clark",
+    "Joseph",
+    "Mann",
+    "McCandlish",
+    "Olah",
+    "Kaplan"
+   ],
+   "year": 2022,
+   "venue": "arXiv",
+   "arxiv": "2207.05221",
+   "url": "http://arxiv.org/abs/2207.05221",
+   "code": null,
+   "lens": "rep",
+   "type": "Fixed",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "CAL"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-06",
+   "id": "zhangReasoningModelsKnow2025",
+   "method": "Probe Reasoning",
+   "title": "Reasoning Models Know When They're Right: Probing Hidden States for Self-Verification",
+   "authors": [
+    "Zhang",
+    "Chen",
+    "Pan",
+    "Zhao",
+    "Panda",
+    "Li",
+    "He"
+   ],
+   "year": 2025,
+   "venue": "COLM",
+   "arxiv": "2504.05419",
+   "url": null,
+   "code": "https://github.com/AngelaZZZ-611/reasoning_models_probing",
+   "lens": "rep",
+   "type": "Fixed",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK",
+    "CAL"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-07",
+   "id": "jiLLMInternalStates2024",
+   "method": "LLM Internal States",
+   "title": "LLM Internal States Reveal Hallucination Risk Faced With a Query",
+   "authors": [
+    "Ji",
+    "Chen",
+    "Ishii",
+    "Cahyawijaya",
+    "Bang",
+    "Wilie",
+    "Fung"
+   ],
+   "year": 2024,
+   "venue": "BlackboxNLP Workshop",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2024.blackboxnlp-1.6",
+   "code": "https://github.com/ziweiji/Internal_States_Reveal_Hallucination",
+   "lens": "rep",
+   "type": "Fixed",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "DEC"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-08",
+   "id": "wangLAFaCTAttributionbasedLocalization2026",
+   "method": "LAFaCT",
+   "title": "LAFaCT: Attribution-Based Localization and Focused Sequential Analysis of Fact-Critical Tokens for Hallucination Detection",
+   "authors": [
+    "Wang",
+    "Li",
+    "Zhang",
+    "Mao"
+   ],
+   "year": 2026,
+   "venue": "ACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2026.acl-long.312",
+   "code": null,
+   "lens": "rep",
+   "type": "Fixed",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-09",
+   "id": "gottesmanEstimatingKnowledgeLarge2024",
+   "method": "KEEN",
+   "title": "Estimating Knowledge in Large Language Models Without Generating a Single Token",
+   "authors": [
+    "Gottesman",
+    "Geva"
+   ],
+   "year": 2024,
+   "venue": "EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2024.emnlp-main.232",
+   "code": "https://github.com/dhgottesman/keen_estimating_knowledge_in_llms",
+   "lens": "rep",
+   "type": "Fixed",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "REG"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-10",
+   "id": "liHALLUCANAFixingLLM2025",
+   "method": "HALLUCANA",
+   "title": "HALLUCANA: Fixing LLM Hallucination with A Canary Lookahead",
+   "authors": [
+    "Li",
+    "Dayanik",
+    "Tyagi",
+    "Pierleoni"
+   ],
+   "year": 2025,
+   "venue": "Findings of NAACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2025.findings-naacl.12",
+   "code": null,
+   "lens": "rep",
+   "type": "Fixed",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR",
+    "UNS"
+   ],
+   "metrics": [
+    "RNK",
+    "REG"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-11",
+   "id": "mielkeReducingConversationalAgents2022",
+   "method": "Linguistic Calibration",
+   "title": "Reducing Conversational Agents' Overconfidence Through Linguistic Calibration",
+   "authors": [
+    "Mielke",
+    "Szlam",
+    "Dinan",
+    "Boureau"
+   ],
+   "year": 2022,
+   "venue": "TACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.1162/tacl_a_00494",
+   "code": null,
+   "lens": "rep",
+   "type": "Fixed",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "CAL",
+    "SCR"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-12",
+   "id": "khanmohammadiCalibratingLLMConfidence2025",
+   "method": "CCPS",
+   "title": "Calibrating LLM Confidence by Probing Perturbed Representation Stability",
+   "authors": [
+    "Khanmohammadi",
+    "Miahi",
+    "Mardikoraem",
+    "Kaur",
+    "Brugere",
+    "Smiley",
+    "Thind",
+    "Ghassemi"
+   ],
+   "year": 2025,
+   "venue": "EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2025.emnlp-main.530",
+   "code": "https://github.com/ledengary/CCPS",
+   "lens": "rep",
+   "type": "Fixed",
+   "access": "W",
+   "ns": [
+    "surr-dis",
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK",
+    "CAL"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-13",
+   "id": "huHARPHallucinationDetection2026",
+   "method": "HaRP",
+   "title": "HARP: Hallucination Detection via Reasoning Subspace Projection",
+   "authors": [
+    "Hu",
+    "Tu",
+    "Shengyu",
+    "Li",
+    "Wang",
+    "Chen",
+    "Zhou",
+    "Shan"
+   ],
+   "year": 2026,
+   "venue": "ICLR",
+   "arxiv": "2509.11536",
+   "url": null,
+   "code": null,
+   "lens": "rep",
+   "type": "Fixed",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "ρ_S",
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-14",
+   "id": "duGeometricDeviationUnsupervised2026",
+   "method": "Geometric Deviation",
+   "title": "Geometric Deviation as an Unsupervised Pre-Generation Reliability Signal: Probing LLM Representations for Answerability",
+   "authors": [
+    "Du"
+   ],
+   "year": 2026,
+   "venue": "TrustNLP Workshop",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2026.trustnlp-main.22",
+   "code": "https://github.com/yucheng-du/geom-reliability",
+   "lens": "rep",
+   "type": "Selected",
+   "access": "W",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "UNS"
+   ],
+   "metrics": [
+    "RNK",
+    "DEC"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-15",
+   "id": "bakmanUncertaintyFeatureGaps2025",
+   "method": "Feature-Gaps",
+   "title": "Uncertainty as Feature Gaps: Epistemic Uncertainty Quantification of LLMs in Contextual Question-Answering",
+   "authors": [
+    "Bakman",
+    "Huang",
+    "Zhu",
+    "Kumar",
+    "Samuel",
+    "Liu"
+   ],
+   "year": 2025,
+   "venue": "NeurIPS",
+   "arxiv": "2510.02671",
+   "url": null,
+   "code": "https://github.com/Ybakman/Feature-Gaps",
+   "lens": "rep",
+   "type": "Selected",
+   "access": "W",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-16",
+   "id": "burnsDiscoveringLatentKnowledge2023",
+   "method": "CCS",
+   "title": "Discovering Latent Knowledge in Language Models without Supervision",
+   "authors": [
+    "Burns",
+    "Ye",
+    "Klein",
+    "Steinhardt"
+   ],
+   "year": 2023,
+   "venue": "ICLR",
+   "arxiv": "2212.03827",
+   "url": null,
+   "code": "https://github.com/collin-burns/discovering_latent_knowledge",
+   "lens": "rep",
+   "type": "Selected",
+   "access": "W",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "DEC"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-17",
+   "id": "liuUncertaintyEstimationQuantification2024",
+   "method": "Supervised UE",
+   "title": "Uncertainty Estimation and Quantification for LLMs: A Simple Supervised Approach",
+   "authors": [
+    "Liu",
+    "Pan",
+    "Li",
+    "Chen"
+   ],
+   "year": 2024,
+   "venue": "arXiv",
+   "arxiv": "2404.15993",
+   "url": "http://arxiv.org/abs/2404.15993",
+   "code": "https://github.com/LoveCatc/supervised-llm-uncertainty-estimation",
+   "lens": "rep",
+   "type": "Selected",
+   "access": "W",
+   "ns": [
+    "surr-dis"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK",
+    "CAL",
+    "SCR"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-18",
+   "id": "ahdritzDistinguishingKnowableUnknowable2024",
+   "method": "Distinguish Known",
+   "title": "Distinguishing the Knowable from the Unknowable with Language Models",
+   "authors": [
+    "Ahdritz",
+    "Qin",
+    "Vyas",
+    "Barak",
+    "Edelman"
+   ],
+   "year": 2024,
+   "venue": "ICML",
+   "arxiv": "2402.03563",
+   "url": null,
+   "code": "https://github.com/KempnerInstitute/llm_uncertainty",
+   "lens": "rep",
+   "type": "Selected",
+   "access": "W",
+   "ns": [
+    "surr-dis"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-19",
+   "id": "joshiPersonasWayModel2024",
+   "method": "Persona Probe",
+   "title": "Personas as a Way to Model Truthfulness in Language Models",
+   "authors": [
+    "Joshi",
+    "Rando",
+    "Saparov",
+    "Kim",
+    "He"
+   ],
+   "year": 2024,
+   "venue": "EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2024.emnlp-main.364",
+   "code": null,
+   "lens": "rep",
+   "type": "Selected",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "DEC"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-20",
+   "id": "afzalKnowingSayingLLM2025",
+   "method": "CoT Success Predictor",
+   "title": "Knowing Before Saying: LLM Representations Encode Information About Chain-of-Thought Success Before Completion",
+   "authors": [
+    "Afzal",
+    "Matthes",
+    "Chechik",
+    "Ziser"
+   ],
+   "year": 2025,
+   "venue": "Findings of ACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2025.findings-acl.662",
+   "code": "https://github.com/anum94/CoTpred",
+   "lens": "rep",
+   "type": "Selected",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "DEC"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-21",
+   "id": "azariaInternalStateLLM2023",
+   "method": "SAPLMA",
+   "title": "The Internal State of an LLM Knows When It's Lying",
+   "authors": [
+    "Azaria",
+    "Mitchell"
+   ],
+   "year": 2023,
+   "venue": "Findings of EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2023.findings-emnlp.68",
+   "code": null,
+   "lens": "rep",
+   "type": "Selected",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK",
+    "DEC"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-22",
+   "id": "zhangDetectingHallucinationLarge2025",
+   "method": "MHAD",
+   "title": "Detecting Hallucination in Large Language Models Through Deep Internal Representation Analysis",
+   "authors": [
+    "Zhang",
+    "Song",
+    "Wu",
+    "Tian",
+    "Zhou",
+    "Xu",
+    "Yang",
+    "Zhang"
+   ],
+   "year": 2025,
+   "venue": "IJCAI",
+   "arxiv": null,
+   "url": "https://doi.org/10.24963/ijcai.2025/929",
+   "code": null,
+   "lens": "rep",
+   "type": "Selected",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-23",
+   "id": "luoTwoPathwaysTruthfulness2026",
+   "method": "Intrinsic Encoding",
+   "title": "Two Pathways to Truthfulness: On the Intrinsic Encoding of LLM Hallucinations",
+   "authors": [
+    "Luo",
+    "Peng",
+    "Li",
+    "Wei",
+    "Song",
+    "Wang",
+    "Yang",
+    "Zhang",
+    "Jin",
+    "Wei",
+    "Wang"
+   ],
+   "year": 2026,
+   "venue": "ACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2026.acl-long.1173",
+   "code": null,
+   "lens": "rep",
+   "type": "Selected",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-24",
+   "id": "hanSimpleFactualityProbes2025",
+   "method": "Factuality Probe",
+   "title": "Simple Factuality Probes Detect Hallucinations in Long-Form Natural Language Generation",
+   "authors": [
+    "Han",
+    "Band",
+    "Razzak",
+    "Kossen",
+    "Rudner",
+    "Gal"
+   ],
+   "year": 2025,
+   "venue": "Findings of EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2025.findings-emnlp.880",
+   "code": "https://github.com/JThh/fact-probe",
+   "lens": "rep",
+   "type": "Selected",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-25",
+   "id": "duHaloScopeHarnessingUnlabeled2024",
+   "method": "HaloScope",
+   "title": "HaloScope: Harnessing Unlabeled LLM Generations for Hallucination Detection",
+   "authors": [
+    "Du",
+    "Xiao",
+    "Li"
+   ],
+   "year": 2024,
+   "venue": "NeurIPS",
+   "arxiv": null,
+   "url": "https://doi.org/10.52202/079017-3270",
+   "code": "https://github.com/deeplearning-wisc/haloscope",
+   "lens": "rep",
+   "type": "Selected",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-26",
+   "id": "parkSteerLLMLatents2025",
+   "method": "Steer Latents",
+   "title": "Steer LLM Latents for Hallucination Detection",
+   "authors": [
+    "Park",
+    "Du",
+    "Yeh",
+    "Wang",
+    "Li"
+   ],
+   "year": 2025,
+   "venue": "ICML",
+   "arxiv": "2503.01917",
+   "url": null,
+   "code": "https://github.com/deeplearning-wisc/tsv",
+   "lens": "rep",
+   "type": "Selected",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-27",
+   "id": "vazhentsevTokenLevelDensityBasedUncertainty2025",
+   "method": "SATMD",
+   "title": "Token-Level Density-Based Uncertainty Quantification Methods for Eliciting Truthfulness of Large Language Models",
+   "authors": [
+    "Vazhentsev",
+    "Rvanova",
+    "Lazichny",
+    "Panchenko",
+    "Panov",
+    "Baldwin",
+    "Shelmanov"
+   ],
+   "year": 2025,
+   "venue": "COLING",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2025.naacl-long.113",
+   "code": "https://github.com/ArtemVazh/token_mahalanobis_distance",
+   "lens": "rep",
+   "type": "Selected",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-28",
+   "id": "hanSemanticEntropyProbes2024",
+   "method": "SEP",
+   "title": "Semantic Entropy Probes: Robust and Cheap Hallucination Detection in LLMs",
+   "authors": [
+    "Han",
+    "Kossen",
+    "Razzak",
+    "Schut",
+    "Malik",
+    "Gal"
+   ],
+   "year": 2024,
+   "venue": "ICML",
+   "arxiv": "2406.15927",
+   "url": null,
+   "code": "https://github.com/OATML/semantic-entropy-probes",
+   "lens": "rep",
+   "type": "Selected",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-29",
+   "id": "hanSemanticEntropyNeurons2024",
+   "method": "Sparse SEP",
+   "title": "Semantic Entropy Neurons: Encoding Semantic Uncertainty in the Latent Space of LLMs",
+   "authors": [
+    "Han",
+    "Kossen",
+    "Razzak",
+    "Gal"
+   ],
+   "year": 2024,
+   "venue": "MINT: Foundation Model Interventions",
+   "arxiv": null,
+   "url": null,
+   "code": null,
+   "lens": "rep",
+   "type": "Selected",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-30",
+   "id": "sreyUnsupervisedHallucinationDetection2025",
+   "method": "IRIS",
+   "title": "Unsupervised Hallucination Detection by Inspecting Reasoning Processes",
+   "authors": [
+    "Srey",
+    "Wu",
+    "Luu"
+   ],
+   "year": 2025,
+   "venue": "EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2025.emnlp-main.1124",
+   "code": "https://github.com/ponhvoan/iris",
+   "lens": "rep",
+   "type": "Selected",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "DEC"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-31",
+   "id": "jiCalibratingVerbalUncertainty2025",
+   "method": "Calibrate Verbal Unc.",
+   "title": "Calibrating Verbal Uncertainty as a Linear Feature to Reduce Hallucinations",
+   "authors": [
+    "Ji",
+    "Yu",
+    "Koishekenov",
+    "Bang",
+    "Hartshorn",
+    "Schelten",
+    "Zhang",
+    "Fung",
+    "Cancedda"
+   ],
+   "year": 2025,
+   "venue": "EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2025.emnlp-main.187",
+   "code": "https://github.com/facebookresearch/verbal_uncertainty_feature_calibration",
+   "lens": "rep",
+   "type": "Selected",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-32",
+   "id": "mrykhinPromptEmbeddingProbes2026",
+   "method": "PEP",
+   "title": "Prompt Embedding Probes (PEP): Hallucination Detection in LLMs from Hidden States",
+   "authors": [
+    "Mrykhin",
+    "Malykh"
+   ],
+   "year": 2026,
+   "venue": "arXiv",
+   "arxiv": "2608.08024",
+   "url": "http://arxiv.org/abs/2608.08024",
+   "code": "https://github.com/zazamrykh/internal_probing",
+   "lens": "rep",
+   "type": "Selected",
+   "access": "W",
+   "ns": [
+    "surr-dis",
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-33",
+   "id": "ferrandoKnowThisEntity2025",
+   "method": "Knowledge Awareness",
+   "title": "Do I Know This Entity? Knowledge Awareness and Hallucinations in Language Models",
+   "authors": [
+    "Ferrando",
+    "Obeso",
+    "Rajamanoharan",
+    "Nanda"
+   ],
+   "year": 2025,
+   "venue": "ICLR",
+   "arxiv": "2411.14257",
+   "url": null,
+   "code": "https://github.com/javiferran/sae_entities",
+   "lens": "rep",
+   "type": "Selected",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "ρ_S",
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-34",
+   "id": "chenHalluSAEDetectingHallucinations2026",
+   "method": "HalluSAE",
+   "title": "HalluSAE: Detecting Hallucinations in Large Language Models via Sparse Auto-Encoders",
+   "authors": [
+    "Chen",
+    "Fan",
+    "Wang",
+    "Leng",
+    "Wu",
+    "Zheng",
+    "Sun",
+    "Wu"
+   ],
+   "year": 2026,
+   "venue": "arXiv",
+   "arxiv": "2604.16430",
+   "url": "http://arxiv.org/abs/2604.16430",
+   "code": null,
+   "lens": "rep",
+   "type": "Selected",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "ρ_S",
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK",
+    "DEC"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-35",
+   "id": "xiongFaithfulRetrievalAugmentedGeneration2026",
+   "method": "RAGLens",
+   "title": "Toward Faithful Retrieval-Augmented Generation with Sparse Autoencoders",
+   "authors": [
+    "Xiong",
+    "He",
+    "Liu",
+    "Sinha",
+    "Zhang"
+   ],
+   "year": 2026,
+   "venue": "ICLR",
+   "arxiv": "2512.08892",
+   "url": null,
+   "code": "https://github.com/Teddy-XiongGZ/RAGLens",
+   "lens": "rep",
+   "type": "Selected",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "ρ_S",
+    "U_S"
+   ],
+   "targets": [
+    "GRD"
+   ],
+   "metrics": [
+    "RNK",
+    "DEC"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-36",
+   "id": "wangLatentSpaceChainofEmbedding2025",
+   "method": "Chain-of-Embedding",
+   "title": "Latent Space Chain-of-Embedding Enables Output-Free LLM Self-Evaluation",
+   "authors": [
+    "Wang",
+    "Zhang",
+    "Yang",
+    "Wong",
+    "Wang"
+   ],
+   "year": 2025,
+   "venue": "ICLR",
+   "arxiv": "2410.13640",
+   "url": null,
+   "code": "https://github.com/Alsace08/Chain-of-Embedding",
+   "lens": "rep",
+   "type": "All",
+   "access": "W",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "∅"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-37",
+   "id": "dakhmoucheCanLinearProbes2025",
+   "method": "Layer Ens. LR",
+   "title": "Can Linear Probes Measure LLM Uncertainty ?",
+   "authors": [
+    "Dakhmouche",
+    "Letellier",
+    "Gorji"
+   ],
+   "year": 2025,
+   "venue": "NeurIPS",
+   "arxiv": "2510.04108",
+   "url": null,
+   "code": null,
+   "lens": "rep",
+   "type": "All",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK",
+    "CAL"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-38",
+   "id": "sureshCrossLayerAttentionProbing2025",
+   "method": "CLAP",
+   "title": "Cross-Layer Attention Probing for Fine-Grained Hallucination Detection",
+   "authors": [
+    "Suresh",
+    "Aljundi",
+    "Nkisi-Orji",
+    "Wiratunga"
+   ],
+   "year": 2025,
+   "venue": "arXiv",
+   "arxiv": "2509.09700",
+   "url": "http://arxiv.org/abs/2509.09700",
+   "code": "https://github.com/itsmemala/CLAP",
+   "lens": "rep",
+   "type": "All",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-39",
+   "id": "maoDigitalDunningKrugerEffect2026",
+   "method": "GHOST",
+   "title": "The Digital Dunning-Kruger Effect: Decoupling Hallucinations via Geometric Hidden-State Observation for Semantic Truthfulness",
+   "authors": [
+    "Mao",
+    "Yu",
+    "Li",
+    "Jiang",
+    "Li",
+    "Zhang",
+    "Xu",
+    "Huang",
+    "Liu"
+   ],
+   "year": 2026,
+   "venue": "ACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2026.acl-long.993",
+   "code": null,
+   "lens": "rep",
+   "type": "All",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-40",
+   "id": "niReProbeEfficientTestTime2026",
+   "method": "ReProbe",
+   "title": "ReProbe: Efficient Test-Time Scaling of Multi-Step Reasoning by Probing Internal States of Large Language Models",
+   "authors": [
+    "Ni",
+    "Fadeeva",
+    "Wu",
+    "Akhtar",
+    "Zhang",
+    "Ash",
+    "Leippold",
+    "Baldwin",
+    "Ng",
+    "Shelmanov",
+    "Sachan"
+   ],
+   "year": 2026,
+   "venue": "ACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2026.acl-long.536",
+   "code": "https://github.com/ReProbe/ReProbe",
+   "lens": "rep",
+   "type": "All",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "rep-41",
+   "id": "sreyLearningUncertaintySequential2026",
+   "method": "SIVR",
+   "title": "Learning Uncertainty from Sequential Internal Dispersion in Large Language Models",
+   "authors": [
+    "Srey",
+    "Wu",
+    "Nguyen",
+    "Luu"
+   ],
+   "year": 2026,
+   "venue": "ACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2026.acl-long.1862",
+   "code": "https://github.com/ponhvoan/internal-variance",
+   "lens": "rep",
+   "type": "All",
+   "access": "W",
+   "ns": [
+    "surr-dis",
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:rep-survey"
+  },
+  {
+   "row": "str-01",
+   "id": "sriramananLLMCheckInvestigatingDetection2024",
+   "method": "LLM Check",
+   "title": "LLM-Check: Investigating Detection of Hallucinations in Large Language Models",
+   "authors": [
+    "Sriramanan",
+    "Bharti",
+    "Sadasivan",
+    "Saha",
+    "Kattakinda",
+    "Feizi"
+   ],
+   "year": 2024,
+   "venue": "NeurIPS",
+   "arxiv": null,
+   "url": "https://doi.org/10.52202/079017-1077",
+   "code": "https://github.com/GaurangSriramanan/LLM_Check_Hallucination_Detection",
+   "lens": "str",
+   "type": "MHA",
+   "access": "W",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR",
+    "GRD"
+   ],
+   "metrics": [
+    "RNK",
+    "DEC"
+   ],
+   "table": "tab:str-survey"
+  },
+  {
+   "row": "str-02",
+   "id": "bazarovaHallucinationDetectionLLMs2026",
+   "method": "TOHA",
+   "title": "Hallucination Detection in LLMs with Topological Divergence on Attention Graphs",
+   "authors": [
+    "Bazarova",
+    "Volodichev",
+    "Yugay",
+    "Shulga",
+    "Ermilova",
+    "Polev",
+    "Belikova",
+    "Parchiev",
+    "Simakov",
+    "Savchenko",
+    "Savchenko",
+    "Barannikov",
+    "Zaytsev"
+   ],
+   "year": 2026,
+   "venue": "ACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2026.acl-long.704",
+   "code": "https://github.com/sb-ai-lab/TOHA",
+   "lens": "str",
+   "type": "MHA",
+   "access": "W",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "GRD"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:str-survey"
+  },
+  {
+   "row": "str-03",
+   "id": "liuRFSGuardDetectingReasoning2026",
+   "method": "RFS Guard",
+   "title": "RFS-Guard: Detecting Reasoning Hallucinations via Cross-Phase Routing Focus in Large Reasoning Models",
+   "authors": [
+    "Liu",
+    "Zhouhua",
+    "Liu",
+    "Liu",
+    "Li",
+    "Wang"
+   ],
+   "year": 2026,
+   "venue": "ACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2026.acl-long.885",
+   "code": null,
+   "lens": "str",
+   "type": "MHA",
+   "access": "W",
+   "ns": [
+    "native"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK",
+    "DEC"
+   ],
+   "table": "tab:str-survey"
+  },
+  {
+   "row": "str-04",
+   "id": "ostmeierGradientStableAttentionHeads2026",
+   "method": "Attention Head Entropy",
+   "title": "Gradient-Stable Attention Heads Signal LLM Correctness",
+   "authors": [
+    "Ostmeier",
+    "Axelrod",
+    "Varma",
+    "Aali",
+    "Zhang",
+    "Paschali",
+    "Koyejo",
+    "Langlotz",
+    "Chaudhari"
+   ],
+   "year": 2026,
+   "venue": "arXiv",
+   "arxiv": "2602.13699",
+   "url": "http://arxiv.org/abs/2602.13699",
+   "code": "https://github.com/StanfordMIMI/HeadEntropy",
+   "lens": "str",
+   "type": "MHA",
+   "access": "W",
+   "ns": [
+    "surr-dis"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK",
+    "CAL"
+   ],
+   "table": "tab:str-survey"
+  },
+  {
+   "row": "str-05",
+   "id": "yuksekgonulAttentionSatisfiesConstraintSatisfaction2024",
+   "method": "SAT Probe",
+   "title": "Attention Satisfies: A Constraint-Satisfaction Lens on Factual Errors of Language Models",
+   "authors": [
+    "Yuksekgonul",
+    "Chandrasekaran",
+    "Jones",
+    "Gunasekar",
+    "Naik",
+    "Palangi",
+    "Kamar",
+    "Nushi"
+   ],
+   "year": 2024,
+   "venue": "ICLR",
+   "arxiv": "2309.15098",
+   "url": null,
+   "code": "https://github.com/microsoft/mechanistic-error-probe",
+   "lens": "str",
+   "type": "MHA",
+   "access": "W",
+   "ns": [
+    "surr-dis"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:str-survey"
+  },
+  {
+   "row": "str-06",
+   "id": "liLanguageModelUncertainty2025",
+   "method": "UQAC",
+   "title": "Language Model Uncertainty Quantification with Attention Chain",
+   "authors": [
+    "Li",
+    "Qiang",
+    "Moukheiber",
+    "Zhang"
+   ],
+   "year": 2025,
+   "venue": "COLM",
+   "arxiv": "2503.19168",
+   "url": null,
+   "code": "https://github.com/Yinghao-Li/UQAC",
+   "lens": "str",
+   "type": "MHA",
+   "access": "W",
+   "ns": [
+    "surr-dis"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "CAL",
+    "RNK"
+   ],
+   "table": "tab:str-survey"
+  },
+  {
+   "row": "str-07",
+   "id": "liuAttentionguidedSelfreflectionZeroshot2025",
+   "method": "AGSER",
+   "title": "Attention-Guided Self-Reflection for Zero-Shot Hallucination Detection in Large Language Models",
+   "authors": [
+    "Liu",
+    "Chen",
+    "Ding",
+    "Song",
+    "Wang",
+    "Wu",
+    "Wang"
+   ],
+   "year": 2025,
+   "venue": "EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2025.emnlp-main.1063",
+   "code": null,
+   "lens": "str",
+   "type": "MHA",
+   "access": "W",
+   "ns": [
+    "surr-dis"
+   ],
+   "Z": [
+    "x′"
+   ],
+   "S": [
+    "Z_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:str-survey"
+  },
+  {
+   "row": "str-08",
+   "id": "vandijkDetectingHallucinationsLarge2026",
+   "method": "Attn. Divergence Signals",
+   "title": "Detecting Hallucinations in Large Language Models via Internal Attention Divergence Signals",
+   "authors": [
+    "van Dijk"
+   ],
+   "year": 2026,
+   "venue": "ACL Workshop",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2026.acl-srw.6",
+   "code": null,
+   "lens": "str",
+   "type": "MHA",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK",
+    "CAL"
+   ],
+   "table": "tab:str-survey"
+  },
+  {
+   "row": "str-09",
+   "id": "binkowskiHallucinationDetectionLLMs2025",
+   "method": "LapEigvals",
+   "title": "Hallucination Detection in LLMs Using Spectral Features of Attention Maps",
+   "authors": [
+    "Binkowski",
+    "Janiak",
+    "Sawczyn",
+    "Gabrys",
+    "Kajdanowicz"
+   ],
+   "year": 2025,
+   "venue": "EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2025.emnlp-main.1239",
+   "code": "https://github.com/graphml-lab-pwr/lapeigvals",
+   "lens": "str",
+   "type": "MHA",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:str-survey"
+  },
+  {
+   "row": "str-10",
+   "id": "shelmanovHeadPredictHead2025",
+   "method": "Uncertainty Head",
+   "title": "A Head to Predict and a Head to Question: Pre-Trained Uncertainty Quantification Heads for Hallucination Detection in LLM Outputs",
+   "authors": [
+    "Shelmanov",
+    "Fadeeva",
+    "Tsvigun",
+    "Tsvigun",
+    "Xie",
+    "Kiselev",
+    "Daheim",
+    "Zhang",
+    "Vazhentsev",
+    "Sachan",
+    "Nakov",
+    "Baldwin"
+   ],
+   "year": 2025,
+   "venue": "EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2025.emnlp-main.1809",
+   "code": "https://github.com/IINemo/llm-uncertainty-head",
+   "lens": "str",
+   "type": "MHA",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:str-survey"
+  },
+  {
+   "row": "str-11",
+   "id": "miLogicalConsistencyBridge2026",
+   "method": "LaaB",
+   "title": "Logical Consistency as a Bridge: Improving LLM Hallucination Detection via Label Constraint Modeling between Responses and Self-Judgments",
+   "authors": [
+    "Mi",
+    "Sheng",
+    "Wang",
+    "Hu",
+    "Sun",
+    "Wang",
+    "Zeng",
+    "Li",
+    "Wang",
+    "Cao"
+   ],
+   "year": 2026,
+   "venue": "ACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2026.acl-long.286",
+   "code": "https://github.com/ICTMCG/LaaB",
+   "lens": "str",
+   "type": "MHA",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "DEC"
+   ],
+   "table": "tab:str-survey"
+  },
+  {
+   "row": "str-12",
+   "id": "zhangEnhancingUncertaintyBasedHallucination2023",
+   "method": "Focus",
+   "title": "Enhancing Uncertainty-Based Hallucination Detection with Stronger Focus",
+   "authors": [
+    "Zhang",
+    "Qiu",
+    "Guo",
+    "Deng",
+    "Zhang",
+    "Zhang",
+    "Zhou",
+    "Wang",
+    "Fu"
+   ],
+   "year": 2023,
+   "venue": "EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2023.emnlp-main.58",
+   "code": "https://github.com/zthang/Focus",
+   "lens": "str",
+   "type": "MHA",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "CAL",
+    "REG"
+   ],
+   "table": "tab:str-survey"
+  },
+  {
+   "row": "str-13",
+   "id": "linContextualizedSequenceLikelihood2024",
+   "method": "Contextualized Seq. Likelihood",
+   "title": "Contextualized Sequence Likelihood: Enhanced Confidence Scores for Natural Language Generation",
+   "authors": [
+    "Lin",
+    "Trivedi",
+    "Sun"
+   ],
+   "year": 2024,
+   "venue": "EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2024.emnlp-main.578",
+   "code": "https://github.com/zlin7/ContextSL",
+   "lens": "str",
+   "type": "MHA",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:str-survey"
+  },
+  {
+   "row": "str-14",
+   "id": "chuangLookbackLensDetecting2024",
+   "method": "Lookback Ratio",
+   "title": "Lookback Lens: Detecting and Mitigating Contextual Hallucinations in Large Language Models Using Only Attention Maps",
+   "authors": [
+    "Chuang",
+    "Qiu",
+    "Hsieh",
+    "Krishna",
+    "Kim",
+    "Glass"
+   ],
+   "year": 2024,
+   "venue": "EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2024.emnlp-main.84",
+   "code": "https://github.com/voidism/Lookback-Lens",
+   "lens": "str",
+   "type": "MHA",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "GRD"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:str-survey"
+  },
+  {
+   "row": "str-15",
+   "id": "samagaHalluZigHallucinationDetection2026",
+   "method": "HalluZig",
+   "title": "HalluZig: Hallucination Detection Using Zigzag Persistence",
+   "authors": [
+    "Samaga",
+    "Arroyo",
+    "Dey"
+   ],
+   "year": 2026,
+   "venue": "EACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2026.eacl-long.159",
+   "code": "https://github.com/TDA-Jyamiti/halluzig",
+   "lens": "str",
+   "type": "MHA",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR",
+    "GRD"
+   ],
+   "metrics": [
+    "RNK",
+    "DEC"
+   ],
+   "table": "tab:str-survey"
+  },
+  {
+   "row": "str-16",
+   "id": "frascaNeuralMessagePassingAttention2026",
+   "method": "CHARM",
+   "title": "Neural Message-Passing on Attention Graphs for Hallucination Detection",
+   "authors": [
+    "Frasca",
+    "Bar-Shalom",
+    "Ziser",
+    "Maron"
+   ],
+   "year": 2026,
+   "venue": "ICLR",
+   "arxiv": "2509.24770",
+   "url": null,
+   "code": "https://github.com/Noired/charm",
+   "lens": "str",
+   "type": "MHA",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR",
+    "GRD"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:str-survey"
+  },
+  {
+   "row": "str-17",
+   "id": "vazhentsevEfficientHallucinationDetection2026",
+   "method": "RAUQ",
+   "title": "Efficient Hallucination Detection for LLMs Using Uncertainty-Aware Attention Heads",
+   "authors": [
+    "Vazhentsev",
+    "Rvanova",
+    "Kuzmin",
+    "Fadeeva",
+    "Lazichny",
+    "Panchenko",
+    "Panov",
+    "Sachan",
+    "Nakov",
+    "Baldwin",
+    "Shelmanov"
+   ],
+   "year": 2026,
+   "venue": "ICML",
+   "arxiv": "2505.20045",
+   "url": null,
+   "code": "https://github.com/mbzuai-nlp/rauq-hallucination-detection",
+   "lens": "str",
+   "type": "MHA",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR",
+    "GRD"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:str-survey"
+  },
+  {
+   "row": "str-18",
+   "id": "vazhentsevUnconditionalTruthfulnessLearning2025",
+   "method": "TAD",
+   "title": "Unconditional Truthfulness: Learning Unconditional Uncertainty of Large Language Models",
+   "authors": [
+    "Vazhentsev",
+    "Fadeeva",
+    "Xing",
+    "Kuzmin",
+    "Lazichny",
+    "Panchenko",
+    "Nakov",
+    "Baldwin",
+    "Panov",
+    "Shelmanov"
+   ],
+   "year": 2025,
+   "venue": "EMNLP",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2025.emnlp-main.1807",
+   "code": "https://github.com/mbzuai-nlp/llm-tad-uncertainty",
+   "lens": "str",
+   "type": "MHA",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR",
+    "GRD"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:str-survey"
+  },
+  {
+   "row": "str-19",
+   "id": "xuInformationFlowReveals2026",
+   "method": "Information Flow",
+   "title": "Information Flow Reveals When to Trust Language Models",
+   "authors": [
+    "Xu",
+    "Chen",
+    "Chen",
+    "Xie"
+   ],
+   "year": 2026,
+   "venue": "ICML",
+   "arxiv": null,
+   "url": null,
+   "code": "https://github.com/rxu0112/RAG-information-flow",
+   "lens": "str",
+   "type": "MHA",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "GRD"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:str-survey"
+  },
+  {
+   "row": "str-20",
+   "id": "liInferenceTimeInterventionEliciting2023",
+   "method": "ITI",
+   "title": "Inference-Time Intervention: Eliciting Truthful Answers from a Language Model",
+   "authors": [
+    "Li",
+    "Patel",
+    "Viégas",
+    "Pfister",
+    "Wattenberg"
+   ],
+   "year": 2023,
+   "venue": "NeurIPS",
+   "arxiv": "2306.03341",
+   "url": null,
+   "code": "https://github.com/likenneth/honest_llama",
+   "lens": "str",
+   "type": "MHA",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "ρ_S",
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "DEC"
+   ],
+   "table": "tab:str-survey"
+  },
+  {
+   "row": "str-21",
+   "id": "heLLMFactoscopeUncovering2024",
+   "method": "Factoscope",
+   "title": "LLM Factoscope: Uncovering LLMs' Factual Discernment through Measuring Inner States",
+   "authors": [
+    "He",
+    "Gong",
+    "Lin",
+    "Wei",
+    "Zhao",
+    "Chen"
+   ],
+   "year": 2024,
+   "venue": "Findings of ACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2024.findings-acl.608",
+   "code": "https://github.com/JenniferHo97/llm_factoscope",
+   "lens": "str",
+   "type": "FFN",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "DEC"
+   ],
+   "table": "tab:str-survey"
+  },
+  {
+   "row": "str-22",
+   "id": "eusebiReadingCalibratedUncertainty2026",
+   "method": "UQ Trajectory",
+   "title": "Reading Calibrated Uncertainty from Language Model Trajectories",
+   "authors": [
+    "Eusebi",
+    "Herzog",
+    "Liang",
+    "Vasek",
+    "Mariconti",
+    "Cavallaro"
+   ],
+   "year": 2026,
+   "venue": "ICML",
+   "arxiv": "2605.22864",
+   "url": null,
+   "code": "https://github.com/s2labres/uq-trajectory",
+   "lens": "str",
+   "type": "FFN",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:str-survey"
+  },
+  {
+   "row": "str-23",
+   "id": "kamatGradDetectGradientBased2026",
+   "method": "Grad Detect",
+   "title": "Grad Detect: Gradient-Based Hallucination Detection in LLMs",
+   "authors": [
+    "Kamat",
+    "Blake",
+    "Werness"
+   ],
+   "year": 2026,
+   "venue": "2nd Workshop on Compositional Learning: Safety, Interpretability, and Agents",
+   "arxiv": "2606.24790",
+   "url": null,
+   "code": null,
+   "lens": "str",
+   "type": "FFN",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK",
+    "DEC"
+   ],
+   "table": "tab:str-survey"
+  },
+  {
+   "row": "str-24",
+   "id": "zhaoVerifyingChainofThoughtReasoning2026",
+   "method": "CRV",
+   "title": "Verifying Chain-of-Thought Reasoning via Its Computational Graph",
+   "authors": [
+    "Zhao",
+    "Koishekenov",
+    "Yang",
+    "Murray",
+    "Cancedda"
+   ],
+   "year": 2026,
+   "venue": "ICLR",
+   "arxiv": "2510.09312",
+   "url": null,
+   "code": "https://github.com/facebookresearch/CRV",
+   "lens": "str",
+   "type": "FFN",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:str-survey"
+  },
+  {
+   "row": "str-25",
+   "id": "zhangICRProbeTracking2025",
+   "method": "ICR Probe",
+   "title": "ICR Probe: Tracking Hidden State Dynamics for Reliable Hallucination Detection in LLMs",
+   "authors": [
+    "Zhang",
+    "Hu",
+    "Zhang",
+    "Zhang",
+    "Wan"
+   ],
+   "year": 2025,
+   "venue": "ACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2025.acl-long.880",
+   "code": "https://github.com/XavierZhang2002/ICR_Probe",
+   "lens": "str",
+   "type": "Joint",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:str-survey"
+  },
+  {
+   "row": "str-26",
+   "id": "luTPANextToken2026",
+   "method": "TPA",
+   "title": "TPA: Next Token Probability Attribution for Detecting Hallucinations in RAG",
+   "authors": [
+    "Lu",
+    "Lu",
+    "Liu",
+    "Zhang"
+   ],
+   "year": 2026,
+   "venue": "ACL",
+   "arxiv": null,
+   "url": "https://doi.org/10.18653/v1/2026.acl-long.1159",
+   "code": "https://github.com/pengqian-lu/TPA",
+   "lens": "str",
+   "type": "Joint",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "GRD"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:str-survey"
+  },
+  {
+   "row": "str-27",
+   "id": "sunReDeEPDetectingHallucination2025",
+   "method": "ReDeEP",
+   "title": "ReDeEP: Detecting Hallucination in Retrieval-Augmented Generation via Mechanistic Interpretability",
+   "authors": [
+    "Sun",
+    "Zang",
+    "Zheng",
+    "Xu",
+    "Zhang",
+    "Yu",
+    "Song",
+    "Li"
+   ],
+   "year": 2025,
+   "venue": "ICLR",
+   "arxiv": "2410.11414",
+   "url": null,
+   "code": "https://github.com/Jeryi-Sun/ReDEeP-ICLR",
+   "lens": "str",
+   "type": "Joint",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "GRD"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:str-survey"
+  },
+  {
+   "row": "str-28",
+   "id": "grunefeldTracingUncertaintyLanguage2026a",
+   "method": "Trace Profiles",
+   "title": "Tracing Uncertainty in Language Model \"Reasoning\"",
+   "authors": [
+    "Grünefeld",
+    "Højer",
+    "Mondorf",
+    "Plank",
+    "Rogers",
+    "Hardmeier",
+    "Heinrich",
+    "Frellsen"
+   ],
+   "year": 2026,
+   "venue": "ICML",
+   "arxiv": "2605.07776",
+   "url": null,
+   "code": null,
+   "lens": "str",
+   "type": "Joint",
+   "access": "W",
+   "ns": [
+    "surr-sem"
+   ],
+   "Z": [
+    "∅"
+   ],
+   "S": [
+    "U_S"
+   ],
+   "targets": [
+    "COR"
+   ],
+   "metrics": [
+    "RNK"
+   ],
+   "table": "tab:str-survey"
+  }
+ ],
+ "coverage": {
+  "lens_x_Z": {
+   "rows": [
+    "str",
+    "rep",
+    "dis",
+    "sem"
+   ],
+   "cols": [
+    "∅",
+    "y",
+    "θ",
+    "x′"
+   ],
+   "cells": {
+    "str": {
+     "∅": {
+      "n": 27,
+      "ids": [
+       "bazarovaHallucinationDetectionLLMs2026",
+       "binkowskiHallucinationDetectionLLMs2025",
+       "chuangLookbackLensDetecting2024",
+       "eusebiReadingCalibratedUncertainty2026",
+       "frascaNeuralMessagePassingAttention2026",
+       "grunefeldTracingUncertaintyLanguage2026a",
+       "heLLMFactoscopeUncovering2024",
+       "kamatGradDetectGradientBased2026",
+       "liInferenceTimeInterventionEliciting2023",
+       "liLanguageModelUncertainty2025",
+       "linContextualizedSequenceLikelihood2024",
+       "liuRFSGuardDetectingReasoning2026",
+       "luTPANextToken2026",
+       "miLogicalConsistencyBridge2026",
+       "ostmeierGradientStableAttentionHeads2026",
+       "samagaHalluZigHallucinationDetection2026",
+       "shelmanovHeadPredictHead2025",
+       "sriramananLLMCheckInvestigatingDetection2024",
+       "sunReDeEPDetectingHallucination2025",
+       "vandijkDetectingHallucinationsLarge2026",
+       "vazhentsevEfficientHallucinationDetection2026",
+       "vazhentsevUnconditionalTruthfulnessLearning2025",
+       "xuInformationFlowReveals2026",
+       "yuksekgonulAttentionSatisfiesConstraintSatisfaction2024",
+       "zhangEnhancingUncertaintyBasedHallucination2023",
+       "zhangICRProbeTracking2025",
+       "zhaoVerifyingChainofThoughtReasoning2026"
+      ],
+      "rows": [
+       "str-01",
+       "str-02",
+       "str-03",
+       "str-04",
+       "str-05",
+       "str-06",
+       "str-08",
+       "str-09",
+       "str-10",
+       "str-11",
+       "str-12",
+       "str-13",
+       "str-14",
+       "str-15",
+       "str-16",
+       "str-17",
+       "str-18",
+       "str-19",
+       "str-20",
+       "str-21",
+       "str-22",
+       "str-23",
+       "str-24",
+       "str-25",
+       "str-26",
+       "str-27",
+       "str-28"
+      ]
+     },
+     "y": {
+      "n": 0,
+      "ids": [],
+      "rows": []
+     },
+     "θ": {
+      "n": 0,
+      "ids": [],
+      "rows": []
+     },
+     "x′": {
+      "n": 1,
+      "ids": [
+       "liuAttentionguidedSelfreflectionZeroshot2025"
+      ],
+      "rows": [
+       "str-07"
+      ]
+     },
+     "total": {
+      "n": 28,
+      "rows": 28
+     }
+    },
+    "rep": {
+     "∅": {
+      "n": 39,
+      "ids": [
+       "afzalKnowingSayingLLM2025",
+       "ahdritzDistinguishingKnowableUnknowable2024",
+       "azariaInternalStateLLM2023",
+       "bakmanUncertaintyFeatureGaps2025",
+       "braunUSpaceUncoveringWhen2026",
+       "burnsDiscoveringLatentKnowledge2023",
+       "chenHalluSAEDetectingHallucinations2026",
+       "dakhmoucheCanLinearProbes2025",
+       "duGeometricDeviationUnsupervised2026",
+       "duHaloScopeHarnessingUnlabeled2024",
+       "ferrandoKnowThisEntity2025",
+       "gottesmanEstimatingKnowledgeLarge2024",
+       "hanSemanticEntropyNeurons2024",
+       "hanSemanticEntropyProbes2024",
+       "hanSimpleFactualityProbes2025",
+       "huHARPHallucinationDetection2026",
+       "jiCalibratingVerbalUncertainty2025",
+       "jiLLMInternalStates2024",
+       "joshiPersonasWayModel2024",
+       "kadavathLanguageModelsMostly2022",
+       "khanmohammadiCalibratingLLMConfidence2025",
+       "liHALLUCANAFixingLLM2025",
+       "liuUncertaintyEstimationQuantification2024",
+       "luoTwoPathwaysTruthfulness2026",
+       "maoDigitalDunningKrugerEffect2026",
+       "mielkeReducingConversationalAgents2022",
+       "mrykhinPromptEmbeddingProbes2026",
+       "niReProbeEfficientTestTime2026",
+       "parkSteerLLMLatents2025",
+       "renOutofDistributionDetectionSelective2023",
+       "sreyLearningUncertaintySequential2026",
+       "sreyUnsupervisedHallucinationDetection2025",
+       "sureshCrossLayerAttentionProbing2025",
+       "vazhentsevTokenLevelDensityBasedUncertainty2025",
+       "wangLAFaCTAttributionbasedLocalization2026",
+       "wangLatentSpaceChainofEmbedding2025",
+       "xiongFaithfulRetrievalAugmentedGeneration2026",
+       "zhangDetectingHallucinationLarge2025",
+       "zhangReasoningModelsKnow2025"
+      ],
+      "rows": [
+       "rep-01",
+       "rep-02",
+       "rep-05",
+       "rep-06",
+       "rep-07",
+       "rep-08",
+       "rep-09",
+       "rep-10",
+       "rep-11",
+       "rep-12",
+       "rep-13",
+       "rep-14",
+       "rep-15",
+       "rep-16",
+       "rep-17",
+       "rep-18",
+       "rep-19",
+       "rep-20",
+       "rep-21",
+       "rep-22",
+       "rep-23",
+       "rep-24",
+       "rep-25",
+       "rep-26",
+       "rep-27",
+       "rep-28",
+       "rep-29",
+       "rep-30",
+       "rep-31",
+       "rep-32",
+       "rep-33",
+       "rep-34",
+       "rep-35",
+       "rep-36",
+       "rep-37",
+       "rep-38",
+       "rep-39",
+       "rep-40",
+       "rep-41"
+      ]
+     },
+     "y": {
+      "n": 1,
+      "ids": [
+       "chenLLMsInternalStates2024"
+      ],
+      "rows": [
+       "rep-03"
+      ]
+     },
+     "θ": {
+      "n": 0,
+      "ids": [],
+      "rows": []
+     },
+     "x′": {
+      "n": 1,
+      "ids": [
+       "liGradientsRespectSemantics2026"
+      ],
+      "rows": [
+       "rep-04"
+      ]
+     },
+     "total": {
+      "n": 41,
+      "rows": 41
+     }
+    },
+    "dis": {
+     "∅": {
+      "n": 18,
+      "ids": [
+       "aichbergerRethinkingUncertaintyEstimation2026",
+       "bakmanMARSMeaningAwareResponse2024",
+       "coleSelectivelyAnsweringAmbiguous2023",
+       "cuiEstimatingBlackboxLLM2026",
+       "darrinRainProofUmbrellaShield2023",
+       "duanUPropInvestigatingUncertainty2025",
+       "fadeevaFactCheckingOutputLarge2024",
+       "fengDontHallucinateAbstain2024",
+       "fomichevaUnsupervisedQualityEstimation2020",
+       "hendrycksBaselineDetectingMisclassified2017",
+       "kadavathLanguageModelsMostly2022",
+       "kangScalableBestofNSelection2025",
+       "maEstimatingLLMUncertainty2025",
+       "malininUncertaintyEstimationAutoregressive2021",
+       "renSelfEvaluationImprovesSelective2023",
+       "vashurinUNCERTAINTYLINELengthInvariantEstimation2025",
+       "xieCalibratingReasoningLanguage2024",
+       "zhaoUncertaintyPropagationLLM2025"
+      ],
+      "rows": [
+       "dis-01",
+       "dis-02",
+       "dis-03",
+       "dis-18",
+       "dis-19",
+       "dis-20",
+       "dis-23",
+       "dis-24",
+       "dis-25",
+       "dis-26",
+       "dis-27",
+       "dis-28",
+       "dis-29",
+       "dis-30",
+       "dis-31",
+       "dis-32",
+       "dis-33",
+       "dis-46",
+       "dis-47"
+      ]
+     },
+     "y": {
+      "n": 15,
+      "ids": [
+       "bakmanMARSMeaningAwareResponse2024",
+       "duanShiftingAttentionRelevance2024",
+       "fuDeepThinkConfidence2026",
+       "liQuantifyingUnderstandingUncertainty2026",
+       "lyuCalibratingLargeLanguage2025",
+       "maSemanticEnergyDetecting2025",
+       "manakulSelfCheckGPTZeroResourceBlackBox2023",
+       "nguyenSemanticEntropyBoosting2025",
+       "quachConformalLanguageModeling2024",
+       "suAPIEnoughConformal2024",
+       "vashurinCoCoAMinimumBayes2025",
+       "wangSubjectiveUncertaintyQuantification2025",
+       "yadkoriBelieveNotBelieve2024",
+       "yaldizNotDesignLearn2025",
+       "zhangCoTUQImprovingResponsewise2025"
+      ],
+      "rows": [
+       "dis-04",
+       "dis-05",
+       "dis-21",
+       "dis-22",
+       "dis-34",
+       "dis-35",
+       "dis-36",
+       "dis-37",
+       "dis-38",
+       "dis-39",
+       "dis-40",
+       "dis-41",
+       "dis-43",
+       "dis-44",
+       "dis-46",
+       "dis-48"
+      ]
+     },
+     "θ": {
+      "n": 7,
+      "ids": [
+       "balabanovUncertaintyQuantificationFinetuned2025",
+       "kruseSimpleEffectiveInformationTheoretic2025",
+       "lingUncertaintyQuantificationInContext2024",
+       "mora-crossUncertaintyEstimationLarge2024",
+       "wangBLoBBayesianLowRank2024",
+       "yangBayesianLowrankAdaptation2024",
+       "zhangTokURTokenLevelUncertainty2026"
+      ],
+      "rows": [
+       "dis-11",
+       "dis-12",
+       "dis-13",
+       "dis-14",
+       "dis-15",
+       "dis-16",
+       "dis-17"
+      ]
+     },
+     "x′": {
+      "n": 8,
+      "ids": [
+       "beckerCyclesThoughtMeasuring2024",
+       "fengDontHallucinateAbstain2024",
+       "jiangCalibratingLanguageModels2023",
+       "jungTrustEscalateLLM2025",
+       "kimDetectingLLMHallucination2025",
+       "kumarConformalPredictionLarge2023",
+       "lingUncertaintyQuantificationInContext2024",
+       "portillowightmanStrengthNumbersEstimating2023"
+      ],
+      "rows": [
+       "dis-06",
+       "dis-07",
+       "dis-08",
+       "dis-09",
+       "dis-10",
+       "dis-17",
+       "dis-42",
+       "dis-45"
+      ]
+     },
+     "total": {
+      "n": 45,
+      "rows": 48
+     }
+    },
+    "sem": {
+     "∅": {
+      "n": 10,
+      "ids": [
+       "bandLinguisticCalibrationLongForm2024",
+       "linTeachingModelsExpress2022",
+       "liuCanLLMsLearn2024",
+       "liuMetaFaithFaithfulNatural2025",
+       "liuReinforcementLearningMetacognitive2026",
+       "tanneruQuantifyingUncertaintyNatural2024",
+       "taoWhenTrustLLMs2024",
+       "tianJustAskCalibration2023",
+       "xuSaySelfTeachingLLMs2024",
+       "yangCanWeTrust2024"
+      ],
+      "rows": [
+       "sem-36",
+       "sem-37",
+       "sem-38",
+       "sem-39",
+       "sem-40",
+       "sem-41",
+       "sem-42",
+       "sem-43",
+       "sem-44",
+       "sem-45"
+      ]
+     },
+     "y": {
+      "n": 37,
+      "ids": [
+       "aichbergerImprovingUncertaintyEstimation2025",
+       "aoCSSContrastiveSemantic2024",
+       "caoClusteredSelfAssessmentSimple2026",
+       "chenEveryResponseCounts2026",
+       "chenQuantifyingUncertaintyAnswers2024",
+       "chenUncertaintyQuantificationLarge2025",
+       "cherianLargeLanguageModel2024",
+       "cohenLMVsLM2023",
+       "coxMappingMeaningAddressing2025",
+       "daLLMUncertaintyQuantification2024",
+       "daUnderstandingUncertaintyLLM2025",
+       "fanIUQInterrogativeUncertainty2026",
+       "farquharDetectingHallucinationsLarge2024",
+       "gaoSPUQPerturbationBasedUncertainty2024",
+       "houDecomposingUncertaintyLarge2024",
+       "houProbabilisticFrameworkLLM2025",
+       "jiangGraphbasedUncertaintyMetrics2024",
+       "kuhnSemanticUncertaintyLinguistic2023",
+       "linGeneratingConfidenceUncertainty2024",
+       "luoAGSCAdaptiveGranularity2026",
+       "manakulSelfCheckGPTZeroResourceBlackBox2023",
+       "mccabeEstimatingSemanticAlphabet2026",
+       "mohriLanguageModelsConformal2024",
+       "nikitinKernelLanguageEntropy2024",
+       "phillipsGeometricUncertaintyDetecting2026",
+       "qiuSemanticDensityUncertainty2024",
+       "tanneruQuantifyingUncertaintyNatural2024",
+       "vipulanandanSemanticUncertaintyQuantification2026",
+       "walhaFinegrainedUncertaintyDecomposition2026",
+       "wangCLUEConceptLevelUncertainty2024",
+       "wangCalibratingVerbalizedConfidence2026",
+       "wangConUConformalUncertainty2024",
+       "yangZerosourceLLMHallucination2026",
+       "yonaCanLargeLanguage2024",
+       "zhangAllRoadsLead2025",
+       "zhangLUQLongtextUncertainty2024",
+       "zhangSAC^3ReliableHallucination2023"
+      ],
+      "rows": [
+       "sem-01",
+       "sem-02",
+       "sem-03",
+       "sem-04",
+       "sem-05",
+       "sem-06",
+       "sem-07",
+       "sem-08",
+       "sem-09",
+       "sem-10",
+       "sem-11",
+       "sem-12",
+       "sem-13",
+       "sem-14",
+       "sem-15",
+       "sem-16",
+       "sem-17",
+       "sem-18",
+       "sem-19",
+       "sem-20",
+       "sem-21",
+       "sem-22",
+       "sem-23",
+       "sem-24",
+       "sem-25",
+       "sem-26",
+       "sem-27",
+       "sem-28",
+       "sem-29",
+       "sem-30",
+       "sem-31",
+       "sem-32",
+       "sem-33",
+       "sem-34",
+       "sem-35",
+       "sem-46",
+       "sem-47",
+       "sem-48",
+       "sem-49",
+       "sem-50",
+       "sem-51",
+       "sem-53"
+      ]
+     },
+     "θ": {
+      "n": 1,
+      "ids": [
+       "zhangSAC^3ReliableHallucination2023"
+      ],
+      "rows": [
+       "sem-11"
+      ]
+     },
+     "x′": {
+      "n": 9,
+      "ids": [
+       "coxMappingMeaningAddressing2025",
+       "fanIUQInterrogativeUncertainty2026",
+       "gaoSPUQPerturbationBasedUncertainty2024",
+       "houDecomposingUncertaintyLarge2024",
+       "houProbabilisticFrameworkLLM2025",
+       "liThinkTwiceTrusting2024",
+       "tanneruQuantifyingUncertaintyNatural2024",
+       "walhaFinegrainedUncertaintyDecomposition2026",
+       "zhangSAC^3ReliableHallucination2023"
+      ],
+      "rows": [
+       "sem-10",
+       "sem-11",
+       "sem-26",
+       "sem-27",
+       "sem-28",
+       "sem-29",
+       "sem-34",
+       "sem-35",
+       "sem-52",
+       "sem-53"
+      ]
+     },
+     "total": {
+      "n": 47,
+      "rows": 53
+     }
+    }
+   }
+  },
+  "lens_x_S": {
+   "rows": [
+    "str",
+    "rep",
+    "dis",
+    "sem"
+   ],
+   "cols": [
+    "∅",
+    "Z_S",
+    "ρ_S",
+    "U_S",
+    "ψ_S"
+   ],
+   "cells": {
+    "str": {
+     "∅": {
+      "n": 0,
+      "ids": [],
+      "rows": []
+     },
+     "Z_S": {
+      "n": 1,
+      "ids": [
+       "liuAttentionguidedSelfreflectionZeroshot2025"
+      ],
+      "rows": [
+       "str-07"
+      ]
+     },
+     "ρ_S": {
+      "n": 1,
+      "ids": [
+       "liInferenceTimeInterventionEliciting2023"
+      ],
+      "rows": [
+       "str-20"
+      ]
+     },
+     "U_S": {
+      "n": 27,
+      "ids": [
+       "bazarovaHallucinationDetectionLLMs2026",
+       "binkowskiHallucinationDetectionLLMs2025",
+       "chuangLookbackLensDetecting2024",
+       "eusebiReadingCalibratedUncertainty2026",
+       "frascaNeuralMessagePassingAttention2026",
+       "grunefeldTracingUncertaintyLanguage2026a",
+       "heLLMFactoscopeUncovering2024",
+       "kamatGradDetectGradientBased2026",
+       "liInferenceTimeInterventionEliciting2023",
+       "liLanguageModelUncertainty2025",
+       "linContextualizedSequenceLikelihood2024",
+       "liuRFSGuardDetectingReasoning2026",
+       "luTPANextToken2026",
+       "miLogicalConsistencyBridge2026",
+       "ostmeierGradientStableAttentionHeads2026",
+       "samagaHalluZigHallucinationDetection2026",
+       "shelmanovHeadPredictHead2025",
+       "sriramananLLMCheckInvestigatingDetection2024",
+       "sunReDeEPDetectingHallucination2025",
+       "vandijkDetectingHallucinationsLarge2026",
+       "vazhentsevEfficientHallucinationDetection2026",
+       "vazhentsevUnconditionalTruthfulnessLearning2025",
+       "xuInformationFlowReveals2026",
+       "yuksekgonulAttentionSatisfiesConstraintSatisfaction2024",
+       "zhangEnhancingUncertaintyBasedHallucination2023",
+       "zhangICRProbeTracking2025",
+       "zhaoVerifyingChainofThoughtReasoning2026"
+      ],
+      "rows": [
+       "str-01",
+       "str-02",
+       "str-03",
+       "str-04",
+       "str-05",
+       "str-06",
+       "str-08",
+       "str-09",
+       "str-10",
+       "str-11",
+       "str-12",
+       "str-13",
+       "str-14",
+       "str-15",
+       "str-16",
+       "str-17",
+       "str-18",
+       "str-19",
+       "str-20",
+       "str-21",
+       "str-22",
+       "str-23",
+       "str-24",
+       "str-25",
+       "str-26",
+       "str-27",
+       "str-28"
+      ]
+     },
+     "ψ_S": {
+      "n": 0,
+      "ids": [],
+      "rows": []
+     },
+     "total": {
+      "n": 28,
+      "rows": 28
+     }
+    },
+    "rep": {
+     "∅": {
+      "n": 4,
+      "ids": [
+       "chenLLMsInternalStates2024",
+       "duGeometricDeviationUnsupervised2026",
+       "renOutofDistributionDetectionSelective2023",
+       "wangLatentSpaceChainofEmbedding2025"
+      ],
+      "rows": [
+       "rep-01",
+       "rep-03",
+       "rep-14",
+       "rep-36"
+      ]
+     },
+     "Z_S": {
+      "n": 0,
+      "ids": [],
+      "rows": []
+     },
+     "ρ_S": {
+      "n": 5,
+      "ids": [
+       "braunUSpaceUncoveringWhen2026",
+       "chenHalluSAEDetectingHallucinations2026",
+       "ferrandoKnowThisEntity2025",
+       "huHARPHallucinationDetection2026",
+       "xiongFaithfulRetrievalAugmentedGeneration2026"
+      ],
+      "rows": [
+       "rep-02",
+       "rep-13",
+       "rep-33",
+       "rep-34",
+       "rep-35"
+      ]
+     },
+     "U_S": {
+      "n": 36,
+      "ids": [
+       "afzalKnowingSayingLLM2025",
+       "ahdritzDistinguishingKnowableUnknowable2024",
+       "azariaInternalStateLLM2023",
+       "bakmanUncertaintyFeatureGaps2025",
+       "burnsDiscoveringLatentKnowledge2023",
+       "chenHalluSAEDetectingHallucinations2026",
+       "dakhmoucheCanLinearProbes2025",
+       "duHaloScopeHarnessingUnlabeled2024",
+       "ferrandoKnowThisEntity2025",
+       "gottesmanEstimatingKnowledgeLarge2024",
+       "hanSemanticEntropyNeurons2024",
+       "hanSemanticEntropyProbes2024",
+       "hanSimpleFactualityProbes2025",
+       "huHARPHallucinationDetection2026",
+       "jiCalibratingVerbalUncertainty2025",
+       "jiLLMInternalStates2024",
+       "joshiPersonasWayModel2024",
+       "kadavathLanguageModelsMostly2022",
+       "khanmohammadiCalibratingLLMConfidence2025",
+       "liGradientsRespectSemantics2026",
+       "liHALLUCANAFixingLLM2025",
+       "liuUncertaintyEstimationQuantification2024",
+       "luoTwoPathwaysTruthfulness2026",
+       "maoDigitalDunningKrugerEffect2026",
+       "mielkeReducingConversationalAgents2022",
+       "mrykhinPromptEmbeddingProbes2026",
+       "niReProbeEfficientTestTime2026",
+       "parkSteerLLMLatents2025",
+       "sreyLearningUncertaintySequential2026",
+       "sreyUnsupervisedHallucinationDetection2025",
+       "sureshCrossLayerAttentionProbing2025",
+       "vazhentsevTokenLevelDensityBasedUncertainty2025",
+       "wangLAFaCTAttributionbasedLocalization2026",
+       "xiongFaithfulRetrievalAugmentedGeneration2026",
+       "zhangDetectingHallucinationLarge2025",
+       "zhangReasoningModelsKnow2025"
+      ],
+      "rows": [
+       "rep-04",
+       "rep-05",
+       "rep-06",
+       "rep-07",
+       "rep-08",
+       "rep-09",
+       "rep-10",
+       "rep-11",
+       "rep-12",
+       "rep-13",
+       "rep-15",
+       "rep-16",
+       "rep-17",
+       "rep-18",
+       "rep-19",
+       "rep-20",
+       "rep-21",
+       "rep-22",
+       "rep-23",
+       "rep-24",
+       "rep-25",
+       "rep-26",
+       "rep-27",
+       "rep-28",
+       "rep-29",
+       "rep-30",
+       "rep-31",
+       "rep-32",
+       "rep-33",
+       "rep-34",
+       "rep-35",
+       "rep-37",
+       "rep-38",
+       "rep-39",
+       "rep-40",
+       "rep-41"
+      ]
+     },
+     "ψ_S": {
+      "n": 0,
+      "ids": [],
+      "rows": []
+     },
+     "total": {
+      "n": 41,
+      "rows": 41
+     }
+    },
+    "dis": {
+     "∅": {
+      "n": 16,
+      "ids": [
+       "aichbergerRethinkingUncertaintyEstimation2026",
+       "coleSelectivelyAnsweringAmbiguous2023",
+       "darrinRainProofUmbrellaShield2023",
+       "duanUPropInvestigatingUncertainty2025",
+       "fengDontHallucinateAbstain2024",
+       "fomichevaUnsupervisedQualityEstimation2020",
+       "hendrycksBaselineDetectingMisclassified2017",
+       "kadavathLanguageModelsMostly2022",
+       "kangScalableBestofNSelection2025",
+       "kimDetectingLLMHallucination2025",
+       "lyuCalibratingLargeLanguage2025",
+       "maEstimatingLLMUncertainty2025",
+       "maSemanticEnergyDetecting2025",
+       "malininUncertaintyEstimationAutoregressive2021",
+       "renSelfEvaluationImprovesSelective2023",
+       "xieCalibratingReasoningLanguage2024"
+      ],
+      "rows": [
+       "dis-01",
+       "dis-02",
+       "dis-04",
+       "dis-18",
+       "dis-19",
+       "dis-20",
+       "dis-23",
+       "dis-24",
+       "dis-25",
+       "dis-26",
+       "dis-27",
+       "dis-28",
+       "dis-29",
+       "dis-30",
+       "dis-31",
+       "dis-34",
+       "dis-42",
+       "dis-45"
+      ]
+     },
+     "Z_S": {
+      "n": 10,
+      "ids": [
+       "balabanovUncertaintyQuantificationFinetuned2025",
+       "beckerCyclesThoughtMeasuring2024",
+       "jiangCalibratingLanguageModels2023",
+       "kruseSimpleEffectiveInformationTheoretic2025",
+       "lingUncertaintyQuantificationInContext2024",
+       "mora-crossUncertaintyEstimationLarge2024",
+       "portillowightmanStrengthNumbersEstimating2023",
+       "wangBLoBBayesianLowRank2024",
+       "yangBayesianLowrankAdaptation2024",
+       "zhangTokURTokenLevelUncertainty2026"
+      ],
+      "rows": [
+       "dis-06",
+       "dis-07",
+       "dis-08",
+       "dis-11",
+       "dis-12",
+       "dis-13",
+       "dis-14",
+       "dis-15",
+       "dis-16",
+       "dis-17"
+      ]
+     },
+     "ρ_S": {
+      "n": 0,
+      "ids": [],
+      "rows": []
+     },
+     "U_S": {
+      "n": 12,
+      "ids": [
+       "bakmanMARSMeaningAwareResponse2024",
+       "cuiEstimatingBlackboxLLM2026",
+       "duanShiftingAttentionRelevance2024",
+       "fadeevaFactCheckingOutputLarge2024",
+       "manakulSelfCheckGPTZeroResourceBlackBox2023",
+       "nguyenSemanticEntropyBoosting2025",
+       "vashurinCoCoAMinimumBayes2025",
+       "wangSubjectiveUncertaintyQuantification2025",
+       "yadkoriBelieveNotBelieve2024",
+       "yaldizNotDesignLearn2025",
+       "zhangCoTUQImprovingResponsewise2025",
+       "zhaoUncertaintyPropagationLLM2025"
+      ],
+      "rows": [
+       "dis-21",
+       "dis-22",
+       "dis-32",
+       "dis-33",
+       "dis-35",
+       "dis-36",
+       "dis-37",
+       "dis-38",
+       "dis-39",
+       "dis-43",
+       "dis-44",
+       "dis-46",
+       "dis-47"
+      ]
+     },
+     "ψ_S": {
+      "n": 7,
+      "ids": [
+       "fuDeepThinkConfidence2026",
+       "jungTrustEscalateLLM2025",
+       "kumarConformalPredictionLarge2023",
+       "liQuantifyingUnderstandingUncertainty2026",
+       "quachConformalLanguageModeling2024",
+       "suAPIEnoughConformal2024",
+       "vashurinUNCERTAINTYLINELengthInvariantEstimation2025"
+      ],
+      "rows": [
+       "dis-03",
+       "dis-05",
+       "dis-09",
+       "dis-10",
+       "dis-40",
+       "dis-41",
+       "dis-48"
+      ]
+     },
+     "total": {
+      "n": 45,
+      "rows": 48
+     }
+    },
+    "sem": {
+     "∅": {
+      "n": 29,
+      "ids": [
+       "aoCSSContrastiveSemantic2024",
+       "bandLinguisticCalibrationLongForm2024",
+       "caoClusteredSelfAssessmentSimple2026",
+       "chenEveryResponseCounts2026",
+       "coxMappingMeaningAddressing2025",
+       "daLLMUncertaintyQuantification2024",
+       "farquharDetectingHallucinationsLarge2024",
+       "houDecomposingUncertaintyLarge2024",
+       "jiangGraphbasedUncertaintyMetrics2024",
+       "kuhnSemanticUncertaintyLinguistic2023",
+       "liThinkTwiceTrusting2024",
+       "linGeneratingConfidenceUncertainty2024",
+       "linTeachingModelsExpress2022",
+       "liuCanLLMsLearn2024",
+       "liuMetaFaithFaithfulNatural2025",
+       "liuReinforcementLearningMetacognitive2026",
+       "manakulSelfCheckGPTZeroResourceBlackBox2023",
+       "mccabeEstimatingSemanticAlphabet2026",
+       "nikitinKernelLanguageEntropy2024",
+       "qiuSemanticDensityUncertainty2024",
+       "tanneruQuantifyingUncertaintyNatural2024",
+       "taoWhenTrustLLMs2024",
+       "tianJustAskCalibration2023",
+       "vipulanandanSemanticUncertaintyQuantification2026",
+       "wangCLUEConceptLevelUncertainty2024",
+       "xuSaySelfTeachingLLMs2024",
+       "yangCanWeTrust2024",
+       "zhangAllRoadsLead2025",
+       "zhangLUQLongtextUncertainty2024"
+      ],
+      "rows": [
+       "sem-01",
+       "sem-02",
+       "sem-03",
+       "sem-04",
+       "sem-05",
+       "sem-06",
+       "sem-10",
+       "sem-12",
+       "sem-13",
+       "sem-14",
+       "sem-15",
+       "sem-16",
+       "sem-17",
+       "sem-18",
+       "sem-19",
+       "sem-20",
+       "sem-21",
+       "sem-22",
+       "sem-26",
+       "sem-30",
+       "sem-31",
+       "sem-32",
+       "sem-36",
+       "sem-37",
+       "sem-38",
+       "sem-39",
+       "sem-40",
+       "sem-41",
+       "sem-42",
+       "sem-43",
+       "sem-44",
+       "sem-45",
+       "sem-52"
+      ]
+     },
+     "Z_S": {
+      "n": 6,
+      "ids": [
+       "aichbergerImprovingUncertaintyEstimation2025",
+       "gaoSPUQPerturbationBasedUncertainty2024",
+       "tanneruQuantifyingUncertaintyNatural2024",
+       "walhaFinegrainedUncertaintyDecomposition2026",
+       "wangCalibratingVerbalizedConfidence2026",
+       "zhangSAC^3ReliableHallucination2023"
+      ],
+      "rows": [
+       "sem-07",
+       "sem-11",
+       "sem-29",
+       "sem-34",
+       "sem-35",
+       "sem-46",
+       "sem-53"
+      ]
+     },
+     "ρ_S": {
+      "n": 0,
+      "ids": [],
+      "rows": []
+     },
+     "U_S": {
+      "n": 12,
+      "ids": [
+       "chenQuantifyingUncertaintyAnswers2024",
+       "chenUncertaintyQuantificationLarge2025",
+       "cohenLMVsLM2023",
+       "daUnderstandingUncertaintyLLM2025",
+       "fanIUQInterrogativeUncertainty2026",
+       "houProbabilisticFrameworkLLM2025",
+       "luoAGSCAdaptiveGranularity2026",
+       "phillipsGeometricUncertaintyDetecting2026",
+       "tanneruQuantifyingUncertaintyNatural2024",
+       "yangZerosourceLLMHallucination2026",
+       "yonaCanLargeLanguage2024",
+       "zhangSAC^3ReliableHallucination2023"
+      ],
+      "rows": [
+       "sem-11",
+       "sem-23",
+       "sem-24",
+       "sem-25",
+       "sem-27",
+       "sem-28",
+       "sem-29",
+       "sem-33",
+       "sem-47",
+       "sem-48",
+       "sem-49",
+       "sem-50"
+      ]
+     },
+     "ψ_S": {
+      "n": 3,
+      "ids": [
+       "cherianLargeLanguageModel2024",
+       "mohriLanguageModelsConformal2024",
+       "wangConUConformalUncertainty2024"
+      ],
+      "rows": [
+       "sem-08",
+       "sem-09",
+       "sem-51"
+      ]
+     },
+     "total": {
+      "n": 47,
+      "rows": 53
+     }
+    }
+   }
+  },
+  "lens_x_target": {
+   "rows": [
+    "str",
+    "rep",
+    "dis",
+    "sem"
+   ],
+   "cols": [
+    "COR",
+    "FTH",
+    "GRD",
+    "UNS"
+   ],
+   "cells": {
+    "str": {
+     "COR": {
+      "n": 23,
+      "ids": [
+       "binkowskiHallucinationDetectionLLMs2025",
+       "eusebiReadingCalibratedUncertainty2026",
+       "frascaNeuralMessagePassingAttention2026",
+       "grunefeldTracingUncertaintyLanguage2026a",
+       "heLLMFactoscopeUncovering2024",
+       "kamatGradDetectGradientBased2026",
+       "liInferenceTimeInterventionEliciting2023",
+       "liLanguageModelUncertainty2025",
+       "linContextualizedSequenceLikelihood2024",
+       "liuAttentionguidedSelfreflectionZeroshot2025",
+       "liuRFSGuardDetectingReasoning2026",
+       "miLogicalConsistencyBridge2026",
+       "ostmeierGradientStableAttentionHeads2026",
+       "samagaHalluZigHallucinationDetection2026",
+       "shelmanovHeadPredictHead2025",
+       "sriramananLLMCheckInvestigatingDetection2024",
+       "vandijkDetectingHallucinationsLarge2026",
+       "vazhentsevEfficientHallucinationDetection2026",
+       "vazhentsevUnconditionalTruthfulnessLearning2025",
+       "yuksekgonulAttentionSatisfiesConstraintSatisfaction2024",
+       "zhangEnhancingUncertaintyBasedHallucination2023",
+       "zhangICRProbeTracking2025",
+       "zhaoVerifyingChainofThoughtReasoning2026"
+      ],
+      "rows": [
+       "str-01",
+       "str-03",
+       "str-04",
+       "str-05",
+       "str-06",
+       "str-07",
+       "str-08",
+       "str-09",
+       "str-10",
+       "str-11",
+       "str-12",
+       "str-13",
+       "str-15",
+       "str-16",
+       "str-17",
+       "str-18",
+       "str-20",
+       "str-21",
+       "str-22",
+       "str-23",
+       "str-24",
+       "str-25",
+       "str-28"
+      ]
+     },
+     "FTH": {
+      "n": 0,
+      "ids": [],
+      "rows": []
+     },
+     "GRD": {
+      "n": 10,
+      "ids": [
+       "bazarovaHallucinationDetectionLLMs2026",
+       "chuangLookbackLensDetecting2024",
+       "frascaNeuralMessagePassingAttention2026",
+       "luTPANextToken2026",
+       "samagaHalluZigHallucinationDetection2026",
+       "sriramananLLMCheckInvestigatingDetection2024",
+       "sunReDeEPDetectingHallucination2025",
+       "vazhentsevEfficientHallucinationDetection2026",
+       "vazhentsevUnconditionalTruthfulnessLearning2025",
+       "xuInformationFlowReveals2026"
+      ],
+      "rows": [
+       "str-01",
+       "str-02",
+       "str-14",
+       "str-15",
+       "str-16",
+       "str-17",
+       "str-18",
+       "str-19",
+       "str-26",
+       "str-27"
+      ]
+     },
+     "UNS": {
+      "n": 0,
+      "ids": [],
+      "rows": []
+     },
+     "total": {
+      "n": 28,
+      "rows": 28
+     }
+    },
+    "rep": {
+     "COR": {
+      "n": 39,
+      "ids": [
+       "afzalKnowingSayingLLM2025",
+       "ahdritzDistinguishingKnowableUnknowable2024",
+       "azariaInternalStateLLM2023",
+       "bakmanUncertaintyFeatureGaps2025",
+       "braunUSpaceUncoveringWhen2026",
+       "burnsDiscoveringLatentKnowledge2023",
+       "chenHalluSAEDetectingHallucinations2026",
+       "chenLLMsInternalStates2024",
+       "dakhmoucheCanLinearProbes2025",
+       "duHaloScopeHarnessingUnlabeled2024",
+       "ferrandoKnowThisEntity2025",
+       "gottesmanEstimatingKnowledgeLarge2024",
+       "hanSemanticEntropyNeurons2024",
+       "hanSemanticEntropyProbes2024",
+       "hanSimpleFactualityProbes2025",
+       "huHARPHallucinationDetection2026",
+       "jiCalibratingVerbalUncertainty2025",
+       "jiLLMInternalStates2024",
+       "joshiPersonasWayModel2024",
+       "kadavathLanguageModelsMostly2022",
+       "khanmohammadiCalibratingLLMConfidence2025",
+       "liGradientsRespectSemantics2026",
+       "liHALLUCANAFixingLLM2025",
+       "liuUncertaintyEstimationQuantification2024",
+       "luoTwoPathwaysTruthfulness2026",
+       "maoDigitalDunningKrugerEffect2026",
+       "mielkeReducingConversationalAgents2022",
+       "mrykhinPromptEmbeddingProbes2026",
+       "niReProbeEfficientTestTime2026",
+       "parkSteerLLMLatents2025",
+       "renOutofDistributionDetectionSelective2023",
+       "sreyLearningUncertaintySequential2026",
+       "sreyUnsupervisedHallucinationDetection2025",
+       "sureshCrossLayerAttentionProbing2025",
+       "vazhentsevTokenLevelDensityBasedUncertainty2025",
+       "wangLAFaCTAttributionbasedLocalization2026",
+       "wangLatentSpaceChainofEmbedding2025",
+       "zhangDetectingHallucinationLarge2025",
+       "zhangReasoningModelsKnow2025"
+      ],
+      "rows": [
+       "rep-01",
+       "rep-02",
+       "rep-03",
+       "rep-04",
+       "rep-05",
+       "rep-06",
+       "rep-07",
+       "rep-08",
+       "rep-09",
+       "rep-10",
+       "rep-11",
+       "rep-12",
+       "rep-13",
+       "rep-15",
+       "rep-16",
+       "rep-17",
+       "rep-18",
+       "rep-19",
+       "rep-20",
+       "rep-21",
+       "rep-22",
+       "rep-23",
+       "rep-24",
+       "rep-25",
+       "rep-26",
+       "rep-27",
+       "rep-28",
+       "rep-29",
+       "rep-30",
+       "rep-31",
+       "rep-32",
+       "rep-33",
+       "rep-34",
+       "rep-36",
+       "rep-37",
+       "rep-38",
+       "rep-39",
+       "rep-40",
+       "rep-41"
+      ]
+     },
+     "FTH": {
+      "n": 0,
+      "ids": [],
+      "rows": []
+     },
+     "GRD": {
+      "n": 1,
+      "ids": [
+       "xiongFaithfulRetrievalAugmentedGeneration2026"
+      ],
+      "rows": [
+       "rep-35"
+      ]
+     },
+     "UNS": {
+      "n": 2,
+      "ids": [
+       "duGeometricDeviationUnsupervised2026",
+       "liHALLUCANAFixingLLM2025"
+      ],
+      "rows": [
+       "rep-10",
+       "rep-14"
+      ]
+     },
+     "total": {
+      "n": 41,
+      "rows": 41
+     }
+    },
+    "dis": {
+     "COR": {
+      "n": 45,
+      "ids": [
+       "aichbergerRethinkingUncertaintyEstimation2026",
+       "bakmanMARSMeaningAwareResponse2024",
+       "balabanovUncertaintyQuantificationFinetuned2025",
+       "beckerCyclesThoughtMeasuring2024",
+       "coleSelectivelyAnsweringAmbiguous2023",
+       "cuiEstimatingBlackboxLLM2026",
+       "darrinRainProofUmbrellaShield2023",
+       "duanShiftingAttentionRelevance2024",
+       "duanUPropInvestigatingUncertainty2025",
+       "fadeevaFactCheckingOutputLarge2024",
+       "fengDontHallucinateAbstain2024",
+       "fomichevaUnsupervisedQualityEstimation2020",
+       "fuDeepThinkConfidence2026",
+       "hendrycksBaselineDetectingMisclassified2017",
+       "jiangCalibratingLanguageModels2023",
+       "jungTrustEscalateLLM2025",
+       "kadavathLanguageModelsMostly2022",
+       "kangScalableBestofNSelection2025",
+       "kimDetectingLLMHallucination2025",
+       "kruseSimpleEffectiveInformationTheoretic2025",
+       "kumarConformalPredictionLarge2023",
+       "liQuantifyingUnderstandingUncertainty2026",
+       "lingUncertaintyQuantificationInContext2024",
+       "lyuCalibratingLargeLanguage2025",
+       "maEstimatingLLMUncertainty2025",
+       "maSemanticEnergyDetecting2025",
+       "malininUncertaintyEstimationAutoregressive2021",
+       "manakulSelfCheckGPTZeroResourceBlackBox2023",
+       "mora-crossUncertaintyEstimationLarge2024",
+       "nguyenSemanticEntropyBoosting2025",
+       "portillowightmanStrengthNumbersEstimating2023",
+       "quachConformalLanguageModeling2024",
+       "renSelfEvaluationImprovesSelective2023",
+       "suAPIEnoughConformal2024",
+       "vashurinCoCoAMinimumBayes2025",
+       "vashurinUNCERTAINTYLINELengthInvariantEstimation2025",
+       "wangBLoBBayesianLowRank2024",
+       "wangSubjectiveUncertaintyQuantification2025",
+       "xieCalibratingReasoningLanguage2024",
+       "yadkoriBelieveNotBelieve2024",
+       "yaldizNotDesignLearn2025",
+       "yangBayesianLowrankAdaptation2024",
+       "zhangCoTUQImprovingResponsewise2025",
+       "zhangTokURTokenLevelUncertainty2026",
+       "zhaoUncertaintyPropagationLLM2025"
+      ],
+      "rows": [
+       "dis-01",
+       "dis-02",
+       "dis-03",
+       "dis-04",
+       "dis-05",
+       "dis-06",
+       "dis-07",
+       "dis-08",
+       "dis-09",
+       "dis-10",
+       "dis-11",
+       "dis-12",
+       "dis-13",
+       "dis-14",
+       "dis-15",
+       "dis-16",
+       "dis-17",
+       "dis-18",
+       "dis-19",
+       "dis-20",
+       "dis-21",
+       "dis-22",
+       "dis-23",
+       "dis-24",
+       "dis-25",
+       "dis-26",
+       "dis-27",
+       "dis-28",
+       "dis-29",
+       "dis-30",
+       "dis-31",
+       "dis-32",
+       "dis-33",
+       "dis-34",
+       "dis-35",
+       "dis-36",
+       "dis-37",
+       "dis-38",
+       "dis-39",
+       "dis-40",
+       "dis-41",
+       "dis-42",
+       "dis-43",
+       "dis-44",
+       "dis-45",
+       "dis-46",
+       "dis-47",
+       "dis-48"
+      ]
+     },
+     "FTH": {
+      "n": 0,
+      "ids": [],
+      "rows": []
+     },
+     "GRD": {
+      "n": 0,
+      "ids": [],
+      "rows": []
+     },
+     "UNS": {
+      "n": 0,
+      "ids": [],
+      "rows": []
+     },
+     "total": {
+      "n": 45,
+      "rows": 48
+     }
+    },
+    "sem": {
+     "COR": {
+      "n": 41,
+      "ids": [
+       "aichbergerImprovingUncertaintyEstimation2025",
+       "aoCSSContrastiveSemantic2024",
+       "bandLinguisticCalibrationLongForm2024",
+       "caoClusteredSelfAssessmentSimple2026",
+       "chenEveryResponseCounts2026",
+       "chenQuantifyingUncertaintyAnswers2024",
+       "chenUncertaintyQuantificationLarge2025",
+       "cherianLargeLanguageModel2024",
+       "cohenLMVsLM2023",
+       "coxMappingMeaningAddressing2025",
+       "daLLMUncertaintyQuantification2024",
+       "fanIUQInterrogativeUncertainty2026",
+       "farquharDetectingHallucinationsLarge2024",
+       "gaoSPUQPerturbationBasedUncertainty2024",
+       "houProbabilisticFrameworkLLM2025",
+       "jiangGraphbasedUncertaintyMetrics2024",
+       "kuhnSemanticUncertaintyLinguistic2023",
+       "liThinkTwiceTrusting2024",
+       "linGeneratingConfidenceUncertainty2024",
+       "linTeachingModelsExpress2022",
+       "liuCanLLMsLearn2024",
+       "luoAGSCAdaptiveGranularity2026",
+       "manakulSelfCheckGPTZeroResourceBlackBox2023",
+       "mccabeEstimatingSemanticAlphabet2026",
+       "mohriLanguageModelsConformal2024",
+       "nikitinKernelLanguageEntropy2024",
+       "phillipsGeometricUncertaintyDetecting2026",
+       "qiuSemanticDensityUncertainty2024",
+       "taoWhenTrustLLMs2024",
+       "tianJustAskCalibration2023",
+       "vipulanandanSemanticUncertaintyQuantification2026",
+       "walhaFinegrainedUncertaintyDecomposition2026",
+       "wangCLUEConceptLevelUncertainty2024",
+       "wangCalibratingVerbalizedConfidence2026",
+       "wangConUConformalUncertainty2024",
+       "xuSaySelfTeachingLLMs2024",
+       "yangCanWeTrust2024",
+       "yangZerosourceLLMHallucination2026",
+       "zhangAllRoadsLead2025",
+       "zhangLUQLongtextUncertainty2024",
+       "zhangSAC^3ReliableHallucination2023"
+      ],
+      "rows": [
+       "sem-01",
+       "sem-02",
+       "sem-03",
+       "sem-04",
+       "sem-05",
+       "sem-06",
+       "sem-07",
+       "sem-08",
+       "sem-09",
+       "sem-11",
+       "sem-12",
+       "sem-13",
+       "sem-14",
+       "sem-15",
+       "sem-16",
+       "sem-17",
+       "sem-18",
+       "sem-19",
+       "sem-20",
+       "sem-21",
+       "sem-22",
+       "sem-23",
+       "sem-24",
+       "sem-26",
+       "sem-27",
+       "sem-28",
+       "sem-30",
+       "sem-31",
+       "sem-32",
+       "sem-33",
+       "sem-34",
+       "sem-35",
+       "sem-36",
+       "sem-37",
+       "sem-38",
+       "sem-39",
+       "sem-40",
+       "sem-41",
+       "sem-42",
+       "sem-46",
+       "sem-47",
+       "sem-48",
+       "sem-49",
+       "sem-51",
+       "sem-52",
+       "sem-53"
+      ]
+     },
+     "FTH": {
+      "n": 5,
+      "ids": [
+       "daUnderstandingUncertaintyLLM2025",
+       "liuMetaFaithFaithfulNatural2025",
+       "liuReinforcementLearningMetacognitive2026",
+       "tanneruQuantifyingUncertaintyNatural2024",
+       "yonaCanLargeLanguage2024"
+      ],
+      "rows": [
+       "sem-25",
+       "sem-29",
+       "sem-43",
+       "sem-44",
+       "sem-45",
+       "sem-50"
+      ]
+     },
+     "GRD": {
+      "n": 0,
+      "ids": [],
+      "rows": []
+     },
+     "UNS": {
+      "n": 1,
+      "ids": [
+       "houDecomposingUncertaintyLarge2024"
+      ],
+      "rows": [
+       "sem-10"
+      ]
+     },
+     "total": {
+      "n": 47,
+      "rows": 53
+     }
+    }
+   }
+  },
+  "multi_value": "counted in each column",
+  "unit": "n = unique papers (bib keys) in that lens with that value; rows = the table rows behind it"
+ },
+ "sankey": {
+  "targets": [
+   {
+    "id": "COR",
+    "n": 146,
+    "criterion": [
+     "dis",
+     "sem"
+    ]
+   },
+   {
+    "id": "FTH",
+    "n": 5,
+    "criterion": [
+     "sem"
+    ]
+   },
+   {
+    "id": "GRD",
+    "n": 11,
+    "criterion": [
+     "dis",
+     "sem"
+    ]
+   },
+   {
+    "id": "UNS",
+    "n": 3,
+    "criterion": [
+     "sem"
+    ]
+   }
+  ],
+  "metrics": [
+   "RNK",
+   "CAL",
+   "SCR",
+   "DEC",
+   "REG",
+   "COV",
+   "FTH"
+  ],
+  "links": [
+   {
+    "source": "COR",
+    "target": "RNK",
+    "n": 115,
+    "ids": [
+     "ahdritzDistinguishingKnowableUnknowable2024",
+     "aichbergerImprovingUncertaintyEstimation2025",
+     "aichbergerRethinkingUncertaintyEstimation2026",
+     "aoCSSContrastiveSemantic2024",
+     "azariaInternalStateLLM2023",
+     "bakmanMARSMeaningAwareResponse2024",
+     "bakmanUncertaintyFeatureGaps2025",
+     "balabanovUncertaintyQuantificationFinetuned2025",
+     "beckerCyclesThoughtMeasuring2024",
+     "binkowskiHallucinationDetectionLLMs2025",
+     "braunUSpaceUncoveringWhen2026",
+     "caoClusteredSelfAssessmentSimple2026",
+     "chenEveryResponseCounts2026",
+     "chenHalluSAEDetectingHallucinations2026",
+     "chenLLMsInternalStates2024",
+     "chenQuantifyingUncertaintyAnswers2024",
+     "chenUncertaintyQuantificationLarge2025",
+     "cherianLargeLanguageModel2024",
+     "coleSelectivelyAnsweringAmbiguous2023",
+     "coxMappingMeaningAddressing2025",
+     "cuiEstimatingBlackboxLLM2026",
+     "daLLMUncertaintyQuantification2024",
+     "dakhmoucheCanLinearProbes2025",
+     "darrinRainProofUmbrellaShield2023",
+     "duHaloScopeHarnessingUnlabeled2024",
+     "duanShiftingAttentionRelevance2024",
+     "duanUPropInvestigatingUncertainty2025",
+     "eusebiReadingCalibratedUncertainty2026",
+     "fadeevaFactCheckingOutputLarge2024",
+     "fanIUQInterrogativeUncertainty2026",
+     "farquharDetectingHallucinationsLarge2024",
+     "ferrandoKnowThisEntity2025",
+     "fomichevaUnsupervisedQualityEstimation2020",
+     "frascaNeuralMessagePassingAttention2026",
+     "grunefeldTracingUncertaintyLanguage2026a",
+     "hanSemanticEntropyNeurons2024",
+     "hanSemanticEntropyProbes2024",
+     "hanSimpleFactualityProbes2025",
+     "hendrycksBaselineDetectingMisclassified2017",
+     "houProbabilisticFrameworkLLM2025",
+     "huHARPHallucinationDetection2026",
+     "jiCalibratingVerbalUncertainty2025",
+     "jiangCalibratingLanguageModels2023",
+     "jiangGraphbasedUncertaintyMetrics2024",
+     "jungTrustEscalateLLM2025",
+     "kamatGradDetectGradientBased2026",
+     "khanmohammadiCalibratingLLMConfidence2025",
+     "kimDetectingLLMHallucination2025",
+     "kruseSimpleEffectiveInformationTheoretic2025",
+     "kuhnSemanticUncertaintyLinguistic2023",
+     "liGradientsRespectSemantics2026",
+     "liHALLUCANAFixingLLM2025",
+     "liLanguageModelUncertainty2025",
+     "liThinkTwiceTrusting2024",
+     "linContextualizedSequenceLikelihood2024",
+     "linGeneratingConfidenceUncertainty2024",
+     "lingUncertaintyQuantificationInContext2024",
+     "liuAttentionguidedSelfreflectionZeroshot2025",
+     "liuCanLLMsLearn2024",
+     "liuRFSGuardDetectingReasoning2026",
+     "liuUncertaintyEstimationQuantification2024",
+     "luoAGSCAdaptiveGranularity2026",
+     "luoTwoPathwaysTruthfulness2026",
+     "lyuCalibratingLargeLanguage2025",
+     "maEstimatingLLMUncertainty2025",
+     "maSemanticEnergyDetecting2025",
+     "malininUncertaintyEstimationAutoregressive2021",
+     "manakulSelfCheckGPTZeroResourceBlackBox2023",
+     "maoDigitalDunningKrugerEffect2026",
+     "mccabeEstimatingSemanticAlphabet2026",
+     "mrykhinPromptEmbeddingProbes2026",
+     "nguyenSemanticEntropyBoosting2025",
+     "niReProbeEfficientTestTime2026",
+     "nikitinKernelLanguageEntropy2024",
+     "ostmeierGradientStableAttentionHeads2026",
+     "parkSteerLLMLatents2025",
+     "phillipsGeometricUncertaintyDetecting2026",
+     "portillowightmanStrengthNumbersEstimating2023",
+     "qiuSemanticDensityUncertainty2024",
+     "renOutofDistributionDetectionSelective2023",
+     "renSelfEvaluationImprovesSelective2023",
+     "samagaHalluZigHallucinationDetection2026",
+     "shelmanovHeadPredictHead2025",
+     "sreyLearningUncertaintySequential2026",
+     "sriramananLLMCheckInvestigatingDetection2024",
+     "sureshCrossLayerAttentionProbing2025",
+     "tianJustAskCalibration2023",
+     "vandijkDetectingHallucinationsLarge2026",
+     "vashurinCoCoAMinimumBayes2025",
+     "vashurinUNCERTAINTYLINELengthInvariantEstimation2025",
+     "vazhentsevEfficientHallucinationDetection2026",
+     "vazhentsevTokenLevelDensityBasedUncertainty2025",
+     "vazhentsevUnconditionalTruthfulnessLearning2025",
+     "vipulanandanSemanticUncertaintyQuantification2026",
+     "walhaFinegrainedUncertaintyDecomposition2026",
+     "wangCLUEConceptLevelUncertainty2024",
+     "wangCalibratingVerbalizedConfidence2026",
+     "wangLAFaCTAttributionbasedLocalization2026",
+     "wangLatentSpaceChainofEmbedding2025",
+     "wangSubjectiveUncertaintyQuantification2025",
+     "xuSaySelfTeachingLLMs2024",
+     "yadkoriBelieveNotBelieve2024",
+     "yaldizNotDesignLearn2025",
+     "yangZerosourceLLMHallucination2026",
+     "yuksekgonulAttentionSatisfiesConstraintSatisfaction2024",
+     "zhangAllRoadsLead2025",
+     "zhangCoTUQImprovingResponsewise2025",
+     "zhangDetectingHallucinationLarge2025",
+     "zhangICRProbeTracking2025",
+     "zhangLUQLongtextUncertainty2024",
+     "zhangReasoningModelsKnow2025",
+     "zhangSAC^3ReliableHallucination2023",
+     "zhangTokURTokenLevelUncertainty2026",
+     "zhaoUncertaintyPropagationLLM2025",
+     "zhaoVerifyingChainofThoughtReasoning2026"
+    ]
+   },
+   {
+    "source": "COR",
+    "target": "CAL",
+    "n": 37,
+    "ids": [
+     "balabanovUncertaintyQuantificationFinetuned2025",
+     "bandLinguisticCalibrationLongForm2024",
+     "beckerCyclesThoughtMeasuring2024",
+     "coleSelectivelyAnsweringAmbiguous2023",
+     "cuiEstimatingBlackboxLLM2026",
+     "dakhmoucheCanLinearProbes2025",
+     "gaoSPUQPerturbationBasedUncertainty2024",
+     "jiangCalibratingLanguageModels2023",
+     "jungTrustEscalateLLM2025",
+     "kadavathLanguageModelsMostly2022",
+     "khanmohammadiCalibratingLLMConfidence2025",
+     "kimDetectingLLMHallucination2025",
+     "kruseSimpleEffectiveInformationTheoretic2025",
+     "kumarConformalPredictionLarge2023",
+     "liLanguageModelUncertainty2025",
+     "liThinkTwiceTrusting2024",
+     "linTeachingModelsExpress2022",
+     "liuUncertaintyEstimationQuantification2024",
+     "lyuCalibratingLargeLanguage2025",
+     "mielkeReducingConversationalAgents2022",
+     "mora-crossUncertaintyEstimationLarge2024",
+     "ostmeierGradientStableAttentionHeads2026",
+     "portillowightmanStrengthNumbersEstimating2023",
+     "renSelfEvaluationImprovesSelective2023",
+     "taoWhenTrustLLMs2024",
+     "tianJustAskCalibration2023",
+     "vandijkDetectingHallucinationsLarge2026",
+     "wangBLoBBayesianLowRank2024",
+     "wangCalibratingVerbalizedConfidence2026",
+     "wangSubjectiveUncertaintyQuantification2025",
+     "xieCalibratingReasoningLanguage2024",
+     "xuSaySelfTeachingLLMs2024",
+     "yangBayesianLowrankAdaptation2024",
+     "yangCanWeTrust2024",
+     "zhangAllRoadsLead2025",
+     "zhangEnhancingUncertaintyBasedHallucination2023",
+     "zhangReasoningModelsKnow2025"
+    ]
+   },
+   {
+    "source": "COR",
+    "target": "SCR",
+    "n": 13,
+    "ids": [
+     "caoClusteredSelfAssessmentSimple2026",
+     "cuiEstimatingBlackboxLLM2026",
+     "jiangCalibratingLanguageModels2023",
+     "kruseSimpleEffectiveInformationTheoretic2025",
+     "liuUncertaintyEstimationQuantification2024",
+     "lyuCalibratingLargeLanguage2025",
+     "mielkeReducingConversationalAgents2022",
+     "tianJustAskCalibration2023",
+     "walhaFinegrainedUncertaintyDecomposition2026",
+     "wangBLoBBayesianLowRank2024",
+     "wangCalibratingVerbalizedConfidence2026",
+     "yangBayesianLowrankAdaptation2024",
+     "zhangAllRoadsLead2025"
+    ]
+   },
+   {
+    "source": "COR",
+    "target": "DEC",
+    "n": 21,
+    "ids": [
+     "afzalKnowingSayingLLM2025",
+     "azariaInternalStateLLM2023",
+     "burnsDiscoveringLatentKnowledge2023",
+     "chenHalluSAEDetectingHallucinations2026",
+     "cohenLMVsLM2023",
+     "fengDontHallucinateAbstain2024",
+     "fuDeepThinkConfidence2026",
+     "heLLMFactoscopeUncovering2024",
+     "jiLLMInternalStates2024",
+     "joshiPersonasWayModel2024",
+     "kamatGradDetectGradientBased2026",
+     "kangScalableBestofNSelection2025",
+     "liInferenceTimeInterventionEliciting2023",
+     "liuRFSGuardDetectingReasoning2026",
+     "mccabeEstimatingSemanticAlphabet2026",
+     "miLogicalConsistencyBridge2026",
+     "samagaHalluZigHallucinationDetection2026",
+     "sreyUnsupervisedHallucinationDetection2025",
+     "sriramananLLMCheckInvestigatingDetection2024",
+     "zhangSAC^3ReliableHallucination2023",
+     "zhangTokURTokenLevelUncertainty2026"
+    ]
+   },
+   {
+    "source": "COR",
+    "target": "REG",
+    "n": 3,
+    "ids": [
+     "gottesmanEstimatingKnowledgeLarge2024",
+     "liHALLUCANAFixingLLM2025",
+     "zhangEnhancingUncertaintyBasedHallucination2023"
+    ]
+   },
+   {
+    "source": "COR",
+    "target": "COV",
+    "n": 7,
+    "ids": [
+     "cherianLargeLanguageModel2024",
+     "kumarConformalPredictionLarge2023",
+     "liQuantifyingUnderstandingUncertainty2026",
+     "mohriLanguageModelsConformal2024",
+     "quachConformalLanguageModeling2024",
+     "suAPIEnoughConformal2024",
+     "wangConUConformalUncertainty2024"
+    ]
+   },
+   {
+    "source": "FTH",
+    "target": "CAL",
+    "n": 2,
+    "ids": [
+     "liuMetaFaithFaithfulNatural2025",
+     "liuReinforcementLearningMetacognitive2026"
+    ]
+   },
+   {
+    "source": "FTH",
+    "target": "SCR",
+    "n": 2,
+    "ids": [
+     "liuMetaFaithFaithfulNatural2025",
+     "liuReinforcementLearningMetacognitive2026"
+    ]
+   },
+   {
+    "source": "FTH",
+    "target": "FTH",
+    "n": 5,
+    "ids": [
+     "daUnderstandingUncertaintyLLM2025",
+     "liuMetaFaithFaithfulNatural2025",
+     "liuReinforcementLearningMetacognitive2026",
+     "tanneruQuantifyingUncertaintyNatural2024",
+     "yonaCanLargeLanguage2024"
+    ]
+   },
+   {
+    "source": "GRD",
+    "target": "RNK",
+    "n": 11,
+    "ids": [
+     "bazarovaHallucinationDetectionLLMs2026",
+     "chuangLookbackLensDetecting2024",
+     "frascaNeuralMessagePassingAttention2026",
+     "luTPANextToken2026",
+     "samagaHalluZigHallucinationDetection2026",
+     "sriramananLLMCheckInvestigatingDetection2024",
+     "sunReDeEPDetectingHallucination2025",
+     "vazhentsevEfficientHallucinationDetection2026",
+     "vazhentsevUnconditionalTruthfulnessLearning2025",
+     "xiongFaithfulRetrievalAugmentedGeneration2026",
+     "xuInformationFlowReveals2026"
+    ]
+   },
+   {
+    "source": "GRD",
+    "target": "DEC",
+    "n": 3,
+    "ids": [
+     "samagaHalluZigHallucinationDetection2026",
+     "sriramananLLMCheckInvestigatingDetection2024",
+     "xiongFaithfulRetrievalAugmentedGeneration2026"
+    ]
+   },
+   {
+    "source": "UNS",
+    "target": "RNK",
+    "n": 3,
+    "ids": [
+     "duGeometricDeviationUnsupervised2026",
+     "houDecomposingUncertaintyLarge2024",
+     "liHALLUCANAFixingLLM2025"
+    ]
+   },
+   {
+    "source": "UNS",
+    "target": "DEC",
+    "n": 1,
+    "ids": [
+     "duGeometricDeviationUnsupervised2026"
+    ]
+   },
+   {
+    "source": "UNS",
+    "target": "REG",
+    "n": 1,
+    "ids": [
+     "liHALLUCANAFixingLLM2025"
+    ]
+   }
+  ],
+  "headline": {
+   "n_papers": 159,
+   "cor": 146,
+   "cor_rnk_only": 78,
+   "all_rnk_only": 84
+  },
+  "multi_value": "counted on each link",
+  "criterion_note": "criterion comes from tab:eval-metrics per target; it is not recorded per paper"
+ },
+ "labels": {
+  "lens": {
+   "str": {
+    "name": "Structural"
+   },
+   "rep": {
+    "name": "Representational"
+   },
+   "dis": {
+    "name": "Distributional"
+   },
+   "sem": {
+    "name": "Semantical"
+   }
+  },
+  "type_header": {
+   "sem": "Type",
+   "dis": "Level",
+   "rep": "Layer",
+   "str": "Comp."
+  },
+  "access": {
+   "B": {
+    "sym": "■",
+    "name": "black-box"
+   },
+   "G": {
+    "sym": "⊠",
+    "name": "gray-box"
+   },
+   "W": {
+    "sym": "□",
+    "name": "white-box"
+   }
+  },
+  "ns": {
+   "native": {
+    "tex": "\\(\\circ\\)",
+    "name": "native"
+   },
+   "surr-dis": {
+    "tex": "\\(\\bullet_{\\text{dis}}\\)",
+    "name": "surrogate for the distributional lens"
+   },
+   "surr-sem": {
+    "tex": "\\(\\bullet_{\\text{sem}}\\)",
+    "name": "surrogate for the semantical lens"
+   }
+  },
+  "Z": {
+   "∅": {
+    "tex": "\\(\\varnothing\\)",
+    "name": "no variation"
+   },
+   "y": {
+    "tex": "\\(y\\)",
+    "name": "resampled outputs"
+   },
+   "θ": {
+    "tex": "\\(\\theta\\)",
+    "name": "parameter variation"
+   },
+   "x′": {
+    "tex": "\\(x'\\)",
+    "name": "input variation"
+   }
+  },
+  "S": {
+   "∅": {
+    "tex": "\\(\\varnothing\\)",
+    "name": "no auxiliary structure"
+   },
+   "Z_S": {
+    "tex": "\\(Z_S\\)",
+    "name": "S defines the distribution of Z"
+   },
+   "ρ_S": {
+    "tex": "\\(\\rho_S\\)",
+    "name": "S defines the readout map"
+   },
+   "U_S": {
+    "tex": "\\(\\mathcal U_S\\)",
+    "name": "S parameterizes U"
+   },
+   "ψ_S": {
+    "tex": "\\(\\psi_S\\)",
+    "name": "S post-processes the score"
+   }
+  },
+  "target": {
+   "COR": "correctness",
+   "FTH": "faithfulness",
+   "GRD": "grounding",
+   "UNS": "underspecification"
+  },
+  "metric": {
+   "RNK": "ranking",
+   "CAL": "calibration",
+   "SCR": "scoring",
+   "DEC": "decision",
+   "REG": "regression",
+   "COV": "coverage",
+   "FTH": "faithfulness"
+  }
+ }
+}

@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
+  <!-- UQ-Lenses icon: λ (the lens axis) painted with the lens band, transparent background; str → rep → dis → sem -->
+  <style>
+    .s0{stop-color:#33598F} .s1{stop-color:#825580} .s2{stop-color:#3A7018} .s3{stop-color:#BA4242}
+    @media (prefers-color-scheme: dark){
+      .s0{stop-color:#7FA3D9} .s1{stop-color:#C08FBD} .s2{stop-color:#8CC06A} .s3{stop-color:#E58585}
+    }
+  </style>
+  <defs>
+    <linearGradient id="band" gradientUnits="userSpaceOnUse" x1="4" y1="0" x2="28" y2="0">
+      <stop offset="0" class="s0"/><stop offset=".333" class="s1"/><stop offset=".667" class="s2"/><stop offset="1" class="s3"/>
+    </linearGradient>
+  </defs>
+  <g fill="none" stroke="url(#band)" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M4.5 3.5c3.3-.4 5 .9 6.3 3.5L27.5 29"/>
+    <path d="M15.5 14L5.5 29"/>
+  </g>
+</svg>

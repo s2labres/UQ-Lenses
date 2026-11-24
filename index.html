@@ -1,0 +1,343 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>UQ Lenses · Where Is Uncertainty Observed?</title>
+<meta name="description" content="UQ Lenses: a mechanistic map of uncertainty quantification in LLMs. Every estimator observes the model through one of four lenses (structural, representational, distributional, semantical). Survey of 159 papers, evaluation protocol and interactive demos.">
+<!-- Stage switch: site-url is the single source of the page's absolute URL.
+     The four absolute URLs below (canonical, og:url, og:image, twitter:image) must start with the same value;
+     link-preview crawlers do not run JS, so they are written out literally. -->
+<meta name="site-url" content="https://s2lab.org/UQ-Lenses/">
+<link rel="canonical" href="https://s2lab.org/UQ-Lenses/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="UQ Lenses">
+<meta property="og:title" content="UQ Lenses: Where Is Uncertainty Observed?">
+<meta property="og:description" content="A mechanistic understanding of uncertainty quantification in LLMs: four observation lenses, a survey of 159 papers, and interactive demos.">
+<meta property="og:url" content="https://s2lab.org/UQ-Lenses/">
+<meta property="og:image" content="https://s2lab.org/UQ-Lenses/assets/img/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="UQ Lenses: Where Is Uncertainty Observed?">
+<meta name="twitter:description" content="A mechanistic understanding of uncertainty quantification in LLMs: four observation lenses, a survey of 159 papers, and interactive demos.">
+<meta name="twitter:image" content="https://s2lab.org/UQ-Lenses/assets/img/og.png">
+<link rel="icon" href="./assets/img/favicon.svg?v=4" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&display=swap">
+<link rel="stylesheet" href="./assets/css/tokens.css?v=20261116y">
+<link rel="stylesheet" href="./assets/css/site.css?v=20261124g">
+<script>/* apply the saved theme before first paint; theme.js wires the toggle */
+try{var t=localStorage.getItem("uql-theme");if(t==="light"||t==="dark")document.documentElement.dataset.theme=t}catch(e){}</script>
+<script src="./assets/js/theme.js?v=20261116y" defer></script>
+<script src="./assets/js/nav.js?v=20261116y" defer></script>
+<script src="./assets/js/toc.js?v=20261124c" defer></script>
+<script src="./assets/js/tabs.js?v=20261116y" defer></script>
+<script src="./assets/js/examples.js?v=20261116y" defer></script>
+<script src="./assets/js/lenses.js?v=20261116y" defer></script>
+<script>/* MathJax 3 (SVG output) for the Lenses section; lenses.js listens for "uql:mathjax" */
+window.MathJax={loader:{load:["[tex]/html"]},tex:{packages:{"[+]":["html"]},inlineMath:[["\\(","\\)"]],displayMath:[["\\[","\\]"]]},svg:{fontCache:"global"},options:{enableMenu:false},
+  startup:{typeset:false,ready:function(){MathJax.startup.defaultReady();MathJax.startup.promise.then(function(){document.dispatchEvent(new Event("uql:mathjax"))})}}};</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/3.2.2/es5/tex-svg.js" defer></script>
+<script src="./assets/js/explorer.js?v=20261123d" defer></script>
+<script src="./assets/js/eval.js?v=20261124a" defer></script>
+<script src="./assets/js/playground.js?v=20261124g" defer></script>
+<script src="./assets/js/poc.js?v=20261124f" defer></script>
+</head>
+<body>
+<a class="skip" href="#overview">Skip to content</a>
+
+<nav class="tabbar" aria-label="Sections">
+  <div class="wrap">
+    <ul class="tablinks" id="tablinks">
+      <li><a href="#overview">Overview</a></li>
+      <li><a href="#lenses">Lenses</a></li>
+      <li><a href="#survey">Survey</a></li>
+      <li><a href="#evaluation">Evaluation</a></li>
+      <li><a href="#demos">Demos</a></li>
+      <li><a href="#cite">Cite</a></li>
+    </ul>
+    <span class="seg" role="group" aria-label="Colour theme" id="theme-toggle" data-theme-toggle><button type="button" data-t="light" aria-pressed="false">Light</button><button type="button" data-t="dark" aria-pressed="false">Dark</button></span>
+  </div>
+</nav>
+
+<!-- Left contents navigator (≥ 1280 px, where it replaces the top tab bar); list filled by assets/js/toc.js from the tab bar links + [data-toc] blocks -->
+<nav class="toc" id="toc" aria-label="Contents">
+  <p class="toc-head">Contents</p>
+  <div id="toc-list"></div>
+  <span class="seg toc-theme" role="group" aria-label="Colour theme" data-theme-toggle><button type="button" data-t="light" aria-pressed="false">Light</button><button type="button" data-t="dark" aria-pressed="false">Dark</button></span>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <p class="eyebrow">preprint 2026</p>
+    <h1>UQ Lenses</h1>
+    <p class="sub">Where Is Uncertainty Observed?</p>
+    <div class="lensrule" aria-hidden="true"></div>
+    <p class="paper-title">Where Is Uncertainty Observed? A Mechanistic Understanding of Uncertainty Quantification in LLMs</p>
+    <p class="authors">Xiaoyu Liang<sup>1</sup>, Virginia Ceccatelli<sup>1</sup>, Aliai Eusebi<sup>1</sup>, Tobias Braun<sup>1,2</sup>, Nils Loose<sup>1,3</sup>, Carlo Malagnino<sup>1</sup>, Lorenzo Cavallaro<sup>1,4</sup></p>
+    <p class="affils"><span><sup>1</sup>University College London</span> <span><sup>2</sup>Technische Universität Darmstadt</span> <span><sup>3</sup>Universität zu Lübeck</span> <span><sup>4</sup>Mohamed bin Zayed University of Artificial Intelligence</span></p>
+    <div class="buttons">
+      <a class="btn" href="https://arxiv.org/abs/2611.15735">arXiv</a>
+      <a class="btn" href="https://arxiv.org/pdf/2611.15735">PDF</a>
+      <a class="btn" href="#cite">BibTeX</a>
+    </div>
+  </div>
+</header>
+
+
+<main class="wrap">
+
+  <!-- ===================== 1 · Overview ===================== -->
+  <section id="overview" aria-labelledby="h-overview">
+    <div class="sec-head"><span class="num">01</span><h2 id="h-overview">Overview</h2></div>
+    <div class="stack">
+      <div class="lede">
+        <p>Knowing when a large language model's (LLM's) response can be trusted is critical for its safe use. Uncertainty quantification (UQ) can help LLMs recognize if their responses may be unreliable. Existing taxonomies organize UQ methods by uncertainty source or estimation mechanism. They leave unresolved the question of <em class="key">where uncertainty is observed in the model's computation</em>. The answer matters because the observation point determines whether an estimator has access to enough information to recover a given target, and how well it can recover it.</p>
+        <p>Drawing on mechanistic interpretability, we define four mechanistic observation lenses: the <em class="lens" data-lens="str">structural</em> lens observes component updates, the <em class="lens" data-lens="rep">representational</em> lens observes hidden states, the <em class="lens" data-lens="dis">distributional</em> lens observes token probabilities, and the <em class="lens" data-lens="sem">semantical</em> lens observes distributions over meanings. We relate these lenses through the residual stream and order them by the information they carry, which gives a principle for selecting UQ methods for different targets. We survey existing methods through the four lenses. Furthermore, we distinguish evaluation targets, criteria, and metrics to clarify different UQ evaluation protocols. Finally, we identify open problems and research directions to connect uncertainty estimation to the internal computation and downstream use of LLMs.</p>
+      </div>
+
+      <div id="opening-example" class="ex" data-toc="Four lenses applied to queries">
+        <h3 class="block-title">Four lenses applied to queries</h3>
+        <div class="ltabs" role="tablist" aria-label="Query"></div>
+        <div class="ex-panels"><p class="ex-status">Loading the example…</p></div>
+        <p class="ex-foot"></p>
+        <noscript><p class="ex-status">This interactive example needs JavaScript.</p></noscript>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 2 · Lenses ===================== -->
+  <!-- Rendered by assets/js/lenses.js from data/lenses.json; order follows the paper's takeaways 1–4. -->
+  <section id="lenses" aria-labelledby="h-lenses">
+    <div class="sec-head"><span class="num">02</span><h2 id="h-lenses">Lenses</h2></div>
+    <div class="lz">
+      <p class="lede lz-lead" id="lz-lead"></p>
+      <p class="ex-status" id="lz-status">Loading the Lenses section…</p>
+      <noscript><p class="ex-status">This section needs JavaScript.</p></noscript>
+
+      <div class="lz-block" id="lenses-residual" aria-label="Takeaway 1"><div id="lz-tk-residual"></div></div>
+
+      <div class="lz-block" id="lenses-four" data-toc="Four lenses on the residual stream">
+        <h3 class="block-title" id="lz-h-fig"></h3><p class="lz-sub" id="lz-sub-fig"></p>
+        <figure class="lz-fig" id="lz-fig" tabindex="0"></figure>
+        <p class="lz-figcap" id="lz-figcap"></p>
+        <h4 class="lz-minor" id="lz-h-lensdefs"></h4>
+        <div class="lensdefs" id="lz-lensdefs"></div>
+        <h4 class="lz-minor" id="lz-h-maps"></h4>
+        <div class="maps" id="lz-maps"></div>
+        <div id="lz-tk-figure"></div>
+      </div>
+
+      <div class="lz-block" id="lenses-estimator" data-toc="Every estimator is a point (λ, Z, S)">
+        <h3 class="block-title" id="lz-h-axes"></h3><p class="lz-sub" id="lz-sub-axes"></p>
+        <div class="axes" id="lz-axes"></div>
+        <div class="zdetail" id="lz-zdetail" aria-live="polite"></div>
+        <h4 class="lz-minor" id="lz-h-pipe"></h4>
+        <div class="lz-eq" id="lz-eq"></div>
+        <div class="pipe" id="lz-pipe" role="group" aria-label="Estimator pipeline, left to right"></div>
+        <div class="detail" id="lz-detail" aria-live="polite"></div>
+        <p class="lz-defaults" id="lz-defaults"></p>
+        <div id="lz-tk-estimator"></div>
+      </div>
+
+      <div class="lz-block" id="lenses-rule" data-toc="Choosing a lens and an estimator on it">
+        <h3 class="block-title" id="lz-h-rule"></h3>
+        <p class="rule" id="lz-rule"></p>
+        <dl class="gloss" id="lz-gloss"></dl>
+        <div class="tie"><h4 class="lz-minor" id="lz-tie-h"></h4><div class="tierows" id="lz-tie"></div></div>
+        <p class="lz-teaser" id="lz-teaser"></p>
+        <div id="lz-tk-rule"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 3 · Survey ===================== -->
+  <!-- Rendered by assets/js/explorer.js from data/papers.json + data/survey.json (+ data/papers.bib for BibTeX). -->
+  <section id="survey" aria-labelledby="h-survey">
+    <div class="sec-head"><span class="num">03</span><h2 id="h-survey">Survey</h2></div>
+    <div class="sv" id="survey-explorer">
+      <p class="lede sv-lede" id="sv-lede"></p>
+      <p class="ex-status" id="sv-status-load">Loading the survey…</p>
+      <noscript><p class="ex-status">The survey explorer needs JavaScript.</p></noscript>
+
+      <div class="sv-top">
+      <div class="sv-block" id="survey-map" data-toc="Coverage map">
+        <h3 class="block-title" id="sv-h-map"></h3>
+        <p class="sv-sub" id="sv-sub-map"></p>
+        <div class="ltabs" role="tablist" aria-label="Coverage map axes">
+          <button class="ltab" role="tab" id="cov-tab-z" aria-controls="cov-z" aria-selected="true">lens × Z</button>
+          <button class="ltab" role="tab" id="cov-tab-s" aria-controls="cov-s" aria-selected="false">lens × S</button>
+          <button class="ltab" role="tab" id="cov-tab-target" aria-controls="cov-target" aria-selected="false">lens × target</button>
+        </div>
+        <div class="sv-dotctl"><span class="sv-dotlbl" id="sv-dotlbl"></span><span class="seg" role="group" aria-labelledby="sv-dotlbl" id="sv-dotmode"></span></div>
+        <div role="tabpanel" id="cov-z" aria-labelledby="cov-tab-z" tabindex="0" data-axis="Z"></div>
+        <div role="tabpanel" id="cov-s" aria-labelledby="cov-tab-s" tabindex="0" data-axis="S" hidden></div>
+        <div role="tabpanel" id="cov-target" aria-labelledby="cov-tab-target" tabindex="0" data-axis="target" hidden></div>
+        <p class="sv-legend" id="sv-legend"></p>
+        <p class="sv-cap" id="sv-cap"></p>
+      </div>
+
+      <div class="sv-block" id="survey-takeaways">
+        <h4 class="sv-minor" id="sv-h-tk"></h4>
+        <div class="sv-tks" id="sv-tks"></div>
+      </div>
+      </div>
+
+      <div class="sv-block" id="survey-list" data-toc="Paper list">
+        <h3 class="block-title" id="sv-h-list"></h3>
+        <details class="sv-finder" id="survey-finder"></details>
+        <div class="sv-filters" id="survey-filters"></div>
+        <div class="sv-bar">
+          <p class="sv-count" id="sv-count" role="status" aria-live="polite"></p>
+          <span class="seg sv-sort" role="group" id="sv-sort"></span>
+        </div>
+        <div class="sv-active" id="sv-active"></div>
+        <div class="sv-cards" id="sv-cards"></div>
+        <div class="sv-more" id="sv-more"></div>
+        <p class="bib-status" id="sv-status" role="status" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 4 · Evaluation ===================== -->
+  <!-- Rendered by assets/js/eval.js from data/papers.json (sankey, labels, papers) + data/eval.json (section text). -->
+  <section id="evaluation" aria-labelledby="h-evaluation">
+    <div class="sec-head"><span class="num">04</span><h2 id="h-evaluation">Evaluation</h2></div>
+    <div class="ev">
+      <p class="lede ev-lede" id="ev-lede"></p>
+      <p class="ex-status" id="ev-status">Loading the Evaluation section…</p>
+      <noscript><p class="ex-status">This section needs JavaScript.</p></noscript>
+
+      <div class="ev-block" id="eval-protocol" data-toc="Protocol">
+        <h3 class="block-title" id="ev-h-protocol"></h3>
+        <ol class="ev-proto" id="ev-proto"></ol>
+      </div>
+
+      <div class="ev-block" id="eval-flow" data-toc="How papers evaluate">
+        <h3 class="block-title" id="ev-h-flow"></h3>
+        <p class="ev-sub" id="ev-sub-flow"></p>
+        <div class="ev-flowgrid">
+          <div class="ev-flowmain">
+            <div class="ev-chart" id="ev-chart"></div>
+            <p class="ev-legend" id="ev-legend"></p>
+            <p class="ev-cap" id="ev-cap"></p>
+          </div>
+          <div class="ev-flowside">
+            <h4 class="ev-minor" id="ev-h-notes"></h4>
+            <ul class="ev-notes" id="ev-notes"></ul>
+          </div>
+        </div>
+        <details class="ev-tbl" id="ev-tbl"></details>
+        <p class="bib-status" id="ev-nav-status" role="status" aria-live="polite"></p>
+      </div>
+
+      <div class="ev-block" id="eval-benchmarks" data-toc="Benchmarks">
+        <h3 class="block-title" id="ev-h-bench"></h3>
+        <p class="ev-sub" id="ev-sub-bench"></p>
+        <div class="ev-bench" id="ev-bench"></div>
+        <p class="ev-cap" id="ev-bench-note"></p>
+      </div>
+
+      <div id="ev-takeaway"></div>
+    </div>
+    <div class="ev-card" id="ev-card" hidden></div>
+  </section>
+
+  <!-- ===================== 5 · Demos ===================== -->
+  <section id="demos" aria-labelledby="h-demos">
+    <div class="sec-head"><span class="num">05</span><h2 id="h-demos">Demos</h2></div>
+    <div class="stack">
+      <!-- Rendered by assets/js/playground.js from data/playground.json (text, presets) + data/papers.json (sankey.headline). -->
+      <div id="playground" data-toc="Metric playground">
+        <h3 class="block-title" id="pg-title">Metric playground</h3>
+        <p class="lede pg-lede" id="pg-lede"></p>
+        <p class="ex-status" id="pg-status">Loading the metric playground…</p>
+        <noscript><p class="ex-status">The metric playground needs JavaScript.</p></noscript>
+        <div class="ltabs" role="tablist" aria-label="Evaluation target">
+          <button class="ltab" role="tab" id="pg-tab-cor" aria-controls="pg-cor" aria-selected="true"><span class="chip tgt" data-t="COR">COR</span> Correctness</button>
+          <button class="ltab" role="tab" id="pg-tab-grd" aria-controls="pg-grd" aria-selected="false"><span class="chip tgt" data-t="GRD">GRD</span> Grounding</button>
+          <button class="ltab" role="tab" id="pg-tab-uns" aria-controls="pg-uns" aria-selected="false"><span class="chip tgt" data-t="UNS">UNS</span> Underspecification</button>
+          <button class="ltab" role="tab" id="pg-tab-fth" aria-controls="pg-fth" aria-selected="false"><span class="chip tgt" data-t="FTH">FTH</span> Faithfulness</button>
+        </div>
+        <div role="tabpanel" id="pg-cor" aria-labelledby="pg-tab-cor"></div>
+        <div role="tabpanel" id="pg-grd" aria-labelledby="pg-tab-grd" hidden></div>
+        <div role="tabpanel" id="pg-uns" aria-labelledby="pg-tab-uns" hidden></div>
+        <div role="tabpanel" id="pg-fth" aria-labelledby="pg-tab-fth" hidden></div>
+        <p class="pg-linkout" id="pg-linkout"></p>
+        <p class="pg-sr" id="pg-keys"></p>
+        <p class="pg-sr" id="pg-live" aria-live="polite"></p>
+      </div>
+      <!-- Rendered by assets/js/poc.js from data/poc.json (brief 10). -->
+      <div id="poc-demo" data-toc="DecBase, estimators and confidence">
+        <h3 class="block-title">DecBase, estimators and confidence</h3>
+        <div class="lede poc-lede">
+          <p>The decodability baseline (DecBase) is a supervised probe that describes the correctness information usable by this probe family: an ℓ<sub>2</sub>-regularized logistic regression followed by a one-hidden-layer MLP (logistic regression only for MMLU). Each lens is probed on nested feature sets, F<sub>sem</sub> ⊂ F<sub>dis</sub> ⊂ F<sub>rep</sub> ⊂ F<sub>str</sub>, so the gain of each lens over the next outer lens is the contribution of the new features.</p>
+          <p>The confidence score is the maximum softmax probability (MSP) of the last token. Raising the MSP cutoff removes less confident questions, leaving fewer errors and harder cases.</p>
+        </div>
+        <p class="ex-status" id="poc-status">Loading the proof-of-concept data…</p>
+        <noscript><p class="ex-status">This demo needs JavaScript.</p></noscript>
+        <div class="poc-top">
+        <span class="poc-grp"><span class="poc-flab" id="poc-mlab">Model</span>
+        <div class="ltabs" role="tablist" aria-labelledby="poc-mlab">
+          <button class="ltab" role="tab" id="poc-tab-qwen-inst" aria-controls="poc-qwen-inst" aria-selected="true">Qwen-Inst</button>
+          <button class="ltab" role="tab" id="poc-tab-qwen-base" aria-controls="poc-qwen-base" aria-selected="false">Qwen-Base</button>
+          <button class="ltab" role="tab" id="poc-tab-llama-inst" aria-controls="poc-llama-inst" aria-selected="false">Llama-Inst</button>
+        </div>
+        </span>
+        <span class="poc-ds-slot" id="poc-ds-slot"></span>
+        </div>
+        <div role="tabpanel" id="poc-qwen-inst" aria-labelledby="poc-tab-qwen-inst"></div>
+        <div role="tabpanel" id="poc-qwen-base" aria-labelledby="poc-tab-qwen-base" hidden></div>
+        <div role="tabpanel" id="poc-llama-inst" aria-labelledby="poc-tab-llama-inst" hidden></div>
+        <ul class="poc-notes">
+          <li>On open-ended QA (TriviaQA, PopQA), the ordering of the lenses is preserved at every confidence level, and the gaps are wider.</li>
+          <li>On MMLU, the four lines cross. The collapsed output space makes distributional signal the same as the semantical one.</li>
+          <li id="poc-note-d" hidden>The lower panel shows the <a href="#lenses">g<sub>unemb</sub></a> gap Δ<sub>unemb</sub>. The representational lens helps most on confident errors.</li>
+        </ul>
+        <p class="poc-foot" id="poc-foot">Setup: N = 3,000 questions per dataset, evaluated on the test split; probes averaged over 5 seeds. Grey shading marks cutoffs with 50 or fewer incorrect answers. Incorrect is the positive class.</p>
+        <p class="vh" id="poc-keys">Arrow keys move the cutoff by one step; Home and End jump to the lowest and highest cutoff.</p>
+        <p class="vh" id="poc-live" aria-live="polite"></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===================== 6 · Cite ===================== -->
+  <section id="cite" aria-labelledby="h-cite">
+    <div class="sec-head"><span class="num">06</span><h2 id="h-cite">Cite</h2></div>
+    <div class="bib">
+      <pre id="bibtex">@article{liang2026uncertainty,
+  title   = {Where Is Uncertainty Observed? A Mechanistic Understanding
+             of Uncertainty Quantification in {LLMs}},
+  author  = {Liang, Xiaoyu and Ceccatelli, Virginia and Eusebi, Aliai and
+             Braun, Tobias and Loose, Nils and Malagnino, Carlo and
+             Cavallaro, Lorenzo},
+  journal = {arXiv preprint arXiv:2611.15735},
+  year    = {2026}
+}</pre>
+      <button class="btn" type="button" id="copy-bib" data-copy="bibtex">Copy BibTeX</button>
+    </div>
+    <p class="bib-status" id="bib-status" role="status" aria-live="polite"></p>
+  </section>
+
+  <!-- ===================== References (not in the tab bar) ===================== -->
+  <section id="references" aria-labelledby="h-references">
+    <div class="sec-head"><h2 id="h-references">References</h2></div>
+    <ul class="refs">
+      <li id="ref-inside" data-cite="Chen et al., 2024">Chao Chen, Kai Liu, Ze Chen, Yi Gu, Yue Wu, Mingyuan Tao, Zhihang Fu, and Jieping Ye. <a href="https://arxiv.org/abs/2402.03744">INSIDE: LLMs' Internal States Retain the Power of Hallucination Detection</a>. In <i>ICLR</i>, 2024.</li>
+      <li id="ref-logitlens" data-cite="nostalgebraist, 2020">nostalgebraist. <a href="https://www.lesswrong.com/posts/AcKRB8wDpdaN6v6ru/interpreting-gpt-the-logit-lens">Interpreting GPT: The Logit Lens</a>. <i>LessWrong</i>, 2020.</li>
+      <li id="ref-qwen25" data-cite="Qwen Team, 2025">Qwen Team: An Yang, Baosong Yang, Beichen Zhang, et al. <a href="https://arxiv.org/abs/2412.15115">Qwen2.5 Technical Report</a>. arXiv:2412.15115, 2025.</li>
+    </ul>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap">
+    <p>UQ Lenses · project page to arXiv:2611.15735.</p>
+    <p>S2Lab, University College London.</p>
+  </div>
+</footer>
+</body>
+</html>

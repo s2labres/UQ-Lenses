@@ -1,0 +1,721 @@
+{
+ "_about": "Metric playground (Demos, brief 09). Text and presets for assets/js/playground.js. Wording from 6-evaluation.tex §6.1/§6.3 and A-appendix.tex sec:appendix-metrics. {cor_rnk_only} and {cor} are filled from data/papers.json sankey.headline at render time; {pos} {neg} {item} {items} {Pos} {Items} from the selected binary target.",
+ "title": "Metric playground",
+ "lede": "Ranking, calibration, scoring and decision metrics measure different aspects of the same uncertainty score. Faithfulness metrics need no ground truth: they measure the agreement between two uncertainty signals of the same model.",
+ "survey_line": "In the survey, <a href=\"#eval-flow\">{cor_rnk_only} of {cor} correctness papers report ranking metrics only</a>.",
+ "tabs": {
+  "COR": "Correctness",
+  "GRD": "Grounding",
+  "UNS": "Underspecification",
+  "FTH": "Faithfulness"
+ },
+ "keys": "Keyboard: left and right arrows move a point or τ by 0.01, with Shift by 0.1; in the faithfulness plot up and down move signal 2. N and P go to the next and previous point. L flips a point's label; Delete removes it.",
+ "targets": {
+  "order": [
+   "COR",
+   "GRD",
+   "UNS"
+  ],
+  "COR": {
+   "name": "Correctness",
+   "pos": "correct",
+   "neg": "wrong",
+   "Pos": "Correct",
+   "item": "answer",
+   "items": "answers",
+   "Items": "Answers",
+   "p": "confidence 1 − U",
+   "acc": "accuracy",
+   "risk": "risk (error rate)",
+   "pdef": "its confidence 1 − <i>U</i> is read as the predicted probability that the answer is correct"
+  },
+  "GRD": {
+   "name": "Grounding",
+   "pos": "grounded",
+   "neg": "ungrounded",
+   "Pos": "Grounded",
+   "item": "answer",
+   "items": "answers",
+   "Items": "Answers",
+   "p": "1 − U",
+   "acc": "share grounded",
+   "risk": "share ungrounded",
+   "pdef": "1 − <i>U</i> is read as the predicted probability that the answer is grounded"
+  },
+  "UNS": {
+   "name": "Underspecification",
+   "pos": "well-specified",
+   "neg": "underspecified",
+   "Pos": "Well-specified",
+   "item": "input",
+   "items": "inputs",
+   "Items": "Inputs",
+   "p": "1 − U",
+   "acc": "share well-specified",
+   "risk": "share underspecified",
+   "pdef": "1 − <i>U</i> is read as the predicted probability that the input is well specified"
+  }
+ },
+ "cor": {
+  "sub": "Each mark is one {item}: <i>U</i> runs from 0 (certain) to 1 (uncertain), {p} is the predicted probability that it is {pos}, and τ gives the decision <i>d</i>(<i>x</i>) = 1[<i>U</i>(<i>x</i>) &lt; τ].",
+  "lanes": {
+   "pos": "{pos} (c = 1)",
+   "neg": "{neg} (c = 0)"
+  },
+  "moral": "Ranking depends only on the order of the scores, whereas calibration depends on their values. Scoring rules reflect calibration and how concentrated the scores are, and a decision metric is a single operating point on a ranking curve. A score can do well in one family and badly in another.",
+  "edited": "Your own scores. Pick a preset to start again.",
+  "families": [
+   {
+    "fam": "RNK",
+    "name": "Ranking",
+    "metrics": [
+     {
+      "id": "auroc",
+      "name": "AUROC",
+      "plot": "roc",
+      "dir": "higher is better · 0.5 = random",
+      "gloss": "P(a random {pos} {item} is less uncertain than a random {neg} one)."
+     },
+     {
+      "id": "aurc",
+      "name": "AURC",
+      "plot": "rc",
+      "dir": "lower is better",
+      "gloss": "Mean share of {neg} {items} among the k least uncertain, k = 1 … n."
+     },
+     {
+      "id": "auarc",
+      "name": "AUARC",
+      "plot": "arc",
+      "dir": "higher is better",
+      "gloss": "Mean share of {pos} {items} among those retained; equals 1 − AURC."
+     },
+     {
+      "id": "auprc",
+      "name": "AUPRC",
+      "plot": "pr",
+      "dir": "higher is better",
+      "gloss": "Average precision, with {pos} {items} as the positive class."
+     },
+     {
+      "id": "prr",
+      "name": "PRR",
+      "plot": "rc",
+      "dir": "higher is better · 0 = random · 1 = oracle",
+      "gloss": "Where AURC sits between random (0) and the oracle (1)."
+     }
+    ]
+   },
+   {
+    "fam": "CAL",
+    "name": "Calibration",
+    "metrics": [
+     {
+      "id": "ece",
+      "name": "ECE",
+      "plot": "rel",
+      "dir": "lower is better",
+      "gloss": "Gap between {p} and the share of {pos} {items}, in 10 bins."
+     },
+     {
+      "id": "mce",
+      "name": "MCE",
+      "plot": "rel",
+      "dir": "lower is better",
+      "gloss": "The largest such gap over the 10 bins."
+     },
+     {
+      "id": "ace",
+      "name": "ACE",
+      "plot": "ace",
+      "dir": "lower is better",
+      "gloss": "ECE with 10 bins of equal size instead of equal width."
+     }
+    ]
+   },
+   {
+    "fam": "SCR",
+    "name": "Scoring",
+    "metrics": [
+     {
+      "id": "brier",
+      "name": "Brier",
+      "dir": "lower is better",
+      "gloss": "Mean squared error between 1 − U and the label c."
+     }
+    ]
+   },
+   {
+    "fam": "DEC",
+    "name": "Decision",
+    "metrics": [
+     {
+      "id": "acc",
+      "name": "Accuracy @ τ",
+      "dir": "higher is better",
+      "gloss": "Share of {items} where d = 1[U < τ] matches the label."
+     },
+     {
+      "id": "f1",
+      "name": "F1 @ τ",
+      "dir": "higher is better",
+      "gloss": "Harmonic mean of precision and recall of d at τ."
+     }
+    ]
+   }
+  ],
+  "plots": {
+   "rel": {
+    "title": "Reliability diagram",
+    "x": "{p}",
+    "y": "{acc}",
+    "note": "Bars: share of {pos} {items} per bin; the number above is the bin size. Diagonal: perfect calibration. Hatched: the gap between the mean of {p} (black tick) and that share.",
+    "note_mce": "Outlined: the worst bin, whose gap is the MCE."
+   },
+   "ace": {
+    "title": "Reliability, equal-mass bins",
+    "x": "{p}",
+    "y": "{acc}",
+    "note": "Dots: mean {p} and share of {pos} {items} in each equal-mass bin. Lines to the diagonal: the gaps that ACE averages."
+   },
+   "roc": {
+    "title": "ROC curve",
+    "x": "false-positive rate",
+    "y": "true-positive rate",
+    "note": "Positive = {pos}; the threshold sweeps U from low to high. Shaded: AUROC. Dashed diagonal: random."
+   },
+   "rc": {
+    "title": "Risk–coverage curve",
+    "x": "coverage (retained fraction)",
+    "y": "{risk}",
+    "note": "Shaded: AURC. Dashed: random order. Dotted: oracle (every {neg} {item} rejected first).",
+    "note_prr": "PRR = (AURC − random) / (oracle − random)."
+   },
+   "arc": {
+    "title": "Accuracy–rejection curve",
+    "x": "rejected fraction",
+    "y": "{acc} of retained",
+    "note": "Shaded: AUARC = 1 − AURC. Dashed: random order. Dotted: oracle."
+   },
+   "pr": {
+    "title": "Precision–recall curve",
+    "x": "recall",
+    "y": "precision",
+    "note": "Positive = {pos}. Shaded: average precision (AUPRC). Dashed: share of {pos} {items}, the random baseline."
+   }
+  },
+  "presets": [
+   {
+    "id": "rank-not-cal",
+    "label": "Good ranking, bad calibration",
+    "tau": 0.5,
+    "caption": "Every {pos} {item} is less uncertain than every {neg} one, so sorting by U puts all {pos} {items} first. But all scores sit below U = 0.1, so each says its {item} is at least 90% likely to be {pos}. Prediction and observed share disagree.",
+    "pos": [
+     0.005,
+     0.01,
+     0.015,
+     0.02,
+     0.025,
+     0.03,
+     0.035,
+     0.04,
+     0.045,
+     0.05
+    ],
+    "neg": [
+     0.055,
+     0.06,
+     0.065,
+     0.07,
+     0.075,
+     0.08,
+     0.085,
+     0.09,
+     0.095,
+     0.1
+    ]
+   },
+   {
+    "id": "cal-not-rank",
+    "label": "Good calibration, bad ranking",
+    "tau": 0.6,
+    "caption": "Every {item} has U = 0.5, so 1 − U equals the observed share of {pos} {items} (10 of 20) and the prediction is right on average. But a constant score cannot tell {pos} from {neg}: sorting by U leaves them in any order, so the risk–coverage curve is the random line.",
+    "pos": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ],
+    "neg": [
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5,
+     0.5
+    ]
+   },
+   {
+    "id": "good",
+    "label": "Good uncertainty score",
+    "tau": 0.5,
+    "caption": "{Pos} {items} mostly sit at low U and {neg} ones at high U, so sorting by U puts most {pos} {items} first. Within each bin, the share of {pos} {items} is close to the predicted probability 1 − U, so the scores can be read as probabilities.",
+    "pos": [
+     0.02,
+     0.04,
+     0.05,
+     0.07,
+     0.09,
+     0.21,
+     0.24,
+     0.28,
+     0.53,
+     0.74
+    ],
+    "neg": [
+     0.26,
+     0.57,
+     0.71,
+     0.77,
+     0.79,
+     0.91,
+     0.93,
+     0.95,
+     0.97,
+     0.99
+    ]
+   },
+   {
+    "id": "random",
+    "label": "Random uncertainty score",
+    "tau": 0.5,
+    "caption": "The scores are drawn independently of the label, so their order carries no information about which {items} are {pos}: {pos} and {neg} marks are spread evenly along the strip. The score is miscalibrated too.",
+    "pos": [
+     0.08,
+     0.17,
+     0.29,
+     0.36,
+     0.44,
+     0.52,
+     0.61,
+     0.69,
+     0.83,
+     0.92
+    ],
+    "neg": [
+     0.12,
+     0.22,
+     0.31,
+     0.41,
+     0.48,
+     0.57,
+     0.66,
+     0.74,
+     0.86,
+     0.95
+    ]
+   }
+  ],
+  "default_preset": "good",
+  "real_data": {
+   "label": "Real data (TriviaQA)",
+   "loading": "Loading the proof-of-concept data…",
+   "caption": "{n} TriviaQA questions answered by {model_full} ({model}), a stratified sample of the test split that keeps its error rate: {npos} answers are correct and {nneg} wrong. Each mark is one real answer.",
+   "switch": "Uncertainty score",
+   "sources": {
+    "msp": {"label": "U = 1 − MSP", "note": "MSP is the maximum softmax probability of the last token."},
+    "se": {"label": "U = SE / ln 21", "note": "Semantic entropy over the greedy answer and 20 samples, divided by its largest value, ln 21. Calibration metrics (ECE, MCE, ACE, Brier) are not meaningful for a rescaled SE; ranking metrics are."}
+   }
+  },
+  "scale": "top scale: <i>U</i> · grey scale: {p}"
+ },
+ "fth": {
+  "sub": "No ground truth: each dot is one answer, placed by two uncertainty signals of the same model (e.g., sampling consistency and verbalized confidence).",
+  "x": "signal 1 (e.g., sampling consistency)",
+  "y": "signal 2 (e.g., verbalized confidence)",
+  "short": [
+   "signal 1",
+   "signal 2"
+  ],
+  "metrics": [
+   {
+    "id": "spearman",
+    "fam": "FTH",
+    "name": "Rank correlation",
+    "dir": "higher is better · 1 = same order",
+    "gloss": "Spearman correlation between the two signals."
+   },
+   {
+    "id": "cmfg",
+    "fam": "FTH",
+    "name": "cMFG",
+    "dir": "higher is better · 1 = faithful",
+    "gloss": "Mean of 1 − |signal 2 − signal 1| per bin of signal 1, then over bins."
+   }
+  ],
+  "caption": "Rank correlation depends only on the order of the two signals; cMFG depends on the gap between their values. Neither needs a correctness label.",
+  "edited": "Your own points. Pick a preset to start again.",
+  "presets": [
+   {
+    "id": "faithful",
+    "label": "Faithful",
+    "caption": "The two signals agree: every dot sits on or next to the diagonal, so both signals give each answer the same order and nearly the same level. The thin vertical lines, the gaps between the two signals, are all short.",
+    "points": [
+     [
+      0.04,
+      0.06
+     ],
+     [
+      0.09,
+      0.08
+     ],
+     [
+      0.13,
+      0.15
+     ],
+     [
+      0.18,
+      0.16
+     ],
+     [
+      0.23,
+      0.25
+     ],
+     [
+      0.27,
+      0.26
+     ],
+     [
+      0.32,
+      0.34
+     ],
+     [
+      0.38,
+      0.36
+     ],
+     [
+      0.43,
+      0.45
+     ],
+     [
+      0.47,
+      0.48
+     ],
+     [
+      0.53,
+      0.51
+     ],
+     [
+      0.58,
+      0.6
+     ],
+     [
+      0.62,
+      0.61
+     ],
+     [
+      0.67,
+      0.69
+     ],
+     [
+      0.73,
+      0.71
+     ],
+     [
+      0.78,
+      0.8
+     ],
+     [
+      0.83,
+      0.82
+     ],
+     [
+      0.88,
+      0.9
+     ],
+     [
+      0.93,
+      0.92
+     ],
+     [
+      0.97,
+      0.98
+     ]
+    ]
+   },
+   {
+    "id": "unfaithful",
+    "label": "Unfaithful",
+    "caption": "Signal 2 has nothing to do with signal 1: the dots are scattered over the plot. The order is lost, and the gaps between the two signals, the vertical lines to the diagonal, are large for most answers.",
+    "points": [
+     [
+      0.04,
+      0.15
+     ],
+     [
+      0.09,
+      0.47
+     ],
+     [
+      0.13,
+      0.76
+     ],
+     [
+      0.18,
+      0.3
+     ],
+     [
+      0.23,
+      0.02
+     ],
+     [
+      0.27,
+      0.68
+     ],
+     [
+      0.32,
+      0.97
+     ],
+     [
+      0.38,
+      0.05
+     ],
+     [
+      0.43,
+      0.08
+     ],
+     [
+      0.47,
+      0.88
+     ],
+     [
+      0.53,
+      0.71
+     ],
+     [
+      0.58,
+      0.82
+     ],
+     [
+      0.62,
+      0.22
+     ],
+     [
+      0.67,
+      0.93
+     ],
+     [
+      0.73,
+      0.55
+     ],
+     [
+      0.78,
+      0.12
+     ],
+     [
+      0.83,
+      0.19
+     ],
+     [
+      0.88,
+      0.58
+     ],
+     [
+      0.93,
+      0.1
+     ],
+     [
+      0.97,
+      0.41
+     ]
+    ]
+   },
+   {
+    "id": "rank-only",
+    "label": "Faithful in order only",
+    "caption": "Signal 2 rises with signal 1 but is squeezed into 0.57–0.94, so the dots form a flatter line above the diagonal. The order is identical, but the levels differ, most where signal 1 is low.",
+    "points": [
+     [
+      0.04,
+      0.57
+     ],
+     [
+      0.09,
+      0.59
+     ],
+     [
+      0.13,
+      0.6
+     ],
+     [
+      0.18,
+      0.62
+     ],
+     [
+      0.23,
+      0.64
+     ],
+     [
+      0.27,
+      0.66
+     ],
+     [
+      0.32,
+      0.68
+     ],
+     [
+      0.38,
+      0.7
+     ],
+     [
+      0.43,
+      0.72
+     ],
+     [
+      0.47,
+      0.74
+     ],
+     [
+      0.53,
+      0.76
+     ],
+     [
+      0.58,
+      0.78
+     ],
+     [
+      0.62,
+      0.8
+     ],
+     [
+      0.67,
+      0.82
+     ],
+     [
+      0.73,
+      0.84
+     ],
+     [
+      0.78,
+      0.86
+     ],
+     [
+      0.83,
+      0.88
+     ],
+     [
+      0.88,
+      0.9
+     ],
+     [
+      0.93,
+      0.92
+     ],
+     [
+      0.97,
+      0.94
+     ]
+    ]
+   },
+   {
+    "id": "level-only",
+    "label": "Faithful in level only",
+    "caption": "Signal 2 stays within 0.12 of signal 1, so every dot is close to the diagonal and the gaps are short. But all answers sit at similar levels between 0.4 and 0.6, and within that band their order is scrambled.",
+    "points": [
+     [
+      0.41,
+      0.42
+     ],
+     [
+      0.42,
+      0.5
+     ],
+     [
+      0.43,
+      0.51
+     ],
+     [
+      0.44,
+      0.53
+     ],
+     [
+      0.45,
+      0.54
+     ],
+     [
+      0.46,
+      0.57
+     ],
+     [
+      0.47,
+      0.44
+     ],
+     [
+      0.48,
+      0.59
+     ],
+     [
+      0.49,
+      0.6
+     ],
+     [
+      0.5,
+      0.46
+     ],
+     [
+      0.51,
+      0.41
+     ],
+     [
+      0.52,
+      0.55
+     ],
+     [
+      0.53,
+      0.43
+     ],
+     [
+      0.54,
+      0.49
+     ],
+     [
+      0.55,
+      0.52
+     ],
+     [
+      0.56,
+      0.58
+     ],
+     [
+      0.57,
+      0.45
+     ],
+     [
+      0.58,
+      0.48
+     ],
+     [
+      0.59,
+      0.47
+     ],
+     [
+      0.6,
+      0.56
+     ]
+    ]
+   }
+  ],
+  "default_preset": "faithful"
+ },
+ "linkout": "Where these metrics sit in the protocol: <a href=\"#eval-protocol\">target → criterion → metric</a>, and <a href=\"#eval-flow\">which families the surveyed papers report</a>."
+}

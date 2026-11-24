@@ -1,0 +1,412 @@
+{
+ "meta": {
+  "section_id": "lenses",
+  "source": "arXiv:2611.15735, §4.1–4.4 (4-observation-lenses.tex)",
+  "date": "2026-11-16",
+  "math": "Strings may contain LaTeX between \\( \\) (inline) or \\[ \\] (display), typeset with MathJax 3 (tex-svg). All text fields are trusted HTML.",
+  "citations": "[[key]] or [[key1;key2]] = citation, resolved against references[] and rendered into the page's References section as #ref-key."
+ },
+ "intro": {
+  "title": "Four lenses, three axes, one rule",
+  "lead": "An uncertainty estimator reads an observation from the model's computation and turns it into a score. We build a framework that characterizes uncertainty estimators by the lens they apply, the variables they sample across repeated inferences, and the auxiliary structure they rely on."
+ },
+ "figure": {
+  "title": "Four lenses on the residual stream",
+  "src": "four_lenses.png",
+  "width": 3125,
+  "height": 1075,
+  "alt": "Figure 3 of the paper. The residual stream of a transformer block, with four lenses along it from inner to outer: the structural lens reads the attention-head and FFN writes, the representational lens reads the hidden state, the distributional lens reads the token distribution after the unembedding, and the semantical lens reads the distribution over meanings given by a relation R. The maps g_sum, g_unemb and g_R link them.",
+  "scroll_hint": "Scroll sideways to see all of it.",
+  "lenses_title": "The four mechanistic observation lenses",
+  "lenses": [
+   {
+    "key": "str",
+    "name": "Structural lens",
+    "observation": "\\(O_\\text{str} := \\Delta h_c^{(\\ell)} \\in \\mathbb R^d\\)",
+    "text": "Reads the individual components: each attention-head and FFN write to the residual stream, including the attention weights \\(a_c^{(\\ell)}\\) and the activation \\(m^{(\\ell)}\\)."
+   },
+   {
+    "key": "rep",
+    "name": "Representational lens",
+    "observation": "\\(O_\\text{rep} := h^{(\\ell)} \\in \\mathbb R^d\\)",
+    "text": "Reads the hidden state, the residual-stream state that sums the component writes."
+   },
+   {
+    "key": "dis",
+    "name": "Distributional lens",
+    "observation": "\\(O_\\text{dis} := \\Pi(h^{(\\ell)}) \\in \\Delta^{|V|-1}\\)",
+    "text": "Reads the token distribution, obtained by unembedding the state with \\(W_U\\)."
+   },
+   {
+    "key": "sem",
+    "name": "Semantical lens",
+    "observation": "\\(O_\\text{sem} := \\Pi_R(h^{(\\ell)}) \\in \\Delta^{|\\mathcal M_R|-1}\\)",
+    "text": "Reads the distribution over meanings, obtained with a semantic relation \\(R\\) between outputs."
+   }
+  ],
+  "maps_title": "Inner-to-outer lens maps",
+  "maps": [
+   {
+    "from": "str",
+    "to": "rep",
+    "map": "\\(g_\\text{sum}\\)",
+    "discards": "Keeps the total update and discards <b>its split among component writes</b>."
+   },
+   {
+    "from": "rep",
+    "to": "dis",
+    "map": "\\(g_\\text{unemb}\\)",
+    "discards": "Composed of the final normalization, the unembedding \\(W_U\\), and the softmax. The normalization discards <b>the norm</b>."
+   },
+   {
+    "from": "dis",
+    "to": "sem",
+    "map": "\\(g_R\\)",
+    "discards": "Moves the sequence-level prediction onto the meaning space. It discards <b>the lexical form of the outputs</b> and keeps only what \\(R\\) reads as their meaning, depending on the implementation of \\(R\\)."
+   }
+  ]
+ },
+ "axes": {
+  "title": "Every estimator is a point \\((\\lambda, Z, S)\\)",
+  "cards": [
+   {
+    "key": "\\(\\lambda\\)",
+    "name": "lens",
+    "title": "where it reads",
+    "sentence": "Which mechanistic object the estimator reads from the residual stream.",
+    "values": [
+     {
+      "code": "str",
+      "label": "structural",
+      "lens": "str"
+     },
+     {
+      "code": "rep",
+      "label": "representational",
+      "lens": "rep"
+     },
+     {
+      "code": "dis",
+      "label": "distributional",
+      "lens": "dis"
+     },
+     {
+      "code": "sem",
+      "label": "semantical",
+      "lens": "sem"
+     }
+    ]
+   },
+   {
+    "key": "\\(Z\\)",
+    "name": "variation",
+    "title": "what is resampled",
+    "sentence": "What varies across forward passes to give several observations.",
+    "inference": "The LLM \\(f_\\theta\\) maps an input \\(x\\) to an output \\(y\\): \\(f_\\theta(x) = y\\).",
+    "values": [
+     {
+      "code": "\\(\\varnothing\\)",
+      "label": "one pass",
+      "z": "none",
+      "equation": "\\[f_\\theta(x) = y\\]",
+      "formula": "\\(Z=\\varnothing\\)",
+      "definition": "No resampling. The estimator reads a single forward pass, and \\(\\mathcal U\\) measures the spread within one atom or across a field.",
+      "examples": [
+       "the entropy of a token distribution [[malinin2021]]"
+      ]
+     },
+     {
+      "code": "\\(y\\)",
+      "label": "outputs",
+      "z": "y",
+      "equation": "\\[f_\\theta(x) = \\underbrace{\\class{zhi}{y_k}}_{\\text{resampled}},\\qquad y_k \\sim p(\\cdot \\mid x, \\theta),\\quad k = 1,\\dots,K\\]",
+      "formula": "\\(Z = y \\sim p(\\cdot \\mid x, \\theta)\\)",
+      "definition": "The output is resampled with \\(\\theta\\) and \\(x\\) fixed, as in stochastic decoding. \\(\\mathcal U\\) measures the spread across the sampled generations.",
+      "examples": [
+       "semantic entropy over sampled answers [[farquhar2024]]"
+      ]
+     },
+     {
+      "code": "\\(\\theta\\)",
+      "label": "parameters",
+      "z": "theta",
+      "equation": "\\[f_{\\underbrace{\\class{zhi}{\\theta_k}}_{\\text{resampled}}}(x) = y_k,\\qquad \\theta_k \\sim p(\\theta \\mid \\mathcal D),\\quad k = 1,\\dots,K\\]",
+      "formula": "\\(Z = \\theta \\sim p(\\theta \\mid \\mathcal D)\\)",
+      "definition": "The parameters are resampled from a posterior given the training data \\(\\mathcal D\\), and \\(\\mathcal U\\) measures the spread across models. It is the Bayesian predictive uncertainty.",
+      "examples": [
+       "a fitted approximate posterior \\(q(\\theta)\\) over the weights [[blundell2015]]",
+       "a finite ensemble of trained models [[lakshminarayanan2017]]"
+      ]
+     },
+     {
+      "code": "\\(x'\\)",
+      "label": "inputs",
+      "z": "x",
+      "equation": "\\[f_\\theta(\\underbrace{\\class{zhi}{x'_k}}_{\\text{resampled}}) = y_k,\\qquad x'_k \\sim p(\\cdot \\mid x),\\quad k = 1,\\dots,K\\]",
+      "formula": "\\(Z = x' \\sim p(\\cdot \\mid x)\\)",
+      "definition": "The input is resampled, usually within a semantic neighbourhood of \\(x\\) by paraphrasing or reformulation, and \\(\\mathcal U\\) measures the spread across inputs.",
+      "examples": [
+       "paraphrases",
+       "dummy tokens",
+       "prompt variants [[gao2024]]"
+      ]
+     }
+    ]
+   },
+   {
+    "key": "\\(S\\)",
+    "name": "auxiliary structure",
+    "title": "what extra structure is used",
+    "sentence": "The auxiliary axis \\(S\\) covers the structure an estimator needs beyond the observation \\(O_\\lambda\\) and the variation \\(Z\\).",
+    "values": [
+     {
+      "code": "\\(Z_S\\)",
+      "label": "",
+      "box": "z"
+     },
+     {
+      "code": "\\(\\rho_S\\)",
+      "label": "",
+      "box": "rho"
+     },
+     {
+      "code": "\\(\\mathcal U_S\\)",
+      "label": "",
+      "box": "u"
+     },
+     {
+      "code": "\\(\\psi_S\\)",
+      "label": "",
+      "box": "psi"
+     }
+    ]
+   }
+  ]
+ },
+ "pipeline": {
+  "title": "How the parts compose (select a box)",
+  "equation": "\\[U_\\lambda(x) = \\psi_S\\Big(\\mathcal U_S\\big({\\{\\,\\rho_S(O_\\lambda(\\theta,x))\\,\\}}_{Z\\sim Z_S}\\big)\\Big)\\]",
+  "boxes": [
+   {
+    "id": "obs",
+    "kind": "lens",
+    "label": "\\(O_\\lambda\\)",
+    "label_text": "O lambda",
+    "role": "observation",
+    "definition": "What the lens reads from the residual stream: component writes, the hidden state, the token distribution, or the distribution over meanings.",
+    "examples": [
+     "the hidden state \\(h^{(\\ell)}\\)",
+     "the token distribution \\(\\Pi(h^{(\\ell)})\\)"
+    ],
+    "default": null
+   },
+   {
+    "id": "rho",
+    "kind": "s",
+    "label": "\\(\\rho_S\\)",
+    "label_text": "rho S",
+    "role": "readout",
+    "definition": "A readout map that transforms each observation before scoring.",
+    "examples": [
+     "SAE encoder [[huben2024]]",
+     "J-Lens [[gurnee2026]] or tuned-lens map [[belrose2025]]",
+     "U-space basis [[braun2026]]"
+    ],
+    "default": "\\(\\rho_S = I\\)"
+   },
+   {
+    "id": "z",
+    "kind": "s",
+    "label": "\\(\\{\\,\\cdot\\,\\}_{Z\\sim Z_S}\\)",
+    "label_text": "collect over Z drawn from Z S",
+    "role": "collect over \\(Z\\sim Z_S\\)",
+    "definition": "Resample \\(Z\\) across forward passes to collect several observations. \\(S\\) defines the distribution \\(Z_S\\) it is drawn from.",
+    "examples": [
+     "sampled outputs (\\(Z=y\\)) [[farquhar2024]]",
+     "an ensemble or approximate posterior (\\(Z=\\theta\\)) [[blundell2015;lakshminarayanan2017]]",
+     "paraphrases of \\(x\\) (\\(Z=x'\\)) [[gao2024]]"
+    ],
+    "default": "\\(Z_S=\\varnothing\\)"
+   },
+   {
+    "id": "u",
+    "kind": "s",
+    "label": "\\(\\mathcal U_S\\)",
+    "label_text": "U S",
+    "role": "score function",
+    "definition": "\\(\\mathcal U\\) measures the spread of the observations and returns a scalar. When \\(S\\) parameterizes it, \\(\\mathcal U\\) is an external model \\(\\mathcal U_S\\), trained against a target.",
+    "examples": [
+     "a trained linear probe on hidden states [[azaria2023]]",
+     "a Dirichlet head over the token distribution [[malinin2021]]"
+    ],
+    "default": "\\(\\mathcal U\\) a fixed function, e.g. the entropy of a token distribution [[malinin2021]]"
+   },
+   {
+    "id": "psi",
+    "kind": "s",
+    "label": "\\(\\psi_S\\)",
+    "label_text": "psi S",
+    "role": "post-process",
+    "definition": "A lens-agnostic step applied to the score after \\(\\mathcal U_S\\).",
+    "examples": [
+     "conformal prediction, which uses a calibration set to give coverage guarantees [[quach2024]]"
+    ],
+    "default": "\\(\\psi_S\\) the identity"
+   },
+   {
+    "id": "out",
+    "kind": "out",
+    "label": "\\(U_\\lambda(x)\\)",
+    "label_text": "U lambda of x",
+    "role": "score",
+    "definition": "A scalar that predicts how uncertain the LLM is about its response.",
+    "examples": [],
+    "default": null
+   }
+  ],
+  "defaults_html": "The default \\(Z=\\varnothing\\), \\(\\rho_S = I\\), \\(\\mathcal U_S\\) fixed and \\(\\psi_S\\) the identity is the fixed single-pass estimator."
+ },
+ "rule": {
+  "title": "Choosing a lens and an estimator on it",
+  "text_html": "Pick the lens that is <em>sufficient</em> for the target, then choose \\(Z\\) and \\(S\\) for <em>efficiency</em>.",
+  "glosses": [
+   {
+    "term": "sufficiency",
+    "text": "For a target, consider the outermost lens \\(\\lambda^*\\) that is sufficient for it. Any lens \\(\\lambda \\succeq \\lambda^*\\) can be read to recover the target (Permission). No estimator that reads only a lens further out can recover it (Prohibition)."
+   },
+   {
+    "term": "efficiency",
+    "text": "Among the estimators that read a sufficient lens, the choice comes down to efficiency, which is set by the variation \\(Z\\) and the auxiliary structure \\(S\\)."
+   }
+  ],
+  "tieback": {
+   "title": "Choosing the lens for the four examples",
+   "rows": [
+    {
+     "id": "math",
+     "tab": "Math",
+     "target": "COR",
+     "suited_lens": "rep",
+     "href": "#math",
+     "why": "The samples agree on a wrong answer, but only the hidden state shows doubt."
+    },
+    {
+     "id": "opinion",
+     "tab": "Opinion",
+     "target": "UNS",
+     "suited_lens": "sem",
+     "href": "#opinion",
+     "why": "The token spread is mostly wording, while most answers share one stance."
+    },
+    {
+     "id": "grounding",
+     "tab": "Grounding",
+     "target": "GRD",
+     "suited_lens": "str",
+     "href": "#grounding",
+     "why": "The output says Lyon, but only the component writes show which parts pull toward the context and which toward memory."
+    },
+    {
+     "id": "factuality",
+     "tab": "Factuality",
+     "target": "COR",
+     "suited_lens": "dis",
+     "href": "#factuality",
+     "why": "One pass of the token distribution already shows the split, whereas grouping by meaning needs 20 samples."
+    }
+   ]
+  }
+ },
+ "demos_teaser": {
+  "html": "How much does each map lose in practice? The paper trains one probe family at every lens (DecBase) and compares. <a href=\"#demos\">See it in the demos →</a>",
+  "href": "#demos"
+ },
+ "takeaways": [
+  {
+   "n": 1,
+   "title": "Communication channel in transformers",
+   "placement": "residual",
+   "body_html": "All communication in a transformer is mediated by the residual stream, since every component at every layer and position reads from and writes to it. [[elhage2021]]"
+  },
+  {
+   "n": 2,
+   "title": "Definition of mechanistic observation lenses",
+   "placement": "figure",
+   "body_html": "The mechanistic observation lenses are identified by the mechanistic object they read from the residual stream. From innermost to outermost, the structural lens reads the component updates; the representational lens reads the hidden state; the distributional lens reads the token distribution; and the semantical lens reads the distribution over meanings induced by a semantic relation \\(R\\) between outputs."
+  },
+  {
+   "n": 3,
+   "title": "Characterizing an uncertainty estimator",
+   "placement": "estimator",
+   "body_html": "An uncertainty estimator is characterized by the lens \\(\\lambda\\) it reads, the variation \\(Z\\) it resamples, and the auxiliary structure \\(S\\) it uses. The lens is set by the mechanistic object the estimator reads. The variation changes which observations are collected and the auxiliary structure changes how they are scored, but neither changes the lens. An estimator is <em>native</em> if it estimates the uncertainty of the lens it reads, and <em>surrogate</em> if it estimates the uncertainty of another lens."
+  },
+  {
+   "n": 4,
+   "title": "Choosing a lens by sufficiency and efficiency",
+   "placement": "rule",
+   "body_html": "The four lenses are ordered by the information they carry, and each outer lens discards some information from the adjacent inner lens. For an uncertainty target, whether the target depends on the discarded information determines the <em>sufficiency</em> of the lens, and what variable is resampled and what auxiliary structure is used determine the <em>efficiency</em> of the estimator. The suited lens is sufficient for the target and admits an efficient estimator."
+  }
+ ],
+ "references": [
+  {
+   "key": "elhage2021",
+   "cite": "Elhage et al., 2021",
+   "html": "Nelson Elhage, Neel Nanda, Catherine Olsson, Tom Henighan, Nicholas Joseph, Ben Mann, et al. <a href=\"https://transformer-circuits.pub/2021/framework/index.html\">A Mathematical Framework for Transformer Circuits</a>. <i>Transformer Circuits Thread</i>, 2021."
+  },
+  {
+   "key": "malinin2021",
+   "cite": "Malinin &amp; Gales, 2021",
+   "html": "Andrey Malinin and Mark Gales. <a href=\"https://arxiv.org/abs/2002.07650\">Uncertainty Estimation in Autoregressive Structured Prediction</a>. In <i>ICLR</i>, 2021."
+  },
+  {
+   "key": "farquhar2024",
+   "cite": "Farquhar et al., 2024",
+   "html": "Sebastian Farquhar, Jannik Kossen, Lorenz Kuhn, and Yarin Gal. <a href=\"https://doi.org/10.1038/s41586-024-07421-0\">Detecting Hallucinations in Large Language Models Using Semantic Entropy</a>. <i>Nature</i>, 2024."
+  },
+  {
+   "key": "blundell2015",
+   "cite": "Blundell et al., 2015",
+   "html": "Charles Blundell, Julien Cornebise, Koray Kavukcuoglu, and Daan Wierstra. <a href=\"https://arxiv.org/abs/1505.05424\">Weight Uncertainty in Neural Networks</a>. In <i>ICML</i>, 2015."
+  },
+  {
+   "key": "lakshminarayanan2017",
+   "cite": "Lakshminarayanan et al., 2017",
+   "html": "Balaji Lakshminarayanan, Alexander Pritzel, and Charles Blundell. <a href=\"https://arxiv.org/abs/1612.01474\">Simple and Scalable Predictive Uncertainty Estimation Using Deep Ensembles</a>. In <i>NeurIPS</i>, 2017."
+  },
+  {
+   "key": "gao2024",
+   "cite": "Gao et al., 2024",
+   "html": "Xiang Gao, Jiaxin Zhang, Lalla Mouatadid, and Kamalika Das. <a href=\"https://doi.org/10.18653/v1/2024.eacl-long.143\">SPUQ: Perturbation-Based Uncertainty Quantification for Large Language Models</a>. In <i>EACL</i>, 2024."
+  },
+  {
+   "key": "huben2024",
+   "cite": "Huben et al., 2024",
+   "html": "Robert Huben, Hoagy Cunningham, Logan Smith, Aidan Ewart, and Lee Sharkey. <a href=\"https://arxiv.org/abs/2309.08600\">Sparse Autoencoders Find Highly Interpretable Features in Language Models</a>. In <i>ICLR</i>, 2024."
+  },
+  {
+   "key": "gurnee2026",
+   "cite": "Gurnee et al., 2026",
+   "html": "Wes Gurnee, Nicholas Sofroniew, Adam Pearce, Mateusz Piotrowski, Isaac Kauvar, Runjin Chen, et al. <a href=\"https://transformer-circuits.pub/2026/workspace/index.html\">Verbalizable Representations Form a Global Workspace in Language Models</a>. <i>Transformer Circuits Thread</i>, 2026."
+  },
+  {
+   "key": "belrose2025",
+   "cite": "Belrose et al., 2025",
+   "html": "Nora Belrose, Igor Ostrovsky, Lev McKinney, Zach Furman, Logan Smith, Danny Halawi, Stella Biderman, and Jacob Steinhardt. <a href=\"https://arxiv.org/abs/2303.08112\">Eliciting Latent Predictions from Transformers with the Tuned Lens</a>. arXiv:2303.08112, 2025."
+  },
+  {
+   "key": "braun2026",
+   "cite": "Braun et al., 2026",
+   "html": "Tobias Braun, Nils Loose, Alexander Herzog, Virginia Ceccatelli, Marcus Rohrbach, Thomas Eisenbarth, and Lorenzo Cavallaro. <a href=\"https://arxiv.org/abs/2610.09087\">U-Space: Uncovering When and Why Uncertainty Arises in Language Models</a>. arXiv:2610.09087, 2026."
+  },
+  {
+   "key": "azaria2023",
+   "cite": "Azaria &amp; Mitchell, 2023",
+   "html": "Amos Azaria and Tom Mitchell. <a href=\"https://doi.org/10.18653/v1/2023.findings-emnlp.68\">The Internal State of an LLM Knows When It's Lying</a>. In <i>Findings of EMNLP</i>, 2023."
+  },
+  {
+   "key": "quach2024",
+   "cite": "Quach et al., 2024",
+   "html": "Victor Quach, Adam Fisch, Tal Schuster, Adam Yala, Jae Ho Sohn, Tommi S. Jaakkola, and Regina Barzilay. <a href=\"https://arxiv.org/abs/2306.10193\">Conformal Language Modeling</a>. In <i>ICLR</i>, 2024."
+  }
+ ]
+}

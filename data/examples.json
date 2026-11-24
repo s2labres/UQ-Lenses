@@ -1,0 +1,463 @@
+{
+ "meta": {
+  "version": 1,
+  "date": "2026-11-16",
+  "model": "Qwen/Qwen2.5-0.5B-Instruct",
+  "samples": 20,
+  "seed": 42,
+  "footnote": "Qwen2.5-0.5B-Instruct [[qwen25]]. Answers grouped into meanings by a human. Representational directions built from sampled answers [[inside]] or read with the logit lens [[logitlens]].",
+  "token_roles": {
+   "right": "--right",
+   "wrong": "--wrong",
+   "ctx": "--teal",
+   "mem": "--slate",
+   "neutral": "--teal",
+   "alt": "--slate"
+  },
+  "notes": "Reference rendering: opening-preview.html (same folder). rep.t: 1 = anchor A (drawn vertical), 0 = anchor B (drawn horizontal), ~0.5 = 'uncertain' (dashed); clamp to [-0.08, 1.08] for drawing.",
+  "footnote_note": "[[key]] = citation, resolved against #ref-key in the page's References section."
+ },
+ "lenses": [
+  {
+   "key": "str",
+   "name": "Structural lens",
+   "ask": "How do components update the state?"
+  },
+  {
+   "key": "rep",
+   "name": "Representational lens",
+   "ask": "What is the hidden state?"
+  },
+  {
+   "key": "dis",
+   "name": "Distributional lens",
+   "ask": "Which token comes next?"
+  },
+  {
+   "key": "sem",
+   "name": "Semantical lens",
+   "ask": "What do the answers mean?"
+  }
+ ],
+ "examples": [
+  {
+   "id": "math",
+   "tab": "Math",
+   "target": "COR",
+   "suited_lens": "rep",
+   "query": "A bat and a ball cost $1.10 in total. The bat costs $1.00 more than the ball. How much does the ball cost?",
+   "reference": "correct: 5¢",
+   "takeaway": "The sampled answers agree on a wrong answer, but the hidden state moves from the wrong side (L14) toward the uncertain direction (L24).",
+   "panels": {
+    "str": {
+     "tokens": {
+      "A": {
+       "label": "10¢",
+       "role": "wrong"
+      },
+      "B": {
+       "label": "5¢",
+       "role": "right"
+      }
+     },
+     "components": [
+      {
+       "name": "MLP 15",
+       "pushes": "B",
+       "dla": 0.171
+      },
+      {
+       "name": "MLP 20",
+       "pushes": "A",
+       "dla": 0.134
+      },
+      {
+       "name": "H 22.7",
+       "pushes": "A",
+       "dla": 0.141
+      },
+      {
+       "name": "MLP 23",
+       "pushes": "B",
+       "dla": 0.269
+      }
+     ],
+     "order": "layer order, left to right; dla = |direct logit attribution|"
+    },
+    "rep": {
+     "anchor_A": "5¢ (correct)",
+     "anchor_B": "10¢",
+     "default_layer": "L24",
+     "layers": {
+      "L14": {
+       "t": -0.017
+      },
+      "L24": {
+       "t": 0.326
+      }
+     }
+    },
+    "dis": {
+     "position": "next digit after “The ball costs $0.”",
+     "bars": [
+      {
+       "token": "1 (10¢)",
+       "p": 0.9996
+      },
+      {
+       "token": "0 (5¢)",
+       "p": 0.0002
+      }
+     ],
+     "other": 0.0002
+    },
+    "sem": {
+     "n": 20,
+     "clusters": [
+      {
+       "label": "10¢",
+       "count": 19,
+       "surface_forms": [
+        "$0.10",
+        "0.10",
+        "$0.1"
+       ]
+      },
+      {
+       "label": "5¢",
+       "count": 1,
+       "surface_forms": [
+        "$0.05"
+       ]
+      }
+     ]
+    }
+   },
+   "sources": {
+    "str": "new run (results.json, run_new_examples.py@d06882c)",
+    "rep": "brief 01c (REPORT-01c.md): diff-of-means, 200 problems, 146 correct / 54 incorrect, last prompt token, pre-norm; held-out acc ≤ 0.70 at every layer (majority baseline 0.73)",
+    "dis": "earlier run (paper figure intro_lenses_two.pdf)",
+    "sem": "earlier run (paper figure)"
+   }
+  },
+  {
+   "id": "opinion",
+   "tab": "Opinion",
+   "target": "UNS",
+   "suited_lens": "sem",
+   "query": "Is remote work better than working in an office?",
+   "reference": "no single correct answer",
+   "takeaway": "The token distribution spreads over many phrasings, but most answers share one stance.",
+   "panels": {
+    "str": {
+     "tokens": {
+      "A": {
+       "label": "As",
+       "role": "neutral"
+      },
+      "B": {
+       "label": "Remote",
+       "role": "alt"
+      }
+     },
+     "components": [
+      {
+       "name": "MLP 19",
+       "pushes": "A",
+       "dla": 0.505
+      },
+      {
+       "name": "H 21.8",
+       "pushes": "B",
+       "dla": 0.532
+      },
+      {
+       "name": "MLP 22",
+       "pushes": "A",
+       "dla": 0.592
+      },
+      {
+       "name": "H 23.9",
+       "pushes": "B",
+       "dla": 0.919
+      }
+     ],
+     "order": "layer order, left to right; dla = |direct logit attribution|"
+    },
+    "rep": {
+     "anchor_A": "pro-remote",
+     "anchor_B": "pro-office",
+     "default_layer": "L14",
+     "layers": {
+      "L14": {
+       "t": 0.0762
+      }
+     }
+    },
+    "dis": {
+     "position": "first answer token",
+     "bars": [
+      {
+       "token": "As",
+       "p": 0.306
+      },
+      {
+       "token": "Remote",
+       "p": 0.27
+      },
+      {
+       "token": "Yes",
+       "p": 0.113
+      },
+      {
+       "token": "The",
+       "p": 0.053
+      },
+      {
+       "token": "While",
+       "p": 0.041
+      }
+     ],
+     "other": 0.217
+    },
+    "sem": {
+     "n": 20,
+     "clusters": [
+      {
+       "label": "It depends.",
+       "count": 13,
+       "surface_forms": [
+        "It depends.",
+        "Multifaceted.",
+        "No preference."
+       ]
+      },
+      {
+       "label": "Remote.",
+       "count": 4,
+       "surface_forms": []
+      },
+      {
+       "label": "Hedge.",
+       "count": 2,
+       "surface_forms": []
+      },
+      {
+       "label": "Office.",
+       "count": 1,
+       "surface_forms": []
+      }
+     ]
+    }
+   },
+   "sources": {
+    "str": "new run (results.json opinion.structural): top-2 pro-'As' MLPs and top-2 pro-'Remote' heads",
+    "rep": "brief 01c (REPORT-01c.md): diff-of-means, 7 pro-remote / 7 pro-office statements, layer 14; no CV (too few)",
+    "dis": "new run",
+    "sem": "paper figure (intro_lenses_two.pdf), not the re-run"
+   }
+  },
+  {
+   "id": "grounding",
+   "tab": "Grounding",
+   "target": "GRD",
+   "suited_lens": "str",
+   "query": "Context: In this story, the capital of France is Lyon. Question: What is the capital of France?",
+   "reference": "context says Lyon",
+   "takeaway": "The output commits to Lyon, but two layers earlier the hidden state still points to Paris. Only component attribution shows the disagreement.",
+   "panels": {
+    "str": {
+     "tokens": {
+      "A": {
+       "label": "Lyon",
+       "role": "ctx"
+      },
+      "B": {
+       "label": "Paris",
+       "role": "mem"
+      }
+     },
+     "components": [
+      {
+       "name": "MLP 20",
+       "pushes": "B",
+       "dla": 0.538
+      },
+      {
+       "name": "H 20.7",
+       "pushes": "A",
+       "dla": 0.457
+      },
+      {
+       "name": "H 20.12",
+       "pushes": "A",
+       "dla": 0.484
+      },
+      {
+       "name": "MLP 22",
+       "pushes": "A",
+       "dla": 1.075
+      }
+     ],
+     "order": "layer order, left to right; dla = |direct logit attribution|"
+    },
+    "rep": {
+     "anchor_A": "Lyon",
+     "anchor_B": "Paris",
+     "default_layer": "L22",
+     "layers": {
+      "L22": {
+       "t": 0.0001
+      },
+      "L24": {
+       "t": 0.996
+      }
+     }
+    },
+    "dis": {
+     "position": "first answer token",
+     "bars": [
+      {
+       "token": "L(yon)",
+       "p": 0.992
+      },
+      {
+       "token": "Paris",
+       "p": 0.004
+      }
+     ],
+     "other": 0.004
+    },
+    "sem": {
+     "n": 20,
+     "clusters": [
+      {
+       "label": "Lyon",
+       "count": 20,
+       "surface_forms": [
+        "Lyon",
+        "Lyon."
+       ]
+      }
+     ]
+    }
+   },
+   "sources": {
+    "str": "new run (brief 01b F3): DLA at first answer token",
+    "rep": "brief 01e (REPORT-01e.md): logit lens on lm_head rows of 'L'(id 43) and 'Paris'(id 59604); t = p_L/(p_L+p_P); L22 = first layer where either answer ranks top 50",
+    "dis": "new run, first answer token",
+    "sem": "new run, 20 samples, grouped by an author (human-labels/)"
+   }
+  },
+  {
+   "id": "factuality",
+   "tab": "Factuality",
+   "target": "COR",
+   "suited_lens": "dis",
+   "query": "What is the capital of Australia?",
+   "reference": "correct: Canberra",
+   "takeaway": "Grouping by meaning needs 20 samples to show the split, but the token distribution shows it in one pass.",
+   "panels": {
+    "str": {
+     "tokens": {
+      "A": {
+       "label": "Sydney",
+       "role": "wrong"
+      },
+      "B": {
+       "label": "Canberra",
+       "role": "right"
+      }
+     },
+     "components": [
+      {
+       "name": "MLP 20",
+       "pushes": "A",
+       "dla": 0.568
+      },
+      {
+       "name": "H 21.6",
+       "pushes": "A",
+       "dla": 0.551
+      },
+      {
+       "name": "MLP 22",
+       "pushes": "B",
+       "dla": 0.337
+      },
+      {
+       "name": "MLP 23",
+       "pushes": "B",
+       "dla": 0.606
+      }
+     ],
+     "order": "layer order, left to right; dla = |direct logit attribution|"
+    },
+    "rep": {
+     "anchor_A": "correct",
+     "anchor_B": "incorrect",
+     "default_layer": "L15",
+     "layers": {
+      "L15": {
+       "t": 1.043
+      }
+     }
+    },
+    "dis": {
+     "position": "first answer token",
+     "bars": [
+      {
+       "token": "Sy(dney)",
+       "p": 0.554
+      },
+      {
+       "token": "Can(berra)",
+       "p": 0.231
+      },
+      {
+       "token": "Canberra",
+       "p": 0.035
+      },
+      {
+       "token": "Mel",
+       "p": 0.026
+      }
+     ],
+     "other": 0.154
+    },
+    "sem": {
+     "n": 20,
+     "clusters": [
+      {
+       "label": "Sydney",
+       "count": 11,
+       "surface_forms": [
+        "Sydney",
+        "Sydney."
+       ]
+      },
+      {
+       "label": "Canberra",
+       "count": 8,
+       "surface_forms": [
+        "Canberra",
+        "Canberra."
+       ]
+      },
+      {
+       "label": "Darwin",
+       "count": 1,
+       "surface_forms": []
+      }
+     ]
+    }
+   },
+   "sources": {
+    "str": "new run",
+    "rep": "brief 01c (REPORT-01c.md): diff-of-means, 142 capital questions (100 correct / 42 incorrect), L15 = best held-out acc (0.66); likely confounded by country familiarity",
+    "dis": "new run, first answer token",
+    "sem": "new run, 20 samples, grouped by an author (human-labels/)"
+   }
+  }
+ ]
+}

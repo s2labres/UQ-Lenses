@@ -1,0 +1,955 @@
+{
+ "meta": {
+  "section_id": "evaluation",
+  "source": "arXiv:2611.15735, §6 (6-evaluation.tex: intro, §6.1 targets, §6.2 criteria, §6.3 metrics and footnote, tab:eval-metrics, the summary paragraph, the takeaway); §6.4 benchmarks (tab:eval-benchmarks)",
+  "date": "2026-11-23",
+  "data": "Counts are never typed in. Placeholders in braces are filled at render time from papers.json: {papers} unique papers; {cor}, {cor_rnk_only}, {all_rnk_only} from sankey.headline (cor_rnk_only is also recomputed from papers[] and asserted); {tgt:COR} unique papers with a target; {met:RNK} unique papers with a metric family; {tl:GRD:str} unique papers with a target at a lens.",
+  "math": "Strings may contain LaTeX between \\( \\), typeset with MathJax 3 (tex-svg). All *_html fields are trusted, author-written HTML."
+ },
+ "lede_html": "A UQ evaluation protocol evaluates the uncertainty score against a <b>target</b>. A <b>criterion</b> decides whether the target is met. A <b>metric</b> measures how well the score tracks the target.",
+ "protocol": {
+  "title": "Target, criterion, metric",
+  "steps": {
+   "target": {
+    "name": "Target",
+    "def_html": "A property of the inference instance \\(\\langle x, f_\\theta, y\\rangle\\) that the uncertainty score is evaluated against."
+   },
+   "criterion": {
+    "name": "Criterion",
+    "def_html": "A function \\(C(\\cdot,\\cdot)\\) that decides whether an instance has the target property."
+   },
+   "metric": {
+    "name": "Metric",
+    "def_html": "Measures how well the uncertainty scores track the labels the criterion gives."
+   }
+  },
+  "target_order": [
+   "COR",
+   "GRD",
+   "UNS",
+   "FTH"
+  ],
+  "targets": {
+   "COR": {
+    "of_html": "A property of the output \\(y\\) alone: does \\(y\\) match a ground-truth answer \\(y^*\\) under a criterion \\(C(y, y^*)\\)? The default target in the literature.",
+    "question": "How well does the uncertainty estimate tell whether the response is correct?",
+    "gt": true
+   },
+   "GRD": {
+    "of_html": "A property of the output \\(y\\), the context in the input \\(x\\), and the model \\(f_\\theta\\): contextual support (is \\(y\\) supported by the context?) and causal reliance (does \\(f_\\theta\\) use the context or its own parametric knowledge?).",
+    "question": "How well does the uncertainty estimate tell whether the response is grounded in the context?",
+    "gt": true
+   },
+   "UNS": {
+    "of_html": "A property of the input \\(x\\) alone: does \\(x\\) admit a valid answer? Covers answerability, ambiguity and novelty; the label comes from dataset annotation.",
+    "question": "How well does the uncertainty estimate tell whether the input is underspecified?",
+    "gt": true
+   },
+   "FTH": {
+    "of_html": "A property of the output \\(y\\) and the model \\(f_\\theta\\): does \\(y\\) reflect the model's own knowledge or reasoning? It compares two uncertainty signals from the same model.",
+    "question": "How well do the model's own uncertainty signals agree with one another?",
+    "gt": false
+   }
+  },
+  "gt_label": {
+   "yes": "needs a ground-truth label",
+   "no": "needs no ground truth"
+  },
+  "criterion_label": "Criterion",
+  "criteria": [
+   {
+    "key": "dis",
+    "name": "Distributional",
+    "def": "Measures the lexical overlap between the output and the reference.",
+    "examples": [
+     "exact match",
+     "BLEU",
+     "ROUGE-1/2/L"
+    ]
+   },
+   {
+    "key": "sem",
+    "name": "Semantical",
+    "def": "Assesses a meaning-level property.",
+    "examples": [
+     "option match",
+     "NLI entailment",
+     "LLM-as-judge",
+     "FActScore",
+     "AlignScore",
+     "human annotation"
+    ]
+   }
+  ],
+  "criterion_link_html": "The split is whether \\(C\\) reads the lexical form. This is the information discarded by the lens map <a href=\"#lenses-four\">\\(g_R\\)</a>.",
+  "metric_order": [
+   "RNK",
+   "CAL",
+   "SCR",
+   "DEC",
+   "REG",
+   "COV",
+   "FTH"
+  ],
+  "metrics": {
+   "RNK": {
+    "def": "Does the score place positive instances ahead of negative ones? Summarizes the separation over all decision thresholds.",
+    "examples": [
+     "AUROC",
+     "AUPRC",
+     "AUARC",
+     "AURC",
+     "PRR"
+    ]
+   },
+   "CAL": {
+    "def": "Agreement between the probability and the empirical frequency of positive instances.",
+    "examples": [
+     "ECE",
+     "MCE",
+     "ACE"
+    ]
+   },
+   "SCR": {
+    "def": "Proper scoring rules: calibration and the concentration of the predicted distribution.",
+    "examples": [
+     "Brier score",
+     "CRPS"
+    ]
+   },
+   "DEC": {
+    "def": "The score thresholded for a downstream decision, such as abstention: a single operating point on a ranking curve.",
+    "examples": [
+     "accuracy",
+     "F1 score"
+    ]
+   },
+   "REG": {
+    "def": "When the criterion returns a continuous score: the correlation between the uncertainty score and the criterion score.",
+    "examples": [
+     "PCC",
+     "SCC"
+    ]
+   },
+   "COV": {
+    "def": "Specific to conformal prediction: does the prediction set contain an acceptable response with the chosen probability, and how large is it?",
+    "examples": [
+     "coverage probability",
+     "average prediction set size"
+    ]
+   },
+   "FTH": {
+    "def": "For the faithfulness target: agreement between two uncertainty signals of the same model.",
+    "examples": [
+     "rank correlation",
+     "cMFG",
+     "CoT intervention"
+    ]
+   }
+  },
+  "examples_label": "e.g."
+ },
+ "flow": {
+  "title": "How the {papers} surveyed papers evaluate",
+  "sub": "Band width is the number of papers that evaluate a target with a metric family.",
+  "heads": {
+   "target": "Target",
+   "metric": "Metric family"
+  },
+  "headline": [
+   "{cor_rnk_only} of {cor} correctness papers",
+   "report ranking only"
+  ],
+  "headline_short": [
+   "{cor_rnk_only} of {cor} COR",
+   "ranking only"
+  ],
+  "legend": {
+   "only": "papers that report only this metric family",
+   "other": "papers that also report another family"
+  },
+  "caption": "A paper with several metric families counts on each of its links, so a target's links can add up to more than its paper count.",
+  "card_more": "+ {n} more",
+  "card_click": "Click to list them in the Survey.",
+  "card_split": "{only} report only this family · {other} also report another",
+  "table_toggle": "Show as table",
+  "table_caption": "Papers by target (rows) and metric family (columns). A paper counts once in every cell it has; totals are unique papers.",
+  "table_total": "Papers",
+  "nosurvey": "On the site this opens the Survey list at {hash} ({n} papers).",
+  "link_only": "{only} of them report only this family"
+ },
+ "notes": [
+  {
+   "html": "Across all targets, ranking is the most common metric family ({met:RNK} papers), followed by calibration ({met:CAL}), and a growing number of papers evaluate decision metrics ({met:DEC}) on downstream use."
+  },
+  {
+   "html": "Grounding sits almost entirely at the structural lens ({tl:GRD:str} of {tgt:GRD} papers), and all faithfulness methods read the semantical lens. <a href=\"#survey?cell=target.str.GRD\">See them in the coverage map</a>."
+  },
+  {
+   "html": "Ranking is not calibration. Ranking depends only on the order of the scores, whereas calibration depends on their values: a constant uncertainty score equal to the empirical accuracy achieves zero calibration error (ECE) but gives no useful ranking, and a score can rank near-optimally while being miscalibrated. <a href=\"#playground\">Try it in the metric playground</a>."
+  }
+ ],
+ "notes_title": "What the flow shows",
+ "takeaway": {
+  "n": 9,
+  "title": "Target, criterion, and metric form the evaluation protocol",
+  "text": "A UQ evaluation protocol evaluates the uncertainty score against a target: correctness, grounding, underspecification, or faithfulness. A distributional or semantical criterion decides whether the target is met. A metric in one of seven families measures how well the score tracks the target.",
+  "sec": "§6"
+ },
+ "benchmarks": {
+  "title": "Benchmarks",
+  "sub_html": "Benchmarks used in the surveyed papers, grouped by input–output format. Benchmarks after <span class=\"chip tgt\" data-t=\"GRD\">GRD</span> also support grounding, and those after <span class=\"chip tgt\" data-t=\"UNS\">UNS</span> support underspecification. Correctness and faithfulness apply to all benchmarks and are not marked.",
+  "head": {
+   "format": "Format",
+   "benchmarks": "Benchmarks"
+  },
+  "rows": [
+   {
+    "key": "MCQA",
+    "name": "multiple-choice question answering",
+    "all": [
+     {
+      "name": "MMLU(-Pro)",
+      "parts": [
+       {
+        "t": "MMLU",
+        "key": "hendrycksMeasuringMassiveMultitask2021",
+        "url": "https://arxiv.org/abs/2009.03300"
+       },
+       {
+        "t": "(-Pro)",
+        "key": "wangMMLUProMoreRobust2024",
+        "url": "https://arxiv.org/abs/2406.01574"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "MedQA",
+      "parts": [
+       {
+        "t": "MedQA",
+        "key": "jinWhatDiseaseDoes2021",
+        "url": "https://arxiv.org/abs/2009.13081"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "MedMCQA",
+      "parts": [
+       {
+        "t": "MedMCQA",
+        "key": "palMedMCQALargescaleMultiSubject2022",
+        "url": "https://arxiv.org/abs/2203.14371"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "GPQA",
+      "parts": [
+       {
+        "t": "GPQA",
+        "key": "reinGPQAGraduateLevelGoogleProof2024",
+        "url": "https://arxiv.org/abs/2311.12022"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "CommonsenseQA",
+      "parts": [
+       {
+        "t": "CommonsenseQA",
+        "key": "talmorCommonsenseQAQuestionAnswering2019",
+        "url": "https://aclanthology.org/N19-1421/"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "BoolQ",
+      "parts": [
+       {
+        "t": "BoolQ",
+        "key": "clarkBoolQExploringSurprising2019",
+        "url": "https://aclanthology.org/N19-1300/"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "ARC",
+      "parts": [
+       {
+        "t": "ARC",
+        "key": "clarkThinkYouHave2018",
+        "url": "https://arxiv.org/abs/1803.05457"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "HellaSwag",
+      "parts": [
+       {
+        "t": "HellaSwag",
+        "key": "zellersHellaSwagCanMachine2019",
+        "url": "https://aclanthology.org/P19-1472/"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "FEVER",
+      "parts": [
+       {
+        "t": "FEVER",
+        "key": "thorneFEVERLargescaleDataset2018",
+        "url": "https://arxiv.org/abs/1803.05355"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "Winogrande",
+      "parts": [
+       {
+        "t": "Winogrande",
+        "key": "sakaguchiWinoGrandeAdversarialWinograd2019",
+        "url": "https://doi.org/10.1145/3474381"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "PIQA",
+      "parts": [
+       {
+        "t": "PIQA",
+        "key": "biskPIQAReasoningPhysical2019",
+        "url": "https://arxiv.org/abs/1911.11641"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "GLUE",
+      "parts": [
+       {
+        "t": "GLUE",
+        "key": "wangGLUEMultiTaskBenchmark2018",
+        "url": "https://aclanthology.org/W18-5446/"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "BigBench",
+      "parts": [
+       {
+        "t": "BigBench",
+        "key": "srivastavaImitationGameQuantifying2023",
+        "url": "https://arxiv.org/abs/2206.04615"
+       }
+      ],
+      "sup": []
+     }
+    ],
+    "GRD": [
+     {
+      "name": "SciQ",
+      "parts": [
+       {
+        "t": "SciQ",
+        "key": "welblCrowdsourcingMultipleChoice2017",
+        "url": "https://aclanthology.org/W17-4413/"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "CosmosQA",
+      "parts": [
+       {
+        "t": "CosmosQA",
+        "key": "huangCosmosQAMachine2019",
+        "url": "https://arxiv.org/abs/1909.00277"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "RACE",
+      "parts": [
+       {
+        "t": "RACE",
+        "key": "laiRACELargescaleReAding2017",
+        "url": "https://arxiv.org/abs/1704.04683"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "OpenBookQA",
+      "parts": [
+       {
+        "t": "OpenBookQA",
+        "key": "mihaylovCanSuitArmor2018",
+        "url": "https://arxiv.org/abs/1809.02789"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "HaluEval",
+      "parts": [
+       {
+        "t": "HaluEval",
+        "key": "liHaluEvalLargeScaleHallucination2023",
+        "url": "https://arxiv.org/abs/2305.11747"
+       }
+      ],
+      "sup": []
+     }
+    ],
+    "UNS": []
+   },
+   {
+    "key": "SFQA",
+    "name": "short-form question answering",
+    "all": [
+     {
+      "name": "TriviaQA",
+      "parts": [
+       {
+        "t": "TriviaQA",
+        "key": "joshiTriviaQALargeScale2017",
+        "url": "https://arxiv.org/abs/1705.03551"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "NQ(-open)",
+      "parts": [
+       {
+        "t": "NQ(-open)",
+        "key": "kwiatkowskiNaturalQuestionsBenchmark2019",
+        "url": "https://aclanthology.org/Q19-1026/"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "PopQA",
+      "parts": [
+       {
+        "t": "PopQA",
+        "key": "mallenWhenNotTrust2023",
+        "url": "https://arxiv.org/abs/2212.10511"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "BioASQ",
+      "parts": [
+       {
+        "t": "BioASQ",
+        "key": "tsatsaronisOverviewBIOASQLargescale2015",
+        "url": "https://doi.org/10.1186/s12859-015-0564-6"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "TruthfulQA",
+      "parts": [
+       {
+        "t": "TruthfulQA",
+        "key": "linTruthfulQAMeasuringHow2022",
+        "url": "https://arxiv.org/abs/2109.07958"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "SimpleQA",
+      "parts": [
+       {
+        "t": "SimpleQA",
+        "key": "weiMeasuringShortformFactuality2024",
+        "url": "https://arxiv.org/abs/2411.04368"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "MS MARCO",
+      "parts": [
+       {
+        "t": "MS MARCO",
+        "key": "bajajMSMARCOHuman2018",
+        "url": "https://arxiv.org/abs/1611.09268"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "WebQuestions",
+      "parts": [
+       {
+        "t": "WebQuestions",
+        "key": "berantSemanticParsingFreebase2013",
+        "url": "https://aclanthology.org/D13-1160/"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "LAMA",
+      "parts": [
+       {
+        "t": "LAMA",
+        "key": "petroniLanguageModelsKnowledge2019",
+        "url": "https://arxiv.org/abs/1909.01066"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "PubMedQA",
+      "parts": [
+       {
+        "t": "PubMedQA",
+        "key": "jinPubMedQADatasetBiomedical2019",
+        "url": "https://arxiv.org/abs/1909.06146"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "MGSM",
+      "parts": [
+       {
+        "t": "MGSM",
+        "key": "shiLanguageModelsAre2023",
+        "url": "https://arxiv.org/abs/2210.03057"
+       }
+      ],
+      "sup": []
+     }
+    ],
+    "GRD": [
+     {
+      "name": "CoQA",
+      "parts": [
+       {
+        "t": "CoQA",
+        "key": "reddyCoQAConversationalQuestion2019",
+        "url": "https://arxiv.org/abs/1808.07042"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "HotpotQA",
+      "parts": [
+       {
+        "t": "HotpotQA",
+        "key": "yangHotpotQADatasetDiverse2018",
+        "url": "https://arxiv.org/abs/1809.09600"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "SQuAD",
+      "parts": [
+       {
+        "t": "SQuAD",
+        "key": "rajpurkarSQuAD100000Questions2016",
+        "url": "https://arxiv.org/abs/1606.05250"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "HaluEval",
+      "parts": [
+       {
+        "t": "HaluEval",
+        "key": "liHaluEvalLargeScaleHallucination2023",
+        "url": "https://arxiv.org/abs/2305.11747"
+       }
+      ],
+      "sup": []
+     }
+    ],
+    "UNS": [
+     {
+      "name": "QuAC",
+      "parts": [
+       {
+        "t": "QuAC",
+        "key": "choiQuACQuestionAnswering2018",
+        "url": "https://arxiv.org/abs/1808.07036"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "SelfAware",
+      "parts": [
+       {
+        "t": "SelfAware",
+        "key": "yinLargeLanguageModels2023",
+        "url": "https://aclanthology.org/2023.findings-acl.551/"
+       }
+      ],
+      "sup": []
+     }
+    ]
+   },
+   {
+    "key": "LFQA",
+    "name": "long-form question answering",
+    "all": [
+     {
+      "name": "ELI5(-Category)",
+      "parts": [
+       {
+        "t": "ELI5",
+        "key": "fanELI5LongForm2019",
+        "url": "https://arxiv.org/abs/1907.09190"
+       },
+       {
+        "t": "(-Category)",
+        "key": "atakishiyevExplainableArtificialIntelligence2024",
+        "url": "https://arxiv.org/abs/2112.11561"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "MedLFQA",
+      "parts": [
+       {
+        "t": "MedLFQA",
+        "key": "jeongOLAPHImprovingFactuality2024",
+        "url": "https://arxiv.org/abs/2405.12701"
+       }
+      ],
+      "sup": []
+     }
+    ],
+    "GRD": [
+     {
+      "name": "Qasper",
+      "parts": [
+       {
+        "t": "Qasper",
+        "key": "dasigiDatasetInformationSeekingQuestions2021",
+        "url": "https://arxiv.org/abs/2105.03011"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "NarrativeQA",
+      "parts": [
+       {
+        "t": "NarrativeQA",
+        "key": "kociskyNarrativeQAReadingComprehension2018",
+        "url": "https://aclanthology.org/Q18-1023/"
+       }
+      ],
+      "sup": []
+     }
+    ],
+    "UNS": []
+   },
+   {
+    "key": "OEG",
+    "name": "open-ended generation",
+    "all": [
+     {
+      "name": "FActScore",
+      "parts": [
+       {
+        "t": "FActScore",
+        "key": "minFActScoreFinegrainedAtomic2023",
+        "url": "https://arxiv.org/abs/2305.14251"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "WikiBio GPT-3",
+      "parts": [
+       {
+        "t": "WikiBio GPT-3",
+        "key": "manakulSelfCheckGPTZeroResourceBlackBox2023",
+        "url": "https://arxiv.org/abs/2303.08896"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "Chatbot Arena",
+      "parts": [
+       {
+        "t": "Chatbot Arena",
+        "key": "chiangChatbotArenaOpen2024",
+        "url": "https://arxiv.org/abs/2403.04132"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "FAVA",
+      "parts": [
+       {
+        "t": "FAVA",
+        "key": "mishraFinegrainedHallucinationDetection2024",
+        "url": "https://arxiv.org/abs/2401.06855"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "HumanEval",
+      "parts": [
+       {
+        "t": "HumanEval",
+        "key": "chenEvaluatingLargeLanguage2021",
+        "url": "https://arxiv.org/abs/2107.03374"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "MBPP",
+      "parts": [
+       {
+        "t": "MBPP",
+        "key": "austinProgramSynthesisLarge2021",
+        "url": "https://arxiv.org/abs/2108.07732"
+       }
+      ],
+      "sup": []
+     }
+    ],
+    "GRD": [
+     {
+      "name": "MT-Bench",
+      "parts": [
+       {
+        "t": "MT-Bench",
+        "key": "chenMTBenchMultimodalTime2026",
+        "url": "https://arxiv.org/abs/2503.16858"
+       }
+      ],
+      "sup": []
+     }
+    ],
+    "UNS": []
+   },
+   {
+    "key": "CG",
+    "name": "contextual generation",
+    "all": [],
+    "GRD": [
+     {
+      "name": "XSum",
+      "parts": [
+       {
+        "t": "XSum",
+        "key": "narayanDontGiveMe2018",
+        "url": "https://arxiv.org/abs/1808.08745"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "SamSum",
+      "parts": [
+       {
+        "t": "SamSum",
+        "key": "gliwaSAMSumCorpusHumanannotated2019",
+        "url": "https://arxiv.org/abs/1911.12237"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "TL;DR",
+      "parts": [
+       {
+        "t": "TL;DR",
+        "key": "stiennonLearningSummarizeHuman2020",
+        "url": "https://arxiv.org/abs/2009.01325"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "SummEval",
+      "parts": [
+       {
+        "t": "SummEval",
+        "key": "fabbriSummEvalReevaluatingSummarization2021",
+        "url": "https://arxiv.org/abs/2007.12626"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "FRANK",
+      "parts": [
+       {
+        "t": "FRANK",
+        "key": "pagnoniUnderstandingFactualityAbstractive2021",
+        "url": "https://arxiv.org/abs/2104.13346"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "CNN/DailyMail",
+      "parts": [
+       {
+        "t": "CNN/DailyMail",
+        "key": "hermannTeachingMachinesRead2015",
+        "url": "https://arxiv.org/abs/1506.03340"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "WMT",
+      "parts": [
+       {
+        "t": "WMT",
+        "key": "bojarFindings2017Conference2017",
+        "url": null
+       }
+      ],
+      "sup": [
+       {
+        "t": "2017",
+        "key": "bojarFindings2017Conference2017",
+        "url": "https://aclanthology.org/W17-4717/"
+       },
+       {
+        "t": "2019",
+        "key": "barraultFindings2019Conference2019",
+        "url": "https://aclanthology.org/W19-5301/"
+       },
+       {
+        "t": "2020",
+        "key": "barraultFindings2020Conference2020",
+        "url": "https://aclanthology.org/2020.wmt-1.1/"
+       }
+      ]
+     },
+     {
+      "name": "HaluEval",
+      "parts": [
+       {
+        "t": "HaluEval",
+        "key": "liHaluEvalLargeScaleHallucination2023",
+        "url": "https://arxiv.org/abs/2305.11747"
+       }
+      ],
+      "sup": []
+     },
+     {
+      "name": "RAGTruth",
+      "parts": [
+       {
+        "t": "RAGTruth",
+        "key": "niuRAGTruthHallucinationCorpus2024",
+        "url": "https://arxiv.org/abs/2401.00396"
+       }
+      ],
+      "sup": []
+     }
+    ],
+    "UNS": []
+   }
+  ],
+  "note_items": [
+   {
+    "name": "GSM8K",
+    "parts": [
+     {
+      "t": "GSM8K",
+      "key": "cobbeTrainingVerifiersSolve2021",
+      "url": "https://arxiv.org/abs/2110.14168"
+     }
+    ],
+    "sup": []
+   },
+   {
+    "name": "MATH",
+    "parts": [
+     {
+      "t": "MATH",
+      "key": "hendrycksMeasuringMathematicalProblem2021",
+      "url": "https://arxiv.org/abs/2103.03874"
+     }
+    ],
+    "sup": []
+   },
+   {
+    "name": "CommonsenseQA",
+    "parts": [
+     {
+      "t": "CommonsenseQA",
+      "key": "talmorCommonsenseQAQuestionAnswering2019",
+      "url": "https://aclanthology.org/N19-1421/"
+     }
+    ],
+    "sup": []
+   },
+   {
+    "name": "BoolQ",
+    "parts": [
+     {
+      "t": "BoolQ",
+      "key": "clarkBoolQExploringSurprising2019",
+      "url": "https://aclanthology.org/N19-1300/"
+     }
+    ],
+    "sup": []
+   },
+   {
+    "name": "TheoremQA",
+    "parts": [
+     {
+      "t": "TheoremQA",
+      "key": "chenTheoremQATheoremdrivenQuestion2023",
+      "url": "https://arxiv.org/abs/2305.12524"
+     }
+    ],
+    "sup": []
+   },
+   {
+    "name": "SVAMP",
+    "parts": [
+     {
+      "t": "SVAMP",
+      "key": "patelAreNLPModels2021",
+      "url": "https://arxiv.org/abs/2103.07191"
+     }
+    ],
+    "sup": []
+   }
+  ],
+  "note_html": "Chain-of-thought reasoning benchmarks also appear: {items}. Some papers construct their own trivia datasets.",
+  "link_title": "Open the paper"
+ }
+}
